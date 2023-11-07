@@ -9,14 +9,13 @@ import utilities from '@/app/styles/object/utilities/sizing.module.css'
 const Home = () => {
   const router = useRouter()
   const [objectWidth, setWidth] = useState(0);
+
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
     window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    handleResize()
   }, []);
 
   return (

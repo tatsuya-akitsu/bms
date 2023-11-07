@@ -1,4 +1,3 @@
-'use client';
 import React, { FC, MouseEventHandler } from 'react';
 import styles from '@/app/styles/object/components/button.module.css'
 

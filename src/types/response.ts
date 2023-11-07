@@ -33,6 +33,6 @@ export interface Characters {
 export interface UserState {
   uid: string;
   email: string | null;
-  password: string;
+  password?: string;
   displayName: string | null;
 }

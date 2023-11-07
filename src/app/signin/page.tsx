@@ -5,7 +5,7 @@ import styles from '@/app/styles/object/projects/signin-page.module.css'
 import icon from '@/app/styles/object/components/icon.module.css';
 import utilities from '@/app/styles/object/utilities/sizing.module.css'
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { auth, twitterProvider } from '@/api/firebase';
+import { auth, googleProvider, twitterProvider } from '@/api/firebase';
 
 import Headline from '@/components/modules/Headline'
 import Button from '@/components/modules/Button'
@@ -26,9 +26,7 @@ const Signup = () => {
       setWidth(window.innerWidth);
     };
     window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    handleResize()
   }, []);
 
   const onSignin = async () => {
@@ -56,7 +54,26 @@ const Signup = () => {
   const onTwitterSignin = async () => {
     try {
       const userCredential = await signInWithPopup(auth, twitterProvider)
-      console.log(userCredential)
+      await setUser({
+        uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        password: password,
+        displayName: userCredential.user.displayName,
+      });
+      router.push('/dashboard');
+    } catch (e) {}
+  }
+
+  const onGoogleSignin = async () => {
+    try {
+      const userCredential = await signInWithPopup(auth, googleProvider);
+      await setUser({
+        uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        password: password,
+        displayName: userCredential.user.displayName,
+      });
+      router.push('/dashboard');
     } catch (e) {}
   }
 
@@ -125,6 +142,7 @@ const Signup = () => {
                 width: `calc(${objectWidth}px / ${iconRatio})`,
                 height: `calc(${objectWidth}px / ${iconRatio})`,
               }}
+              onClick={onGoogleSignin}
             >
               <Icon
                 imagePath={'/images/icon_social--google.svg'}

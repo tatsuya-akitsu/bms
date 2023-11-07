@@ -2,6 +2,7 @@ import { UserState } from '@/types/response';
 import { initializeApp, getApps } from 'firebase/app';
 import { GoogleAuthProvider, TwitterAuthProvider, getAuth, onAuthStateChanged } from 'firebase/auth';
 import { SetterOrUpdater } from 'recoil';
+import { useRouter } from 'next/navigation';
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -21,9 +22,14 @@ export const googleProvider = new GoogleAuthProvider()
 export const authenticateStateConfirm = (onUpdateStateUser: SetterOrUpdater<UserState | null>) => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      console.log('||| response user object', user)
-      // onUpdateStateUser(user);
+      onUpdateStateUser({
+        uid: user.uid,
+        email: user.email,
+        displayName: user.displayName
+      });
     } else {
+      const router = useRouter()
+      router.push('/login')
     }
   });
 };
