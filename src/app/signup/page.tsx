@@ -18,7 +18,7 @@ const Signup = () => {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [objectWidth, setWidth] = useState(window.innerWidth);
+  const [objectWidth, setWidth] = useState(0);
   const [user, setUser] = useRecoilState(useUserState);
 
   useEffect(() => {
