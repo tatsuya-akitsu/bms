@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 4% 8% 3%;
+  width: 78.2rem;
+  border-radius: 1.2rem;
+  background-color: #fff;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px #0000001a,
+    0 4px 6px -4px #0000001a;
+}
+
+.formBox {
+  margin-top: 4%;
+  text-align: center;
+}
+
+.formBoxItem {
+  text-align: left;
+
+  &:not(:nth-of-type(1)) {
+    margin-top: 2.4rem;
+  }
+
+  &:nth-of-type(3) {
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+}
+
+.formBoxItem:nth-of-type(3) button:nth-of-type(1) {
+  margin-right: 1.6rem;
+}
+
+.formBoxItem:nth-of-type(3) button:nth-of-type(2) {
+  margin-left: 1.6rem;
+}
+
+.formBoxItem p {
+  padding-bottom: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #1c1c1c;
+}
+
+.formBoxItem input {
+  padding: 1.6rem 1rem;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 0.05em;
+  background-color: #fff;
+  width: 100%;
+  border-bottom: 2px solid #CCDBDC;
+}
+
+.separator {
+  background-color: #CCDBDC;
+  border: none;
+  height: 2px;
+}
+
+.socialLoginBox {
+  margin-top: 2.4rem;
+  margin-left: -1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialLoginBox button:not(:nth-last-of-type(1)) {
+  margin-right: 1.6rem;
+}

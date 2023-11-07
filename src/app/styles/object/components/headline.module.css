@@ -1,0 +1,33 @@
+.headline {
+  position: relative;
+  padding: 2.2rem 3.6rem;
+  border-top: #EA526F solid 2px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -1.6rem;
+    left: 2rem;
+    width: 160px;
+    height: 3rem;
+    border-radius: 30rem;
+    background: #EA526F;
+  }
+}
+
+.headline span {
+  position: absolute;
+  top: -1.6rem;
+  left: 2rem;
+  width: 160px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.headline p {
+  font-size: 2.8rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
