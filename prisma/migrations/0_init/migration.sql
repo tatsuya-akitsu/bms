@@ -28,3 +28,4 @@ CREATE TABLE "CharacterTags" (
 
     CONSTRAINT "CharacterTags_pkey" PRIMARY KEY ("id")
 );
+
