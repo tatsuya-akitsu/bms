@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "prisma migrate deploy && next build",
+    "seed": "prisma db seed",
     "start": "next start",
     "lint": "next lint",
     "codegen": "microcms-typescript src/schema src/types/response.ts"
