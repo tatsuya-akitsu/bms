@@ -3,9 +3,10 @@ import prisma from '../src/lib/prisma';
 import { characters } from '../src/constants/index';
 
 async function main() {
-  for (const data of characters) {
-    await prisma.character.create({ data });
-  }
+  await prisma.character.createMany({
+    data: characters,
+    skipDuplicates: true,
+  })
 }
 
 main()

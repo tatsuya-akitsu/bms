@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "prisma migrate deploy && next build",
+    "build": "prisma db seed && next build",
     "seed": "prisma db seed",
+    "migrate": "prisma migrate deploy",
     "start": "next start",
     "lint": "next lint",
     "codegen": "microcms-typescript src/schema src/types/response.ts"
