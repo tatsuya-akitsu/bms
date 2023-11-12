@@ -6,7 +6,10 @@
     "dev": "next dev --turbo",
     "build": "prisma generate && prisma db seed && next build",
     "seed": "prisma db seed",
-    "migrate": "prisma migrate deploy",
+    "migrate": "prisma migrate dev --name init",
+    "deploy": "prisma migrate deploy",
+    "applied": "prisma migrate resolve --applied '20231110025325_init'",
+    "studio": "prisma studio",
     "start": "next start",
     "lint": "next lint",
     "codegen": "microcms-typescript src/schema src/types/response.ts"
