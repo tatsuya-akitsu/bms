@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "prisma db seed && next build",
+    "build": "prisma generate && prisma db seed && next build",
     "seed": "prisma db seed",
     "migrate": "prisma migrate deploy",
     "start": "next start",
