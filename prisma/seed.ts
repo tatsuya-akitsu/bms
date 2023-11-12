@@ -5,7 +5,6 @@ import { characters } from '../src/constants/index';
 async function main() {
   await prisma.character.createMany({
     data: characters,
-    skipDuplicates: true,
   })
 }
 

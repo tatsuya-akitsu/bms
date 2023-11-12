@@ -28,18 +28,3 @@ CREATE TABLE "CharacterTags" (
 
     CONSTRAINT "CharacterTags_pkey" PRIMARY KEY ("id")
 );
-
--- Characterテーブルに初期データを挿入
-INSERT INTO "Character"
-    ("name", "label", "type", "attributes", "totalScore", "boost")
-VALUES
-    ('シャンクス', 'FILM RED', 'GREEN', 'ATTACKER', 0, 0),
-    ('モンキー・D・ルフィ', 'ギア 5', 'GREEN', 'DEFENDER', 0, 1);
-
--- CharacterTagsテーブルに初期データを挿入
-INSERT INTO "CharacterTags"
-    ("name", "isActivation", "effect")
-VALUES
-    ('Tag 1', true, '{"effect1": "value1"}'),
-    ('Tag 2', false, '{"effect2": "value2"}'),
-    ('Tag 3', true, '{"effect3": "value3"}');
