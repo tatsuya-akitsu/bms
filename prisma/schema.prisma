@@ -35,15 +35,9 @@ model Character {
 
 model CharacterDetail {
   id            Int               @id @default(autoincrement())
-  name          String
-  label         String
-  boost         Int
-  attributes    CharacterAttributes
-  type          CharacterType
   status        Json
   skill         Json
   property      Json
-  characterTags CharacterToCharacterTag[]
   character      Character         @relation(fields: [id], references: [id])
   createdAt      DateTime          @default(now())
 }
@@ -60,13 +54,11 @@ model CharacterTag {
 // 中間テーブル（結合テーブル）
 model CharacterToCharacterTag {
   character         Character                @relation(fields: [characterId], references: [id])
-  characterDetail   CharacterDetail          @relation(fields: [characterDetailId], references: [id])
   characterId       Int
-  characterDetailId Int
   tag               CharacterTag             @relation(fields: [tagId], references: [id])
   tagId             Int
 
-  @@id([characterId, characterDetailId, tagId])
+  @@id([characterId, tagId])
 }
 
 enum CharacterType {
