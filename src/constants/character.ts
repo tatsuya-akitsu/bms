@@ -1,51 +1,26 @@
-import { Characters } from '@/types';
+import { Character } from '@/types';
 import { CharacterAttributes, CharacterType } from '@prisma/client';
 
-export const characters: Characters[] = [
+export const characters: Character[] = [
   {
     name: 'シャンクス',
     label: 'FILM RED',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -55,93 +30,44 @@ export const characters: Characters[] = [
     label: 'ギア 5',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
   },
+  // @TODO: ここから先が変更してない。
   {
     name: 'ルフィ太郎',
     label: 'ワノ国',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -151,45 +77,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -199,45 +100,20 @@ export const characters: Characters[] = [
     label: '四皇',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -247,45 +123,20 @@ export const characters: Characters[] = [
     label: '希望の星',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -295,45 +146,20 @@ export const characters: Characters[] = [
     label: 'ギア4／バウンドマン',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -343,45 +169,20 @@ export const characters: Characters[] = [
     label: 'ルナーリア族',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -391,45 +192,20 @@ export const characters: Characters[] = [
     label: '大口真神',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -439,45 +215,20 @@ export const characters: Characters[] = [
     label: 'ギア4／スネイクマン',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -487,45 +238,20 @@ export const characters: Characters[] = [
     label: 'ロジャー海賊団／副船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -535,45 +261,20 @@ export const characters: Characters[] = [
     label: 'ロジャーの好敵手',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -583,45 +284,20 @@ export const characters: Characters[] = [
     label: '海賊王の右腕 冥王',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -631,45 +307,20 @@ export const characters: Characters[] = [
     label: 'モンキー・D・ルフィ',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -679,45 +330,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島怪物決戦',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -727,45 +353,20 @@ export const characters: Characters[] = [
     label: 'カイドウの息子',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -775,45 +376,20 @@ export const characters: Characters[] = [
     label: '死の外科医',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -823,45 +399,20 @@ export const characters: Characters[] = [
     label: 'ルフィの兄',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -871,45 +422,20 @@ export const characters: Characters[] = [
     label: '世界最強の剣士',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -919,45 +445,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／総督',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -967,45 +468,20 @@ export const characters: Characters[] = [
     label: '新時代の歌い手',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1015,45 +491,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1063,45 +514,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1111,45 +537,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／大看板',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1159,45 +560,20 @@ export const characters: Characters[] = [
     label: 'FILM RED',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1207,45 +583,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1255,45 +606,20 @@ export const characters: Characters[] = [
     label: '2年後／戦闘員',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1303,45 +629,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1351,45 +652,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／飛び六砲',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1399,45 +675,20 @@ export const characters: Characters[] = [
     label: '機密特殊部隊「SWORD」隊長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1447,45 +698,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1495,45 +721,20 @@ export const characters: Characters[] = [
     label: '頂上戦争',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1543,45 +744,20 @@ export const characters: Characters[] = [
     label: 'オンエア海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1591,45 +767,20 @@ export const characters: Characters[] = [
     label: '海軍本部／少将',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1639,45 +790,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1687,45 +813,20 @@ export const characters: Characters[] = [
     label: 'ハートの海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1735,45 +836,20 @@ export const characters: Characters[] = [
     label: '白ひげ海賊団／一番隊隊長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1783,45 +859,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1831,45 +882,20 @@ export const characters: Characters[] = [
     label: '2年後／船医',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1879,45 +905,20 @@ export const characters: Characters[] = [
     label: 'アラバスタ王国護衛隊副官',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1927,45 +928,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／飛び六砲',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -1975,45 +951,20 @@ export const characters: Characters[] = [
     label: '頂上戦争',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2023,45 +974,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2071,45 +997,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／大看板',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2119,45 +1020,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテファミリー／幹部',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2167,45 +1043,20 @@ export const characters: Characters[] = [
     label: '腕力強化',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2215,45 +1066,20 @@ export const characters: Characters[] = [
     label: '海賊王',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2263,45 +1089,20 @@ export const characters: Characters[] = [
     label: '海軍本部／元帥　赤犬',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2311,45 +1112,20 @@ export const characters: Characters[] = [
     label: 'FILM RED',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2359,45 +1135,20 @@ export const characters: Characters[] = [
     label: 'ルフィ・ロー海賊同盟',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2407,45 +1158,20 @@ export const characters: Characters[] = [
     label: '最強生物',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2455,45 +1181,20 @@ export const characters: Characters[] = [
     label: '火拳',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2503,45 +1204,20 @@ export const characters: Characters[] = [
     label: 'FILM RED',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2551,45 +1227,20 @@ export const characters: Characters[] = [
     label: '九里大名',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2599,45 +1250,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島怪物決戦',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2647,45 +1273,20 @@ export const characters: Characters[] = [
     label: '海賊王を夢見る男',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2695,45 +1296,20 @@ export const characters: Characters[] = [
     label: 'バギー海賊団／船長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2743,45 +1319,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2791,45 +1342,20 @@ export const characters: Characters[] = [
     label: '5tハンマー',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2839,45 +1365,20 @@ export const characters: Characters[] = [
     label: 'STAMPEDE',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2887,45 +1388,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2935,45 +1411,20 @@ export const characters: Characters[] = [
     label: '九蛇海賊団／船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -2983,45 +1434,20 @@ export const characters: Characters[] = [
     label: '海軍本部／曹長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3031,45 +1457,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／幹部',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3079,45 +1480,20 @@ export const characters: Characters[] = [
     label: 'BW／フロンティアエージェント',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3127,45 +1503,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3175,45 +1526,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3223,45 +1549,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3271,45 +1572,20 @@ export const characters: Characters[] = [
     label: '黒ひげ海賊団／元インペルダウン看守長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3319,45 +1595,20 @@ export const characters: Characters[] = [
     label: '2年後／コック',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3367,45 +1618,20 @@ export const characters: Characters[] = [
     label: '天候棒',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3415,45 +1641,20 @@ export const characters: Characters[] = [
     label: '新世界',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3463,45 +1664,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3511,45 +1687,20 @@ export const characters: Characters[] = [
     label: '狙撃の王様',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3559,45 +1710,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3607,45 +1733,20 @@ export const characters: Characters[] = [
     label: 'ゴムゴムの暴風雨',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3655,45 +1756,20 @@ export const characters: Characters[] = [
     label: '破戒僧海賊団／船長 "怪僧"',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3703,45 +1779,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3751,45 +1802,20 @@ export const characters: Characters[] = [
     label: 'CP9',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3799,45 +1825,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／考古学者',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3847,45 +1848,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／音楽家',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3895,45 +1871,20 @@ export const characters: Characters[] = [
     label: '元海軍本部大将',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3943,45 +1894,20 @@ export const characters: Characters[] = [
     label: 'ステルス・ブラック',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -3991,45 +1917,20 @@ export const characters: Characters[] = [
     label: '革命軍',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4039,45 +1940,20 @@ export const characters: Characters[] = [
     label: 'アルビダ海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4087,45 +1963,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／船医',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4135,45 +1986,20 @@ export const characters: Characters[] = [
     label: '海軍の英雄',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4183,45 +2009,20 @@ export const characters: Characters[] = [
     label: '革命軍／"北軍"軍隊長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4231,45 +2032,20 @@ export const characters: Characters[] = [
     label: '七光り',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4279,45 +2055,20 @@ export const characters: Characters[] = [
     label: '3000万の賞金首',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4327,45 +2078,20 @@ export const characters: Characters[] = [
     label: 'ビッグ・マム海賊団／スイート3将星',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4375,45 +2101,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4423,45 +2124,20 @@ export const characters: Characters[] = [
     label: '絡繰人間',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4471,45 +2147,20 @@ export const characters: Characters[] = [
     label: '白ひげ海賊団／5番隊隊長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4519,45 +2170,20 @@ export const characters: Characters[] = [
     label: 'アーロン一味／幹部',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4567,45 +2193,20 @@ export const characters: Characters[] = [
     label: '海軍本部／曹長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4615,45 +2216,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／船長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4663,45 +2239,20 @@ export const characters: Characters[] = [
     label: '鉄の海賊',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4711,45 +2262,20 @@ export const characters: Characters[] = [
     label: 'アーロン一味／幹部',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4759,45 +2285,20 @@ export const characters: Characters[] = [
     label: 'クリーク海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4807,45 +2308,20 @@ export const characters: Characters[] = [
     label: 'バラティエ／料理長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4855,45 +2331,20 @@ export const characters: Characters[] = [
     label: 'クロネコ海賊団／元船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4903,45 +2354,20 @@ export const characters: Characters[] = [
     label: 'CP0',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4951,45 +2377,20 @@ export const characters: Characters[] = [
     label: 'クリーク海賊団／戦闘総隊長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -4999,45 +2400,20 @@ export const characters: Characters[] = [
     label: '海軍本部／大将 青雉',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5047,45 +2423,20 @@ export const characters: Characters[] = [
     label: '元白ひげ海賊団／16番隊隊長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5095,45 +2446,20 @@ export const characters: Characters[] = [
     label: '海軍本部／大将 黄猿',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5143,45 +2469,20 @@ export const characters: Characters[] = [
     label: '一大・三千・大千・世界',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5191,45 +2492,20 @@ export const characters: Characters[] = [
     label: 'ジェルマ66／総帥',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5239,45 +2515,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／最高幹部',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5287,45 +2538,20 @@ export const characters: Characters[] = [
     label: '頂上戦争',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5335,45 +2561,20 @@ export const characters: Characters[] = [
     label: 'ホールケーキアイランド',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5383,45 +2584,20 @@ export const characters: Characters[] = [
     label: '武闘派アニマル',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5431,45 +2607,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5479,45 +2630,20 @@ export const characters: Characters[] = [
     label: '黒ひげ海賊団／操舵手 "チャンピオン"',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5527,45 +2653,20 @@ export const characters: Characters[] = [
     label: '赤髪海賊団／大頭',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5575,45 +2676,20 @@ export const characters: Characters[] = [
     label: '夜の王',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5623,45 +2699,20 @@ export const characters: Characters[] = [
     label: 'ワノ国一の美少年剣士',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5671,45 +2722,20 @@ export const characters: Characters[] = [
     label: 'ミンク族',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5719,45 +2745,20 @@ export const characters: Characters[] = [
     label: 'ハッピーホリデー',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5767,45 +2768,20 @@ export const characters: Characters[] = [
     label: 'バルトクラブ／船長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5815,45 +2791,20 @@ export const characters: Characters[] = [
     label: 'CP9',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5863,45 +2814,20 @@ export const characters: Characters[] = [
     label: '神',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5911,45 +2837,20 @@ export const characters: Characters[] = [
     label: '2年後／狙撃手',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -5959,45 +2860,20 @@ export const characters: Characters[] = [
     label: 'BW／副社長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6007,45 +2883,20 @@ export const characters: Characters[] = [
     label: 'スリラーバーク海賊団／四怪人',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6055,45 +2906,20 @@ export const characters: Characters[] = [
     label: 'ハッピーホリデー',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6103,45 +2929,20 @@ export const characters: Characters[] = [
     label: 'アーロン一味／船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6151,45 +2952,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／戦闘員',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6199,45 +2975,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／船大工',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6247,45 +2998,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／コック',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6295,45 +3021,20 @@ export const characters: Characters[] = [
     label: 'ビッグ・マム海賊団／船員',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6343,45 +3044,20 @@ export const characters: Characters[] = [
     label: 'ホールケーキアイランド',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6391,45 +3067,20 @@ export const characters: Characters[] = [
     label: '海軍大佐',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6439,45 +3090,20 @@ export const characters: Characters[] = [
     label: 'BW／オフィサーエージェント',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6487,45 +3113,20 @@ export const characters: Characters[] = [
     label: 'ボニー海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6535,45 +3136,20 @@ export const characters: Characters[] = [
     label: 'ファイアタンク海賊団／頭目',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6583,45 +3159,20 @@ export const characters: Characters[] = [
     label: 'バギー海賊団／参謀長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6631,45 +3182,20 @@ export const characters: Characters[] = [
     label: 'クロネコ海賊団／船長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6679,45 +3205,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6727,45 +3228,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6775,45 +3251,20 @@ export const characters: Characters[] = [
     label: '賞金稼ぎ',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6823,45 +3274,20 @@ export const characters: Characters[] = [
     label: '賞金稼ぎ',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6871,45 +3297,20 @@ export const characters: Characters[] = [
     label: 'クロネコ海賊団／船の番人',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6919,45 +3320,20 @@ export const characters: Characters[] = [
     label: '山賊／棟梁',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -6967,45 +3343,20 @@ export const characters: Characters[] = [
     label: '海軍本部／元帥',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7015,45 +3366,20 @@ export const characters: Characters[] = [
     label: '水着',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7063,45 +3389,20 @@ export const characters: Characters[] = [
     label: '麦わらの一味／航海士',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7111,45 +3412,20 @@ export const characters: Characters[] = [
     label: '雑用',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7159,45 +3435,20 @@ export const characters: Characters[] = [
     label: 'プロデンス王国／国王',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7207,45 +3458,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7255,45 +3481,20 @@ export const characters: Characters[] = [
     label: '海軍本部／大将 藤虎',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7303,45 +3504,20 @@ export const characters: Characters[] = [
     label: '2年後／音楽家',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7351,45 +3527,20 @@ export const characters: Characters[] = [
     label: '美しき海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7399,45 +3550,20 @@ export const characters: Characters[] = [
     label: 'キッド海賊団／船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7447,45 +3573,20 @@ export const characters: Characters[] = [
     label: '救世主',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7495,45 +3596,20 @@ export const characters: Characters[] = [
     label: 'くじらの森 侠客団／団長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7543,45 +3619,20 @@ export const characters: Characters[] = [
     label: 'ビッグ・マム海賊団／スイート3将星',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7591,45 +3642,20 @@ export const characters: Characters[] = [
     label: 'FILM RED',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7639,45 +3665,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／大看板',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7687,45 +3688,20 @@ export const characters: Characters[] = [
     label: '黒炭家の内通者',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7735,45 +3711,20 @@ export const characters: Characters[] = [
     label: 'スベスベの実',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7783,45 +3734,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／飛び六砲',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7831,45 +3757,20 @@ export const characters: Characters[] = [
     label: '初めての共同作業',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7879,45 +3780,20 @@ export const characters: Characters[] = [
     label: 'インペルダウン／監獄署長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7927,45 +3803,20 @@ export const characters: Characters[] = [
     label: 'ビッグ・マム海賊団／船員',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -7975,45 +3826,20 @@ export const characters: Characters[] = [
     label: 'ビッグ・マム海賊団／船員',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8023,45 +3849,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8071,45 +3872,20 @@ export const characters: Characters[] = [
     label: '仔羊肉ショット',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8119,45 +3895,20 @@ export const characters: Characters[] = [
     label: 'アーロン一味／幹部',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8167,45 +3918,20 @@ export const characters: Characters[] = [
     label: '革命軍／"東軍"軍隊長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8215,45 +3941,20 @@ export const characters: Characters[] = [
     label: 'BW／オフィサーエージェント',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8263,45 +3964,20 @@ export const characters: Characters[] = [
     label: 'ヒョウ五郎一家／大親分',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8311,45 +3987,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8359,45 +4010,20 @@ export const characters: Characters[] = [
     label: '雷神',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8407,45 +4033,20 @@ export const characters: Characters[] = [
     label: '革命軍／参謀総長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8455,45 +4056,20 @@ export const characters: Characters[] = [
     label: '光月家／家臣',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8503,45 +4079,20 @@ export const characters: Characters[] = [
     label: 'STAMPEDE',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8551,45 +4102,20 @@ export const characters: Characters[] = [
     label: '伝説の侍',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8599,45 +4125,20 @@ export const characters: Characters[] = [
     label: 'フライング海賊団／船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8647,45 +4148,20 @@ export const characters: Characters[] = [
     label: 'FILM GOLD',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8695,45 +4171,20 @@ export const characters: Characters[] = [
     label: '怪物強化',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8743,45 +4194,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8791,45 +4217,20 @@ export const characters: Characters[] = [
     label: 'ロンメルのカマイタチ',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8839,45 +4240,20 @@ export const characters: Characters[] = [
     label: 'アラバスタ王国／王女',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8887,45 +4263,20 @@ export const characters: Characters[] = [
     label: '白ひげ海賊団／船長"白ひげ"',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8935,45 +4286,20 @@ export const characters: Characters[] = [
     label: 'ビッグ・マム海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -8983,45 +4309,20 @@ export const characters: Characters[] = [
     label: '海軍GL第5支部／中将',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9031,45 +4332,20 @@ export const characters: Characters[] = [
     label: '超人',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9079,45 +4355,20 @@ export const characters: Characters[] = [
     label: '王女と大切な相棒',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9127,45 +4378,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／最高幹部',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9175,45 +4401,20 @@ export const characters: Characters[] = [
     label: '海賊王の息子',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9223,45 +4424,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／特別幹部',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9271,45 +4447,20 @@ export const characters: Characters[] = [
     label: '白ひげ海賊団／3番隊隊長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9319,45 +4470,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／最高幹部',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9367,45 +4493,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9415,45 +4516,20 @@ export const characters: Characters[] = [
     label: '海軍本部／科学部隊隊長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9463,45 +4539,20 @@ export const characters: Characters[] = [
     label: '海軍本部／大将 赤犬',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9511,45 +4562,20 @@ export const characters: Characters[] = [
     label: 'BW／オフィサーエージェント',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9559,45 +4585,20 @@ export const characters: Characters[] = [
     label: 'ドレスローザの凶弾',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9607,45 +4608,20 @@ export const characters: Characters[] = [
     label: '2年後／船大工',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9655,45 +4631,20 @@ export const characters: Characters[] = [
     label: 'ジェルマ66',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9703,45 +4654,20 @@ export const characters: Characters[] = [
     label: '光月家／家臣',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9751,45 +4677,20 @@ export const characters: Characters[] = [
     label: '昼の王',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9799,45 +4700,20 @@ export const characters: Characters[] = [
     label: '狂死郎一家／親分',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9847,45 +4723,20 @@ export const characters: Characters[] = [
     label: '光月家／家臣',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9895,45 +4746,20 @@ export const characters: Characters[] = [
     label: 'ベテランくの一',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9943,45 +4769,20 @@ export const characters: Characters[] = [
     label: '革命軍／幹部',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -9991,45 +4792,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10039,45 +4815,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10087,45 +4838,20 @@ export const characters: Characters[] = [
     label: 'パンクハザード',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10135,45 +4861,20 @@ export const characters: Characters[] = [
     label: '2年後／考古学者',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10183,45 +4884,20 @@ export const characters: Characters[] = [
     label: 'ゴーストプリンセス',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10231,45 +4907,20 @@ export const characters: Characters[] = [
     label: '元世界政府／科学班員',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10279,45 +4930,20 @@ export const characters: Characters[] = [
     label: '2年後／航海士',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10327,45 +4953,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10375,45 +4976,20 @@ export const characters: Characters[] = [
     label: 'ドラム王国／元国王',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10423,45 +4999,20 @@ export const characters: Characters[] = [
     label: '孔雀スラッシャー',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10471,45 +5022,20 @@ export const characters: Characters[] = [
     label: '赤髪海賊団／狙撃手',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10519,45 +5045,20 @@ export const characters: Characters[] = [
     label: '海軍本部／大差',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10567,45 +5068,20 @@ export const characters: Characters[] = [
     label: '百八煩悩鳳',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10615,45 +5091,20 @@ export const characters: Characters[] = [
     label: 'シロップ村の少女',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10663,45 +5114,20 @@ export const characters: Characters[] = [
     label: 'リュウグウ王国／国王',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10711,45 +5137,20 @@ export const characters: Characters[] = [
     label: 'エニエス・ロビー',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10759,45 +5160,20 @@ export const characters: Characters[] = [
     label: 'ロイヤルウェディング',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10807,45 +5183,20 @@ export const characters: Characters[] = [
     label: 'ホールケーキアイランド',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10855,45 +5206,20 @@ export const characters: Characters[] = [
     label: '光月家／家臣',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10903,45 +5229,20 @@ export const characters: Characters[] = [
     label: 'ビッグ・マム海賊団／船員',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10951,45 +5252,20 @@ export const characters: Characters[] = [
     label: '新魚人海賊団／船長',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -10999,45 +5275,20 @@ export const characters: Characters[] = [
     label: 'ホールケーキアイランド',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11047,45 +5298,20 @@ export const characters: Characters[] = [
     label: '王下七武海',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11095,45 +5321,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／幹部',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11143,45 +5344,20 @@ export const characters: Characters[] = [
     label: '水着',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11191,45 +5367,20 @@ export const characters: Characters[] = [
     label: 'ドンキホーテ海賊団／使用人兼殺し屋',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11239,45 +5390,20 @@ export const characters: Characters[] = [
     label: '白ひげ海賊団／二番隊隊長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11287,45 +5413,20 @@ export const characters: Characters[] = [
     label: 'STAMPEDE',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11335,45 +5436,20 @@ export const characters: Characters[] = [
     label: 'FILM STRONG WORLD',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11383,45 +5459,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11431,45 +5482,20 @@ export const characters: Characters[] = [
     label: '元八宝水軍／第12代棟梁',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11479,45 +5505,20 @@ export const characters: Characters[] = [
     label: '百獣海賊団／飛び六砲弾',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11527,45 +5528,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島討ち入り',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11575,45 +5551,20 @@ export const characters: Characters[] = [
     label: 'インペルダウン／囚人',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11623,45 +5574,20 @@ export const characters: Characters[] = [
     label: 'STAMPEDE',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11671,45 +5597,20 @@ export const characters: Characters[] = [
     label: 'ODYSSEY',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11719,45 +5620,20 @@ export const characters: Characters[] = [
     label: 'インペルダウン／囚人',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11767,45 +5643,20 @@ export const characters: Characters[] = [
     label: '森の番人',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11815,45 +5666,20 @@ export const characters: Characters[] = [
     label: '無敗の女',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11863,45 +5689,20 @@ export const characters: Characters[] = [
     label: 'ベラミー海賊団／船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11911,45 +5712,20 @@ export const characters: Characters[] = [
     label: 'ワノ国',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -11959,45 +5735,20 @@ export const characters: Characters[] = [
     label: '鬼ヶ島怪物決戦',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12007,45 +5758,20 @@ export const characters: Characters[] = [
     label: '食いわずらい',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12055,45 +5781,20 @@ export const characters: Characters[] = [
     label: 'FILM Z',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12103,45 +5804,20 @@ export const characters: Characters[] = [
     label: 'STAMPEDE',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12151,45 +5827,20 @@ export const characters: Characters[] = [
     label: 'FILM RED',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12199,45 +5850,20 @@ export const characters: Characters[] = [
     label: 'FILM RED',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12247,45 +5873,20 @@ export const characters: Characters[] = [
     label: 'FILM RED',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12295,45 +5896,20 @@ export const characters: Characters[] = [
     label: '革命軍／兵士',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12343,45 +5919,20 @@ export const characters: Characters[] = [
     label: 'XXX級ボクサー',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12391,45 +5942,20 @@ export const characters: Characters[] = [
     label: 'カリブー海賊団／船長',
     attributes: CharacterAttributes.RED,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12439,45 +5965,20 @@ export const characters: Characters[] = [
     label: '革命軍／幹部',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12487,45 +5988,20 @@ export const characters: Characters[] = [
     label: '海軍潜入',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12535,45 +6011,20 @@ export const characters: Characters[] = [
     label: '囚われの花嫁',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12583,45 +6034,20 @@ export const characters: Characters[] = [
     label: '海軍本部／中将',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.DEFENDER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12631,45 +6057,20 @@ export const characters: Characters[] = [
     label: 'ハッピーホリデー',
     attributes: CharacterAttributes.RED,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12679,45 +6080,20 @@ export const characters: Characters[] = [
     label: '一刀流「居合」獅子歌歌',
     attributes: CharacterAttributes.GREEN,
     type: CharacterType.ATTACKER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12727,45 +6103,20 @@ export const characters: Characters[] = [
     label: 'キッド海賊団／戦闘員',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12775,45 +6126,20 @@ export const characters: Characters[] = [
     label: 'シャンドラの戦士',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,
@@ -12823,45 +6149,20 @@ export const characters: Characters[] = [
     label: '海軍GL第5支部／大佐',
     attributes: CharacterAttributes.RED,
     type: CharacterType.GETTER,
-    boost: 0,
-    status: {
-      level: 0,
-      totalScore: 0,
-      strength: 0,
-      attack: 0,
-      defense: 0,
-      critical: 0,
-      charaBoost: 0,
-    },
-    skill: {
-      skill1: {
-        name: '赤髪の強襲',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+    maximum: {
+      status: {
+        level: 100,
+        comprehensive: 11519,
+        strength: 9131,
+        attack: 2400,
+        defense: 2240,
+        critical: 11.0,
+        boost: 52,
       },
-      skill2: {
-        name: 'グリフォンの刺突',
-        effects: [
-          {
-            level: 1,
-            effect: '',
-          },
-        ],
+      skills: {
+        skill1: 960,
+        skill2: 960,
       },
-      teamBoost: {
-        name: '',
-        effect: '',
-      },
-    },
-    property: {
-      characterFeature: [],
-      feature1: [],
-      feature2: [],
-      boostFeature: [],
     },
     hasCharacter: false,
     userId: 0,

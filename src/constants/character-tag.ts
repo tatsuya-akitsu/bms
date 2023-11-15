@@ -1,6 +1,6 @@
-import { CharacterTagSeed } from '@/types';
+import { CharacterTagModelSeed } from '@/types';
 
-export const characterTags: Array<CharacterTagSeed> = [
+export const characterTags: Array<CharacterTagModelSeed> = [
   {
     name: 'アタッカー',
     isActivation: true,

@@ -1,64 +1,75 @@
 import { CharacterAttributes, CharacterType } from "@prisma/client"
 
-interface CharacterSkill {
-  name: string;
-  effects: Array<{
-    level: 1 | 2 | 3 | 4 | 5;
-    effect: string
-  }>;
-}
+// @TODO: 追々情報として追加するかも…？
+// interface CharacterSkill {
+//   name: string;
+//   effect: {
+//     level: number;
+//     effect: string;
+//     detail: string;
+//   };
+// }
 
-interface CharacterProperty {
-  uniqueFeature?: Array<{
-    label: string;
-    feature: Array<string>;
-  }>;
-  characterFeature: Array<string>;
-  feature1: Array<string>;
-  feature2: Array<string>;
-  boostFeature: Array<string>;
-}
+// interface CharacterProperty {
+//   uniqueFeature?: Array<{
+//     label: string;
+//     feature: Array<string>;
+//   }>;
+//   characterFeature: Array<string>;
+//   feature1: Array<string>;
+//   feature2: Array<string>;
+//   boostFeature: Array<string>;
+// }
 
-interface Characters {
+interface CharacterModelSeed {
   name: string;
   label: string;
-  boost: 0 | 1 | 2 | 3;
-  attributes: CharacterAttributes;
   type: CharacterType;
-  status: {
-    level: number;
-    totalScore: number;
-    strength: number;
-    attack: number;
-    defense: number;
-    critical: number;
-    charaBoost: number;
-  };
-  skill: {
-    skill1: CharacterSkill | Array<CharacterSkill>;
-    skill2: CharacterSkill | Array<CharacterSkill>;
-    teamBoost: {
-      name: string;
-      effect: string;
+  attributes: CharacterAttributes;
+  hasCharacter: boolean;
+  userId: number;
+}
+
+interface CharacterDetailModelSeed {
+  maximum: {
+    status: {
+      level: number;
+      comprehensive: number;
+      strength: number;
+      attack: number;
+      defense: number;
+      critical: number;
+      boost: number;
+    };
+    skills: {
+      skill1: number;
+      skill2: number;
     };
   };
-  property: CharacterProperty;
-  hasCharacter: boolean;
-  userId: number;
+  userdata: {
+    status: {
+      level: number;
+      comprehensive: number;
+      strength: number;
+      attack: number;
+      defense: number;
+      critical: number;
+      boost: number;
+      medals: {
+        comprehensive: number;
+        strength: number;
+        attack: number;
+        defense: number;
+      };
+    };
+    skills: {
+      skill1: number;
+      skill2: number;
+    };
+  };
 }
 
-interface CharactersSeed {
-  name: string;
-  label: string;
-  attributes: CharacterAttributes;
-  type: CharacterType;
-  totalScore: number;
-  boost: 0 | 1 | 2 | 3;
-  hasCharacter: boolean;
-  userId: number;
-}
-
-interface CharacterTagSeed {
+interface CharacterTagModelSeed {
   name: string;
   isActivation: boolean;
   effect: Array<{
@@ -67,25 +78,6 @@ interface CharacterTagSeed {
   }>;
 }
 
-interface CharacterDetailSeed {
-  status: {
-    level: number;
-    totalScore: number;
-    strength: number;
-    attack: number;
-    defense: number;
-    critical: number;
-    charaBoost: number;
-  };
-  skill: {
-    skill1: CharacterSkill | Array<CharacterSkill>;
-    skill2: CharacterSkill | Array<CharacterSkill>;
-    teamBoost: {
-      name: string;
-      effect: string;
-    };
-  };
-  property: CharacterProperty;
-  hasCharacter: boolean;
-  userId: number;
+interface Character extends CharacterModelSeed {
+  maximum: CharacterDetailModelSeed['maximum']
 }

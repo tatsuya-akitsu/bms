@@ -2,7 +2,8 @@
 import prisma from '../src/lib/prisma';
 import { characters } from '../src/constants/character';
 import { characterTags } from '../src/constants/character-tag';
-import { Characters, CharactersSeed } from '../src/types';
+import { CharacterModelSeed } from '../src/types';
+import { Character } from '@prisma/client';
 
 async function seedUser() {
   await prisma.user.upsert({
@@ -18,14 +19,12 @@ async function seedUser() {
 }
 
 async function seedCharacter() {
-  const charactersData: Array<CharactersSeed> = characters.map((character: Characters) => {
+  const charactersData = characters.map((character: CharacterModelSeed) => {
     return {
       name: character.name,
       label: character.label,
       attributes: character.attributes,
       type: character.type,
-      totalScore: character.status.totalScore,
-      boost: character.boost,
       hasCharacter: character.hasCharacter,
       userId: character.userId
     }
@@ -33,6 +32,49 @@ async function seedCharacter() {
   await prisma.character.createMany({
     data: charactersData,
   });
+}
+
+async function getCharacters() {
+  return prisma.character.findMany();
+}
+
+function createInitialCharacterDetail(character: Character) {
+  const characterData = characters.filter((item) => item.name === character.name && item.label === character.label && item.type === character.type);
+  return {
+    maximum: JSON.stringify(characterData[0].maximum),
+    userdata: JSON.stringify({
+      status: {
+        level: 60,
+        comprehensive: 0,
+        strength: 0,
+        attack: 0,
+        defense: 0,
+        critical: 0,
+        boost: 0,
+        medals: {
+          comprehensive: 0,
+          strength: 0,
+          attack: 0,
+          defense: 0,
+        },
+      },
+      skills: {
+        skill1: 1,
+        skill2: 1,
+      },
+    }),
+    characterId: character.id,
+  };
+}
+
+async function seedCharacterDetail() {
+  const characters = await getCharacters();
+  for (const character of characters) {
+    const characterDetailData = createInitialCharacterDetail(character);
+    await prisma.characterDetail.create({
+      data: characterDetailData,
+    });
+  }
 }
 
 async function seedCharacterTag() {
@@ -45,6 +87,7 @@ async function main() {
   await seedUser()
   await seedCharacter()
   await seedCharacterTag()
+  await seedCharacterDetail()
 }
 
 main()

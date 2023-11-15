@@ -11,54 +11,51 @@ datasource db {
 }
 
 model User {
-  id           Int                 @id @default(autoincrement())
-  email        String              @unique
-  characters   Character[]
-  createdAt    DateTime @default(now())
+  id         Int         @id @default(autoincrement())
+  email      String      @unique
+  characters Character[]
+  createdAt  DateTime    @default(now())
 }
 
 model Character {
-  id           Int                       @id @default(autoincrement())
-  name         String
-  label        String
-  type         CharacterType
-  attributes   CharacterAttributes
-  totalScore   Int
-  boost        Int
-  characterTags CharacterToCharacterTag[]
-  characterDetails CharacterDetail[]
-  hasCharacter Boolean
-  userId       Int
-  user         User                     @relation(fields: [userId], references: [id])
-  createdAt    DateTime                 @default(now())
+  id              Int                 @id @default(autoincrement())
+  name            String
+  label           String
+  type            CharacterType
+  attributes      CharacterAttributes
+  hasCharacter    Boolean
+  createdAt       DateTime            @default(now())
+  userId          Int
+  user            User                @relation(fields: [userId], references: [id])
+  characterDetail CharacterDetail[]
 }
 
 model CharacterDetail {
-  id            Int               @id @default(autoincrement())
-  status        Json
-  skill         Json
-  property      Json
-  character      Character         @relation(fields: [id], references: [id])
-  createdAt      DateTime          @default(now())
+  id                  Int                  @id @default(autoincrement())
+  maximum             Json
+  userdata            Json
+  createdAt           DateTime             @default(now())
+  characterId         Int
+  character           Character            @relation(fields: [characterId], references: [id])
+  characterDetailTags CharacterDetailTag[]
 }
 
 model CharacterTag {
-  id           Int                       @id @default(autoincrement())
-  name         String
-  isActivation Boolean
-  effect       Json
-  characterTags CharacterToCharacterTag[]
-  createdAt    DateTime                 @default(now())
+  id                  Int                  @id @default(autoincrement())
+  name                String
+  isActivation        Boolean
+  effect              Json
+  createdAt           DateTime             @default(now())
+  characterDetailTags CharacterDetailTag[]
 }
 
-// 中間テーブル（結合テーブル）
-model CharacterToCharacterTag {
-  character         Character                @relation(fields: [characterId], references: [id])
-  characterId       Int
-  tag               CharacterTag             @relation(fields: [tagId], references: [id])
-  tagId             Int
+model CharacterDetailTag {
+  characterDetailId Int
+  characterTagId    Int
+  characterDetail   CharacterDetail @relation(fields: [characterDetailId], references: [id])
+  characterTag      CharacterTag    @relation(fields: [characterTagId], references: [id])
 
-  @@id([characterId, tagId])
+  @@id([characterDetailId, characterTagId])
 }
 
 enum CharacterType {
