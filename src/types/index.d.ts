@@ -79,5 +79,6 @@ interface CharacterTagModelSeed {
 }
 
 interface Character extends CharacterModelSeed {
-  maximum: CharacterDetailModelSeed['maximum']
+  maximum: CharacterDetailModelSeed['maximum'];
+  tags: Array<number>;
 }

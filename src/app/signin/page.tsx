@@ -10,7 +10,7 @@ import { auth, googleProvider, twitterProvider } from '@/api/firebase';
 import Headline from '@/components/modules/Headline'
 import Button from '@/components/modules/Button'
 import Icon from '@/components/modules/Icon';
-import { iconRatio } from '@/constants/character';
+import { iconRatio } from '@/constants/index';
 import { useRecoilState } from 'recoil';
 import { useUserState } from '@/store/user';
 

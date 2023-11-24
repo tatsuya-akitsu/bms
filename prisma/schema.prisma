@@ -11,33 +11,34 @@ datasource db {
 }
 
 model User {
-  id         Int         @id @default(autoincrement())
-  email      String      @unique
-  characters Character[]
-  createdAt  DateTime    @default(now())
+  id                   Int                   @id @default(autoincrement())
+  email                String                @unique
+  characters           Character[]
+  userCharacterDetails UserCharacterDetail[]
+  createdAt            DateTime              @default(now())
 }
 
 model Character {
-  id              Int                 @id @default(autoincrement())
-  name            String
-  label           String
-  type            CharacterType
-  attributes      CharacterAttributes
-  hasCharacter    Boolean
-  createdAt       DateTime            @default(now())
-  userId          Int
-  user            User                @relation(fields: [userId], references: [id])
-  characterDetail CharacterDetail[]
+  id           Int                 @id @default(autoincrement())
+  name         String
+  label        String
+  type         CharacterType
+  attributes   CharacterAttributes
+  hasCharacter Boolean
+  createdAt    DateTime            @default(now())
+  userId       Int
+  user         User                @relation(fields: [userId], references: [id])
+  details      CharacterDetail[]
 }
 
 model CharacterDetail {
-  id                  Int                  @id @default(autoincrement())
-  maximum             Json
-  userdata            Json
-  createdAt           DateTime             @default(now())
-  characterId         Int
-  character           Character            @relation(fields: [characterId], references: [id])
-  characterDetailTags CharacterDetailTag[]
+  id                   Int                   @id @default(autoincrement())
+  maximum              Json
+  createdAt            DateTime              @default(now())
+  characterId          Int
+  character            Character             @relation(fields: [characterId], references: [id])
+  characterDetailTags  CharacterDetailTag[]
+  userCharacterDetails UserCharacterDetail[]
 }
 
 model CharacterTag {
@@ -47,6 +48,16 @@ model CharacterTag {
   effect              Json
   createdAt           DateTime             @default(now())
   characterDetailTags CharacterDetailTag[]
+}
+
+model UserCharacterDetail {
+  userId            Int
+  characterDetailId Int
+  userdata          Json // ユーザーごとのキャラクターのステータス情報
+  user              User            @relation(fields: [userId], references: [id])
+  characterDetail   CharacterDetail @relation(fields: [characterDetailId], references: [id])
+
+  @@id([userId, characterDetailId])
 }
 
 model CharacterDetailTag {

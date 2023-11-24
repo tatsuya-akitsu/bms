@@ -1,6 +1,6 @@
 // prisma/seed.ts
 import prisma from '../src/lib/prisma';
-import { characters } from '../src/constants/character';
+import { characterMasterData } from '../src/constants/character';
 import { characterTags } from '../src/constants/character-tag';
 import { CharacterModelSeed } from '../src/types';
 import { Character } from '@prisma/client';
@@ -19,7 +19,7 @@ async function seedUser() {
 }
 
 async function seedCharacter() {
-  const charactersData = characters.map((character: CharacterModelSeed) => {
+  const charactersData = characterMasterData.map((character: CharacterModelSeed) => {
     return {
       name: character.name,
       label: character.label,
@@ -38,31 +38,14 @@ async function getCharacters() {
   return prisma.character.findMany();
 }
 
+async function getCharacterTags() {
+  return prisma.characterTag.findMany();
+}
+
 function createInitialCharacterDetail(character: Character) {
-  const characterData = characters.filter((item) => item.name === character.name && item.label === character.label && item.type === character.type);
+  const characterData = characterMasterData.filter((item) => item.name === character.name && item.label === character.label && item.type === character.type);
   return {
     maximum: JSON.stringify(characterData[0].maximum),
-    userdata: JSON.stringify({
-      status: {
-        level: 60,
-        comprehensive: 0,
-        strength: 0,
-        attack: 0,
-        defense: 0,
-        critical: 0,
-        boost: 0,
-        medals: {
-          comprehensive: 0,
-          strength: 0,
-          attack: 0,
-          defense: 0,
-        },
-      },
-      skills: {
-        skill1: 1,
-        skill2: 1,
-      },
-    }),
     characterId: character.id,
   };
 }
@@ -77,6 +60,68 @@ async function seedCharacterDetail() {
   }
 }
 
+async function getCharacterDetails() {
+  return prisma.characterDetail.findMany();
+}
+
+async function seedUserCharacterDetail() {
+  const characters = await getCharacters();
+  const characterDetails = await getCharacterDetails();
+
+  for (const character of characters) {
+    await prisma.userCharacterDetail.create({
+      data: {
+        userId: character.userId,
+        characterDetailId: characterDetails.filter(
+          (item) => item.characterId === character.id
+        )[0].id,
+        userdata: JSON.stringify({
+          status: {
+            level: 60,
+            comprehensive: 0,
+            strength: 0,
+            attack: 0,
+            defense: 0,
+            critical: 0,
+            boost: 0,
+            medals: {
+              comprehensive: 0,
+              strength: 0,
+              attack: 0,
+              defense: 0,
+            },
+          },
+          skills: {
+            skill1: 1,
+            skill2: 1,
+          },
+        }),
+      },
+    });
+  }
+}
+
+async function seedCharacterDetailTag() {
+  const characters = await getCharacters();
+  const characterDetails = await getCharacterDetails();
+
+  for (const character of characters) {
+    const characterDetail = characterDetails.filter((item) => item.characterId === character.id)[0]
+    const characterTags = characterMasterData.filter(
+      (item) => item.name === character.name && item.label === character.label
+    ).flatMap((item) => item.tags);
+
+    for (const tagId of characterTags) {
+      await prisma.characterDetailTag.create({
+        data: {
+          characterDetailId: characterDetail.id,
+          characterTagId: tagId,
+        },
+      });
+    }
+  }
+}
+
 async function seedCharacterTag() {
   await prisma.characterTag.createMany({
     data: characterTags,
@@ -88,6 +133,8 @@ async function main() {
   await seedCharacter()
   await seedCharacterTag()
   await seedCharacterDetail()
+  await seedUserCharacterDetail()
+  await seedCharacterDetailTag()
 }
 
 main()

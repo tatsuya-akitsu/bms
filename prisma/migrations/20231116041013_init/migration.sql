@@ -31,7 +31,6 @@ CREATE TABLE "Character" (
 CREATE TABLE "CharacterDetail" (
     "id" SERIAL NOT NULL,
     "maximum" JSONB NOT NULL,
-    "userdata" JSONB NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "characterId" INTEGER NOT NULL,
 
@@ -50,6 +49,15 @@ CREATE TABLE "CharacterTag" (
 );
 
 -- CreateTable
+CREATE TABLE "UserCharacterDetail" (
+    "userId" INTEGER NOT NULL,
+    "characterDetailId" INTEGER NOT NULL,
+    "userdata" JSONB NOT NULL,
+
+    CONSTRAINT "UserCharacterDetail_pkey" PRIMARY KEY ("userId","characterDetailId")
+);
+
+-- CreateTable
 CREATE TABLE "CharacterDetailTag" (
     "characterDetailId" INTEGER NOT NULL,
     "characterTagId" INTEGER NOT NULL,
@@ -65,6 +73,12 @@ ALTER TABLE "Character" ADD CONSTRAINT "Character_userId_fkey" FOREIGN KEY ("use
 
 -- AddForeignKey
 ALTER TABLE "CharacterDetail" ADD CONSTRAINT "CharacterDetail_characterId_fkey" FOREIGN KEY ("characterId") REFERENCES "Character"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "UserCharacterDetail" ADD CONSTRAINT "UserCharacterDetail_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "UserCharacterDetail" ADD CONSTRAINT "UserCharacterDetail_characterDetailId_fkey" FOREIGN KEY ("characterDetailId") REFERENCES "CharacterDetail"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "CharacterDetailTag" ADD CONSTRAINT "CharacterDetailTag_characterDetailId_fkey" FOREIGN KEY ("characterDetailId") REFERENCES "CharacterDetail"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
