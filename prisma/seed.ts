@@ -52,12 +52,14 @@ function createInitialCharacterDetail(character: Character) {
 
 async function seedCharacterDetail() {
   const characters = await getCharacters();
-  for (const character of characters) {
+  const characterDetailPromises = characters.map((character) => {
     const characterDetailData = createInitialCharacterDetail(character);
-    await prisma.characterDetail.create({
+    return prisma.characterDetail.create({
       data: characterDetailData,
     });
-  }
+  });
+
+  await prisma.$transaction(characterDetailPromises);
 }
 
 async function getCharacterDetails() {
@@ -68,13 +70,15 @@ async function seedUserCharacterDetail() {
   const characters = await getCharacters();
   const characterDetails = await getCharacterDetails();
 
-  for (const character of characters) {
-    await prisma.userCharacterDetail.create({
+  const userCharacterDetailPromises = characters.map((character) => {
+    const characterDetailId = characterDetails.filter(
+      (item) => item.characterId === character.id
+    )[0].id;
+
+    return prisma.userCharacterDetail.create({
       data: {
         userId: character.userId,
-        characterDetailId: characterDetails.filter(
-          (item) => item.characterId === character.id
-        )[0].id,
+        characterDetailId,
         userdata: JSON.stringify({
           status: {
             level: 60,
@@ -97,29 +101,37 @@ async function seedUserCharacterDetail() {
           },
         }),
       },
-    });
-  }
+    })
+  })
+
+  await prisma.$transaction(userCharacterDetailPromises);
 }
 
 async function seedCharacterDetailTag() {
   const characters = await getCharacters();
   const characterDetails = await getCharacterDetails();
 
-  for (const character of characters) {
-    const characterDetail = characterDetails.filter((item) => item.characterId === character.id)[0]
-    const characterTags = characterMasterData.filter(
-      (item) => item.name === character.name && item.label === character.label
-    ).flatMap((item) => item.tags);
+  const characterDetailTagPromises = characters.flatMap((character) => {
+    const characterDetail = characterDetails.filter(
+      (item) => item.characterId === character.id
+    )[0];
+    const characterTags = characterMasterData
+      .filter(
+        (item) => item.name === character.name && item.label === character.label
+      )
+      .flatMap((item) => item.tags);
 
-    for (const tagId of characterTags) {
-      await prisma.characterDetailTag.create({
+    return characterTags.map((tagId) => {
+      return prisma.characterDetailTag.create({
         data: {
           characterDetailId: characterDetail.id,
           characterTagId: tagId,
         },
       });
-    }
-  }
+    })
+  })
+
+  await prisma.$transaction(characterDetailTagPromises);
 }
 
 async function seedCharacterTag() {
