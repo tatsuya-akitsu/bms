@@ -658,4 +658,14 @@ export const characterTags: Array<CharacterTagModelSeed> = [
     isActivation: false,
     effect: [],
   },
+  {
+    name: '忍者',
+    isActivation: false,
+    effect: []
+  },
+  {
+    name: 'シャンブルズ',
+    isActivation: false,
+    effect: []
+  }
 ];
