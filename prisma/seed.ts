@@ -129,8 +129,15 @@ async function seedCharacterDetailTag() {
       .flatMap((item) => item.tags);
 
     return characterTags.map((tagId) => {
-      return prisma.characterDetailTag.create({
-        data: {
+      return prisma.characterDetailTag.upsert({
+        where: {
+          characterDetailId_characterTagId: {
+            characterDetailId: characterDetail.id,
+            characterTagId: tagId,
+          },
+        },
+        update: {},
+        create: {
           characterDetailId: characterDetail.id,
           characterTagId: tagId,
         },
