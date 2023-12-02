@@ -75,8 +75,15 @@ async function seedUserCharacterDetail() {
       (item) => item.characterId === character.id
     )[0].id;
 
-    return prisma.userCharacterDetail.create({
-      data: {
+    return prisma.userCharacterDetail.upsert({
+      where: {
+        userId_characterDetailId: {
+          userId: character.userId,
+          characterDetailId: characterDetailId,
+        },
+      },
+      update: {},
+      create: {
         userId: character.userId,
         characterDetailId,
         userdata: JSON.stringify({
@@ -101,7 +108,7 @@ async function seedUserCharacterDetail() {
           },
         }),
       },
-    })
+    });
   })
 
   await prisma.$transaction(userCharacterDetailPromises);
