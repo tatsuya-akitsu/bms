@@ -1,3 +1,24 @@
-.imageItem {
+.hero {
   position: relative;
+}
+
+.hexagon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--hexagon-md-size);
+  height: var(--hexagon-md-size);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hexagon .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.attributeIcon {
+  width: 36px;
 }

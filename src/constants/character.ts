@@ -24,6 +24,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 2, 3, 4, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -48,6 +49,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 8, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: true,
     userId: 0,
   },
   {
@@ -72,6 +74,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -96,6 +99,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 11, 9, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -120,6 +124,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 2, 3, 4, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -144,6 +149,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 13, 11, 3, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -168,6 +174,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 3, 11, 7, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -192,6 +199,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 8, 9, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -216,6 +224,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 8, 4, 9],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -240,6 +249,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -264,6 +274,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [5, 15],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -288,6 +299,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 16, 11, 3, 4, 9],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -312,11 +324,12 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
-    name: '2年後／船長',
-    label: 'モンキー・D・ルフィ',
+    name: 'モンキー・D・ルフィ',
+    label: '2年後／船長',
     attributes: CharacterAttributes.BLUE,
     type: CharacterType.ATTACKER,
     maximum: {
@@ -336,6 +349,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -360,6 +374,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -384,6 +399,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 8, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -408,6 +424,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 17, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -432,6 +449,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 18, 19, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -456,6 +474,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 17, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -480,6 +499,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 8, 3, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -504,6 +524,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -528,6 +549,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -552,6 +574,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 20, 11, 3, 9, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -576,6 +599,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 8, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -600,6 +624,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 2, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -624,6 +649,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -648,6 +674,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -672,6 +699,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -696,6 +724,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 8, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -720,6 +749,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 21, 8, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -744,6 +774,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 17, 11, 3, 9, 4, 22, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -768,6 +799,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 17, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -792,6 +824,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -816,6 +849,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -840,6 +874,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -864,6 +899,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 3, 9, 13, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -888,6 +924,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 16, 8, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -912,6 +949,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -936,6 +974,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 8, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -960,6 +999,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 8, 9, 13, 23],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -984,6 +1024,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 8, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1008,6 +1049,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 11, 3, 9, 13, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1032,6 +1074,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 8, 9, 4, 10, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1056,6 +1099,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 8, 24, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1080,6 +1124,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 20, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1104,6 +1149,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 8, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1128,6 +1174,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 3, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1152,6 +1199,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 21, 19, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1176,6 +1224,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1200,6 +1249,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1224,6 +1274,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 8, 3, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1248,6 +1299,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 16, 19, 9, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1272,6 +1324,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1296,6 +1349,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 16, 25, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1320,6 +1374,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 8, 3, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1344,6 +1399,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 3, 9, 10],
     hasCharacter: false,
+    isMultipleType: true,
     userId: 0,
   },
   {
@@ -1368,6 +1424,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26, 11, 3, 9, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1392,6 +1449,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 16, 8, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1416,6 +1474,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1440,6 +1499,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1464,6 +1524,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1488,6 +1549,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 17, 27, 11, 3, 9, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1512,6 +1574,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 21, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1536,6 +1599,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 20, 19, 9, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1560,6 +1624,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 28, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1584,6 +1649,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 17, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1608,6 +1674,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1632,6 +1699,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4, 10, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1656,6 +1724,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13, 29],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1680,6 +1749,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1704,6 +1774,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1728,6 +1799,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1752,6 +1824,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 17, 27, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1776,6 +1849,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1800,6 +1874,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 17, 18, 11, 9, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1824,6 +1899,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1848,6 +1924,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 3, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1872,6 +1949,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 17, 28, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1896,6 +1974,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 30, 8, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1920,6 +1999,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1944,6 +2024,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1968,6 +2049,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 19, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -1992,6 +2074,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4, 32],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2016,6 +2099,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 18, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2040,6 +2124,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26, 3],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2064,6 +2149,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 8, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2088,6 +2174,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2112,6 +2199,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 18, 9, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2136,6 +2224,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2160,6 +2249,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2184,6 +2274,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2208,6 +2299,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2232,6 +2324,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 8, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2256,6 +2349,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 16, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2280,6 +2374,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26, 24, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2304,6 +2399,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 21, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2328,6 +2424,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26, 7, 11, 3, 9],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2352,6 +2449,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2376,6 +2474,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26, 24],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2400,6 +2499,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26, 3],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2424,6 +2524,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2448,6 +2549,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26, 3],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2472,6 +2574,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 30, 8, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2496,6 +2599,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2520,6 +2624,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2544,6 +2649,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 16, 4, 12, 25],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2568,6 +2674,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2592,6 +2699,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2616,6 +2724,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4, 32],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2640,6 +2749,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 20, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2664,6 +2774,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2688,6 +2799,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2712,6 +2824,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13],
     hasCharacter: false,
+    isMultipleType: true,
     userId: 0,
   },
   {
@@ -2736,6 +2849,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 17, 3, 24, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2760,6 +2874,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13, 29],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2784,6 +2899,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26, 2, 3, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2808,6 +2924,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4, 25, 33],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2832,6 +2949,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 25],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2856,6 +2974,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4, 33],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2880,6 +2999,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 8, 9, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2904,6 +3024,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2928,6 +3049,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 30, 8, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2952,6 +3074,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -2976,6 +3099,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3000,6 +3124,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 28, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3024,6 +3149,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 9, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3048,6 +3174,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3072,6 +3199,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26, 3, 24],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3096,6 +3224,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3120,6 +3249,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3144,6 +3274,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3168,6 +3299,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 8, 4, 12, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3192,6 +3324,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3216,6 +3349,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26, 21],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3240,6 +3374,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 28, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3264,6 +3399,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 3, 9, 13, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3288,6 +3424,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 4, 10, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3312,6 +3449,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3336,6 +3474,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26, 3],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3360,6 +3499,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3384,6 +3524,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26, 7, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3408,6 +3549,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3432,6 +3574,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3456,6 +3599,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3480,6 +3624,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3504,6 +3649,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 8, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3528,6 +3674,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 17, 27, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3552,6 +3699,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3576,6 +3724,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3600,6 +3749,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3624,6 +3774,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 17, 19, 3, 9, 13, 10, 29],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3648,6 +3799,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3672,6 +3824,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3696,6 +3849,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 3, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3720,6 +3874,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 3, 9, 13, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3744,6 +3899,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3768,6 +3924,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 33],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3792,6 +3949,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3816,6 +3974,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 2, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3840,6 +3999,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 8, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3864,6 +4024,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3888,6 +4049,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3912,6 +4074,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 8, 24, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3936,6 +4099,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3960,6 +4124,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -3984,6 +4149,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4008,6 +4174,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4032,6 +4199,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4056,6 +4224,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4080,6 +4249,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26, 24],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4104,6 +4274,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 18, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4128,6 +4299,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 28, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4152,6 +4324,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4176,6 +4349,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4, 10],
     hasCharacter: false,
+    isMultipleType: true,
     userId: 0,
   },
   {
@@ -4200,6 +4374,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4224,6 +4399,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 18, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4248,6 +4424,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 9, 4, 12, 25, 34],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4272,6 +4449,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 17, 27, 11, 3, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4296,6 +4474,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4320,6 +4499,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 3, 24, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4344,6 +4524,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4368,6 +4549,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 8, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4392,6 +4574,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 4],
     hasCharacter: false,
+    isMultipleType: true,
     userId: 0,
   },
   {
@@ -4416,6 +4599,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 3, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4440,6 +4624,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 13, 23],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4464,6 +4649,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 16, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4488,6 +4674,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4512,6 +4699,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 21, 19, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4536,6 +4724,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4560,6 +4749,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 13, 23],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4584,6 +4774,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 20, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4608,6 +4799,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 16, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4632,6 +4824,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 20, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4656,6 +4849,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 16, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4680,6 +4874,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 21, 20, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4704,6 +4899,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4728,6 +4924,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4752,6 +4949,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 21, 19, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4776,6 +4974,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 28, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4800,6 +4999,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4824,6 +5024,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4848,6 +5049,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 4, 32],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4872,6 +5074,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 24, 4, 25],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4896,6 +5099,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 25, 33],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4920,6 +5124,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4944,6 +5149,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4, 25],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4968,6 +5174,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 9, 4, 25, 34],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -4992,6 +5199,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 18, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5016,6 +5224,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4, 34],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5040,6 +5249,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5064,6 +5274,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 21, 4, 35],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5088,6 +5299,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 7, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5112,6 +5324,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5136,6 +5349,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 19, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5160,6 +5374,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5184,6 +5399,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 26, 17],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5208,6 +5424,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5232,6 +5449,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 13, 23],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5256,6 +5474,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 26, 2, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5280,6 +5499,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5304,6 +5524,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5328,6 +5549,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5352,6 +5574,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5376,6 +5599,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5400,6 +5624,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5424,6 +5649,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5448,6 +5674,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4, 25],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5472,6 +5699,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5496,6 +5724,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 3, 24, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5520,6 +5749,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 3, 24, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5544,6 +5774,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 17, 20, 11, 3, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5568,6 +5799,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 20, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5592,6 +5824,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5616,6 +5849,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 20, 11, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5640,6 +5874,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 16, 19, 9, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5664,6 +5899,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 11, 9, 4, 5],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5688,6 +5924,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5712,6 +5949,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 7, 24, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5736,6 +5974,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5760,6 +5999,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 8, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5784,6 +6024,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 4, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5808,6 +6049,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5832,6 +6074,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 18, 19, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5856,6 +6099,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5880,6 +6124,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 19, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5904,6 +6149,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 26],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5928,6 +6174,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5952,6 +6199,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 13],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -5976,6 +6224,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 7, 8, 9, 4, 33],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6000,6 +6249,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 3, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: true,
     userId: 0,
   },
   {
@@ -6024,6 +6274,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 11, 3, 9, 4, 31],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6048,6 +6299,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6072,6 +6324,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 21, 19, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6096,6 +6349,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 7, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6120,6 +6374,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 4, 7, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6144,6 +6399,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 4, 8, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6168,6 +6424,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 24, 18],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6192,6 +6449,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6216,6 +6474,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 19, 3, 9, 4],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6240,6 +6499,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 11, 9, 13, 18],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6264,6 +6524,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 8, 9, 4, 14],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6288,6 +6549,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13, 16, 19],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6312,6 +6574,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6336,6 +6599,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [6, 13, 21],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6360,6 +6624,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 4, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6384,6 +6649,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [1, 13, 7],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6408,6 +6674,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 4, 10],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6432,6 +6699,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 13, 12],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
   {
@@ -6456,6 +6724,7 @@ export const characterMasterData: Character[] = [
     },
     tags: [15, 4, 21],
     hasCharacter: false,
+    isMultipleType: false,
     userId: 0,
   },
 ];

@@ -1,0 +1,20 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.2rem 2.2rem;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.inner img {
+  width: 200px;
+}

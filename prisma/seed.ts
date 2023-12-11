@@ -19,13 +19,15 @@ async function seedUser() {
 }
 
 async function seedCharacter() {
-  const charactersData = characterMasterData.map((character: CharacterModelSeed) => {
+  const charactersData = characterMasterData.map((character) => {
     return {
       name: character.name,
       label: character.label,
       attributes: character.attributes,
       type: character.type,
+      totalScore: character.maximum.status.comprehensive,
       hasCharacter: character.hasCharacter,
+      isMultipleType: character.isMultipleType,
       userId: character.userId
     }
   })

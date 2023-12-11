@@ -27,6 +27,7 @@ interface CharacterModelSeed {
   type: CharacterType;
   attributes: CharacterAttributes;
   hasCharacter: boolean;
+  isMultipleType: boolean;
   userId: number;
 }
 
@@ -81,4 +82,8 @@ interface CharacterTagModelSeed {
 interface Character extends CharacterModelSeed {
   maximum: CharacterDetailModelSeed['maximum'];
   tags: Array<number>;
+}
+
+interface CharacterData extends Character {
+  totalScore: number;
 }

@@ -24,7 +24,9 @@ model Character {
   label        String
   type         CharacterType
   attributes   CharacterAttributes
+  totalScore   Int
   hasCharacter Boolean
+  isMultipleType   Boolean
   createdAt    DateTime            @default(now())
   userId       Int
   user         User                @relation(fields: [userId], references: [id])
