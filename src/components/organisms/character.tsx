@@ -4,15 +4,17 @@ import React, { ForwardedRef, forwardRef } from 'react'
 import ListStyle from '@/app/styles/object/projects/characters.module.css'
 import ImageStyle from '@/app/styles/object/components/image-item.module.css';
 
-const Character = forwardRef<HTMLLIElement, { character: CharacterData, index: number, isLast: boolean }>(({ character, index, isLast }, ref) => {
+const Character: React.FC<{ character: CharacterData, index: number }> = ({ character, index }) => {
   return (
-    <li className={isLast ? 'isLast' : ''} ref={isLast ? ref : null}>
+    <li>
       <div className={ListStyle.box}>
         <div className={`${ImageStyle.hexagon} ${ListStyle.thumbnail}`}>
           <div
             className={ImageStyle.image}
             style={{
-              backgroundImage: `url(/images/characters/character_${index + 1}.png)`,
+              backgroundImage: `url(/images/characters/character_${
+                index + 1
+              }.png)`,
             }}
           ></div>
         </div>
@@ -37,7 +39,7 @@ const Character = forwardRef<HTMLLIElement, { character: CharacterData, index: n
       </div>
     </li>
   );
-})
+}
 
 Character.displayName = 'Character'
 

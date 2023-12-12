@@ -11,59 +11,66 @@ import ListStyle from '@/app/styles/object/projects/characters.module.css';
 const Characters = () => {
   const [data, setData] = useState<Array<CharacterData>>([])
   const [page, setPage] = useState<number>(1)
+  const [hasData, setHasData] = useState<boolean>(true)
   const isDevFetchFlg = useRef<boolean>(true)
   const isDevObserverFlg = useRef<boolean>(true)
-  const item = useRef<HTMLLIElement>(null)
-  const observer = useRef<IntersectionObserver | null>(null)
+  const target = useRef<HTMLDivElement>(null)
 
-  const handleObserver = (entries: IntersectionObserverEntry[]) => {
-    const target = entries[0]
-    if (target.isIntersecting) setPage((prev) => prev + 1)
-  }
+  const fetchData = async (number: number) => {
+    const res = await fetch(
+      `http://localhost:3000/api/characters?page=${number}`
+    );
+    const data: CharacterData[] = await res.json();
+    const count = data.length
+
+    if (data.length === 0) {
+      setHasData(false)
+      return;
+    }
+    setData((prev) => [...prev, ...data]);
+    setHasData(count > 0);
+  };
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       if (isDevObserverFlg.current) {
-        isDevObserverFlg.current = false
-        return
+        isDevObserverFlg.current = false;
+        return;
       }
     }
 
-    observer.current = new IntersectionObserver(handleObserver, {
-      root: document.querySelector(`.${ListStyle.wrapper}`),
-      threshold: 1.0,
-    });
-    if (item.current) observer.current.observe(item.current)
-    return () => {
-      if (observer.current) observer.current.disconnect()
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          if (hasData) {
+            setPage((prev) => prev + 1)
+          }
+        }
+      },
+      { threshold: 1.0 }
+    )
+
+    if (target.current) {
+      observer.observe(target.current)
     }
-  }, [data])
+    return () => {
+      if (target.current) {
+        observer.unobserve(target.current)
+      }
+    }
+  }, [hasData, target])
 
   useEffect(() => {
-    const fetchData = async () => {
-      console.log(page)
-      const res = await fetch(
-        `http://localhost:3000/api/characters?page=${page}`
-      );
-      const data = await res.json();
-
-      if (data.length === 0 || data.length < 20) {
-        if (item.current && observer.current) {
-          observer.current.unobserve(item.current)
-        }
-        return
-      }
-      setData((prev) => [...prev, ...data])
-    }
-
     if (process.env.NODE_ENV === 'development') {
       if (isDevFetchFlg.current) {
-        isDevFetchFlg.current = false
-        return
+        isDevFetchFlg.current = false;
+        return;
       }
     }
 
-    fetchData()
+    if (page > 0) {
+      fetchData(page)
+    }
   }, [page])
 
   // const characters = use<CharacterData[]>(getCharacters());
@@ -76,12 +83,13 @@ const Characters = () => {
               key={i}
               character={character}
               index={i}
-              isLast={i === data.length - 1}
-              ref={i === data.length - 1 ? item : null}
             />
           );
         })}
       </ul>
+      <div ref={target}>
+        {hasData && <p>Load More Characters...</p>}
+      </div>
     </div>
   );
 }
