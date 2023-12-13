@@ -1,6 +1,7 @@
 'use client'
 import Header from '@/components/modules/Header'
 import { RecoilRoot } from 'recoil';
+import styles from '@/app/styles/object/projects/shared.module.css'
 
 export default function RootTemplate({
   children,
@@ -9,8 +10,10 @@ export default function RootTemplate({
 }) {
   return (
     <RecoilRoot>
-      <Header />
-      <div>{children}</div>
+      <div className={styles.template}>
+        <Header />
+        <div>{children}</div>
+      </div>
     </RecoilRoot>
   );
 }

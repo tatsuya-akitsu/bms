@@ -1,0 +1,19 @@
+.table_character_label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--base-annotation-color);
+}
+
+.table_character_name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.table_character_type {
+  font-size: 1.4rem;
+}
+
+.table_character_score {
+  font-size: 1.4rem;
+  font-weight: bold;
+}

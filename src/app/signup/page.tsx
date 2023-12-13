@@ -3,7 +3,6 @@ import React, { FC, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from '@/app/styles/object/projects/signin-page.module.css';
 import icon from '@/app/styles/object/components/icon.module.css'
-import utilities from '@/app/styles/object/utilities/sizing.module.css';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/api/firebase';
 
@@ -53,7 +52,7 @@ const Signup = () => {
 
   return (
     <div
-      className={`${styles.container} ${utilities.fullHeight} ${utilities.fullWidth}`}
+      className={`${styles.container}`}
     >
       <div className={styles.inner}>
         <Headline label={`New Registration`} title={`新規登録`} />

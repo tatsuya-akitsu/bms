@@ -1,14 +1,16 @@
 'use client'
 import { CharacterData } from '@/types';
 import { cache, use, useCallback, useEffect, useRef, useState } from 'react';
-import Character from '@/components/organisms/character';
-import ListStyle from '@/app/styles/object/projects/characters.module.css';
+import CharacterTable from '@/components/organisms/character/table';
+import styles from '@/app/styles/object/components/table.module.css'
+import iconStyles from '@/app/styles/object/components/icon.module.css'
 
 // const getCharacters = cache(() =>
 //   fetch('http://localhost:3000/api/characters').then((res) => res.json())
 // );
 
 const Characters = () => {
+  const thead = ['', '名前', 'タイプ', '属性', 'キャラ総合力']
   const [data, setData] = useState<Array<CharacterData>>([])
   const [page, setPage] = useState<number>(1)
   const [hasData, setHasData] = useState<boolean>(true)
@@ -75,20 +77,26 @@ const Characters = () => {
 
   // const characters = use<CharacterData[]>(getCharacters());
   return (
-    <div className={ListStyle.wrapper}>
-      <ul className={ListStyle.list}>
-        {data.map((character, i) => {
-          return (
-            <Character
-              key={i}
-              character={character}
-              index={i}
-            />
-          );
-        })}
-      </ul>
-      <div ref={target}>
-        {hasData && <p>Load More Characters...</p>}
+    <div className={styles.wrapper}>
+      <div className={styles.inner}>
+        <header className={styles.header}>
+          <div className={styles.headline}>
+            <h2 className={styles.title}>キャラクター一覧</h2>
+            <p className={styles.description}>
+              バウンティラッシュ実装済みキャラクター一覧です。随時更新していきます。
+            </p>
+          </div>
+        </header>
+        <div className={styles.container}>
+          <div className={styles.table_wrapper}>
+            <div className={styles.table_inner}>
+              <CharacterTable data={data} thead={thead} />
+              <div ref={target}>
+                {hasData && <div className={iconStyles.loader_box}><div className={iconStyles.loader}></div></div>}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

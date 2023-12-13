@@ -19,6 +19,15 @@
   background-position: center center;
 }
 
+.table_character_icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-size: 250%;
+  background-repeat: no-repeat;
+  background-position: center -20px;
+}
+
 .attributeIcon {
   width: 36px;
 }

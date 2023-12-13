@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className={`${styles.container} ${utilities.fullHeight} ${utilities.fullWidth}`}>
+    <main className={`${styles.container}`}>
       <div className={styles.inner}>
         <div className={styles.backgroundImage}>
           <HeroImage

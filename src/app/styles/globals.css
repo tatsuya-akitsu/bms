@@ -1,10 +1,20 @@
 :root {
   --max-width: 1280px;
+  --full-width: 100vw;
+  --full-height: calc(var(--vh, 1vh) * 100);
   --hexagon-md-size: 160px;
   --hexagon-sm-size: 120px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --base-main-color: #EA526F;
+  --base-text-color: #030301;
+  --base-subtext-color: #475569;
+  --base-annotation-color: #cbd5e1;
+  --base-disabled-color: #FBF5F3;
+  --base-white-color: #FFFFFF;
+  --base-border-color: #CCDBDC;
+  --secondary-border-color: #F2F2F2;
 }
 
 * {
