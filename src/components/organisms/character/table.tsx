@@ -1,12 +1,16 @@
 import { CharacterData } from '@/types'
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import Table from '@/components/organisms/table'
+import Button from '@/components/modules/Button'
 import styles from '@/app/styles/object/components/table.module.css';
 import imageStyles from '@/app/styles/object/components/image-item.module.css';
 import textStyles from '@/app/styles/object/components/text.module.css';
 import { CharacterType } from '@prisma/client';
 
 const CharacterTable: React.FC<{ data: CharacterData[], thead: Array<string> }> = ({ data, thead }) => {
+  const router = useRouter()
+
   const handleTypeValue = (type: CharacterType) => {
     switch (type) {
       case 'ATTACKER':
@@ -17,6 +21,10 @@ const CharacterTable: React.FC<{ data: CharacterData[], thead: Array<string> }> 
         return 'ゲッター';
     }
   };
+
+  const handleRouteDetail = (id: string) => {
+    router.push(`/characters/${id}`)
+  }
 
   return (
     <Table thead={thead}>
@@ -65,6 +73,14 @@ const CharacterTable: React.FC<{ data: CharacterData[], thead: Array<string> }> 
             <p className={textStyles.table_character_score}>
               {character.totalScore}
             </p>
+          </td>
+          <td className={styles.tbodydata}>
+            <Button
+              isDisabled={false}
+              isSecondary={false}
+              value={`詳細`}
+              onClick={() => handleRouteDetail(`${i + 1}`)}
+            />
           </td>
         </tr>
       ))}

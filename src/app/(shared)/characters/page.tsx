@@ -10,7 +10,7 @@ import iconStyles from '@/app/styles/object/components/icon.module.css'
 // );
 
 const Characters = () => {
-  const thead = ['', '名前', 'タイプ', '属性', 'キャラ総合力']
+  const thead = ['', '名前', 'タイプ', '属性', 'キャラ総合力', '詳細']
   const [data, setData] = useState<Array<CharacterData>>([])
   const [page, setPage] = useState<number>(1)
   const [hasData, setHasData] = useState<boolean>(true)
