@@ -42,12 +42,14 @@ const Home = () => {
             onClick={() => router.push('/signin')}
             isDisabled={false}
             isSecondary={false}
+            size={`is_medium`}
             value={`ログイン`}
           />
           <Button
             onClick={() => router.push('/signup')}
             isDisabled={false}
             isSecondary={true}
+            size={`is_medium`}
             value={`新規登録`}
           />
         </div>

@@ -1,20 +1,33 @@
 .header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--base-slate-200);
 }
 
 .inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 1.2rem 2.2rem;
-  width: 100%;
-  max-width: 1024px;
+  padding: 1.6rem 3rem;
 }
 
-.inner img {
-  width: 200px;
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  color: var(--base-slate-800);
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  color: var(--base-slate-400);
+}
+
+.description {
+  padding-top: 1.6rem;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  color: var(--base-slate-800);
 }

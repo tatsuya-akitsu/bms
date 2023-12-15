@@ -79,6 +79,7 @@ const CharacterTable: React.FC<{ data: CharacterData[], thead: Array<string> }> 
               isDisabled={false}
               isSecondary={false}
               value={`詳細`}
+              size={`is_small`}
               onClick={() => handleRouteDetail(`${i + 1}`)}
             />
           </td>

@@ -7,6 +7,13 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
     where: {
       id: parseInt(req.nextUrl.searchParams.get('id')!),
     },
+    include: {
+      characterDetailTags: {
+        include: {
+          characterTag: true
+        }
+      }
+    }
   });
   return NextResponse.json(character)
 }

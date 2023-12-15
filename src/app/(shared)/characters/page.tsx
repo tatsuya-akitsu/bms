@@ -79,14 +79,6 @@ const Characters = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inner}>
-        <header className={styles.header}>
-          <div className={styles.headline}>
-            <h2 className={styles.title}>キャラクター一覧</h2>
-            <p className={styles.description}>
-              バウンティラッシュ実装済みキャラクター一覧です。随時更新していきます。
-            </p>
-          </div>
-        </header>
         <div className={styles.container}>
           <div className={styles.table_wrapper}>
             <div className={styles.table_inner}>

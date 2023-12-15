@@ -1,7 +1,11 @@
 .wrapper {
   overflow-y: auto;
+  margin: 0 auto;
+  width: 80%;
   max-height: calc(var(--full-height) * 0.66);
   background-color: var(--base-white-color);
+  border: 1px solid var(--base-slate-200);
+  border-radius: 0.8rem;
 }
 
 .inner {

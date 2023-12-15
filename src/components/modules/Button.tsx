@@ -5,12 +5,13 @@ interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
   isDisabled: boolean
   isSecondary: boolean
+  size: 'is_large' | 'is_medium' | 'is_small'
   value: string
 }
 
-const Button: FC<ButtonProps> = ({ onClick, isDisabled, isSecondary, value }) => {
+const Button: FC<ButtonProps> = ({ onClick, isDisabled, isSecondary, size, value }) => {
   return (
-    <button className={`${styles.button} ${isSecondary ? styles.isSecond : ''}`} type="button" disabled={isDisabled} onClick={onClick}>
+    <button className={`${styles.button} ${isSecondary ? styles.isSecond : ''} ${styles[size]}`} type="button" disabled={isDisabled} onClick={onClick}>
       <span>{value}</span>
     </button>
   );

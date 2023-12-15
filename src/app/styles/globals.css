@@ -7,14 +7,23 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  --base-main-color: #EA526F;
-  --base-text-color: #030301;
-  --base-subtext-color: #475569;
-  --base-annotation-color: #cbd5e1;
-  --base-disabled-color: #FBF5F3;
-  --base-white-color: #FFFFFF;
-  --base-border-color: #CCDBDC;
-  --secondary-border-color: #F2F2F2;
+  --base-main-color: rgb(234, 82, 111); /* #EA526F */
+  --base-text-color: rgb(3, 3, 1); /* #030301 */
+  --base-subtext-color: rgb(71, 85, 105);  /* #475569 */
+  --base-annotation-color: rgb(203, 213, 225); /* #cbd5e1 */
+  --base-disabled-color: rgb(251, 245, 243); /* #FBF5F3 */
+  --base-white-color: rgb(255, 255, 255);  /* #FFFFFF */
+  --base-border-color: rgb(204, 219, 220); /* #CCDBDC */
+  --secondary-border-color: rgb(242, 242, 242);  /* #F2F2F2 */
+
+
+  --base-slate-900: rgb(15, 23, 42); /* #0f172a */
+  --base-slate-800: rgb(30, 41, 59);  /* #1e293b */
+  --base-slate-400: rgb(148, 163, 184);  /* #94a3b8 */
+  --base-slate-300: rgb(203, 213, 225);  /* #cbd5e1 */
+  --base-slate-200: rgb(226, 232, 240);  /* #e2e8f0 */
+  --base-slate-50: rgb(241, 245, 249); /* #f1f5f9 */
+  --base-white-color: rgb(255, 255, 255); /* #FFFFFF */
 }
 
 * {
@@ -40,4 +49,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul, ol {
+  list-style-type: none;
 }

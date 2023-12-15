@@ -1,4 +1,9 @@
 .template {
+  display: flex;
   width: var(--full-width);
   height: var(--full-height);
+}
+
+.container {
+  width: calc(100% - 28.8rem);
 }

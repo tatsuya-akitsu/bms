@@ -79,6 +79,20 @@ interface CharacterTagModelSeed {
   }>;
 }
 
+interface CharacterTag {
+  characterDetailId: number;
+  characterTag: {
+    effect: Array<{
+      effect: string;
+      level: number;
+    }>
+    id: number;
+    isActivation: boolean;
+    name: string;
+  }
+  characterTagId: number;
+}
+
 interface Character extends CharacterModelSeed {
   maximum: CharacterDetailModelSeed['maximum'];
   tags: Array<number>;
@@ -86,4 +100,9 @@ interface Character extends CharacterModelSeed {
 
 interface CharacterData extends Character {
   totalScore: number;
+}
+
+interface Breadcrumb {
+  path: string;
+  label: string;
 }

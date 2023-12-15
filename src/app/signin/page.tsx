@@ -77,9 +77,7 @@ const Signup = () => {
   }
 
   return (
-    <div
-      className={`${styles.container}`}
-    >
+    <div className={`${styles.container}`}>
       <div className={styles.inner}>
         <Headline
           label={`Login`}
@@ -109,12 +107,14 @@ const Signup = () => {
               onClick={() => router.push('/signup')}
               isDisabled={false}
               isSecondary={true}
+              size={`is_medium`}
               value={`新規登録はこちら`}
             />
             <Button
               onClick={onSignin}
               isDisabled={false}
               isSecondary={false}
+              size={`is_medium`}
               value={`ログイン`}
             />
           </div>

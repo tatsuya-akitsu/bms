@@ -80,12 +80,14 @@ const Signup = () => {
               onClick={() => router.push('/signin')}
               isDisabled={false}
               isSecondary={true}
+              size={`is_medium`}
               value={`ログインはこちら`}
             />
             <Button
               onClick={onSignup}
               isDisabled={false}
               isSecondary={false}
+              size={`is_medium`}
               value={`完了`}
             />
           </div>

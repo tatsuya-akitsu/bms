@@ -1,4 +1,7 @@
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1.2rem 1.6rem;
   font-size: 1.6rem;
   font-weight: 700;
@@ -18,4 +21,15 @@
   color: #EA526F;
   background-color: #fff;
   border: 1px solid #EA526F;
+}
+
+.is_large {
+  width: 24rem;
+}
+.is_medium {
+  width: 18rem;
+}
+.is_small {
+  width: 12rem;
+  height: 4.2rem;
 }
