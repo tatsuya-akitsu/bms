@@ -35,29 +35,49 @@ export default function RootTemplate({
     }
     let currentBreadcrumb: Breadcrumb = { path: '', label: '' }
     let breadcrumbs: Array<Breadcrumb> = []
-    switch (pathname) {
-      case '/characters':
-        setHeader({
-          title: 'キャラクター一覧',
-          subtitle: 'Character List',
-          description:
-            'バウンティラッシュ実装済みキャラクター一覧です。随時更新していきます。',
-        });
-        currentBreadcrumb = { path: '/characters', label: 'キャラクター一覧' }
-        breadcrumbs = [currentBreadcrumb]
-        setBreadcrumbs(breadcrumbs)
-        break;
-      // ダッシュボード
-      default:
-        setHeader({
-          title: 'ダッシュボード',
-          subtitle: 'dashboard',
-          description:
-            'バウンティラッシュ実装済みキャラクター一覧です。随時更新していきます。',
-        });
-        breadcrumbs = [initialBreadcrumb];
-        setBreadcrumbs(breadcrumbs);
-        break;
+
+    const characterDetailPathMatch = /^\/characters\/(\d+)$/;
+    if (characterDetailPathMatch.test(pathname)) {
+      setHeader({
+        title: 'キャラクター一覧',
+        subtitle: 'Character List',
+        description:
+          'バウンティラッシュ実装済みキャラクター一覧です。随時更新していきます。',
+      });
+      currentBreadcrumb = {
+        path: '/characters',
+        label: 'キャラクター一覧',
+      };
+      breadcrumbs = [currentBreadcrumb];
+      setBreadcrumbs(breadcrumbs);
+    } else {
+      switch (pathname) {
+        case '/characters':
+          setHeader({
+            title: 'キャラクター一覧',
+            subtitle: 'Character List',
+            description:
+              'バウンティラッシュ実装済みキャラクター一覧です。随時更新していきます。',
+          });
+          currentBreadcrumb = {
+            path: '/characters',
+            label: 'キャラクター一覧',
+          };
+          breadcrumbs = [currentBreadcrumb];
+          setBreadcrumbs(breadcrumbs);
+          break;
+        // ダッシュボード
+        default:
+          setHeader({
+            title: 'ダッシュボード',
+            subtitle: 'dashboard',
+            description:
+              'バウンティラッシュ実装済みキャラクター一覧です。随時更新していきます。',
+          });
+          breadcrumbs = [initialBreadcrumb];
+          setBreadcrumbs(breadcrumbs);
+          break;
+      }
     }
   }, [pathname])
   return (
