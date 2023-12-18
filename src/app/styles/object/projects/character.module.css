@@ -1,0 +1,101 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.left_box {
+  padding-right: 4.2rem;
+  width: 60%;
+}
+
+.right_box {
+  width: 40%;
+}
+
+.character_image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 0.8rem;
+}
+
+.label {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--base-slate-400);
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--base-slate-800);
+}
+
+.status {
+  padding-top: 2rem;
+}
+
+.level {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--base-main-color);
+}
+
+.power_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.power_label {
+  padding-right: 1em;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--base-slate-800);
+}
+.power_value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--base-slate-800);
+}
+
+.status_list {
+  padding-top: 1.6rem;
+}
+.status_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.status_item:not(:nth-last-of-type(1)) {
+  border-bottom: 1px solid var(--base-slate-200);
+}
+
+.status_label_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+.status_label_box > svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.status_label_box > p {
+  padding-left: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--base-slate-800);
+}
+
+.status_score {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--base-slate-800);
+}

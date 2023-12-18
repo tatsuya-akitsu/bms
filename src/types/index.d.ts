@@ -99,6 +99,7 @@ interface Character extends CharacterModelSeed {
 }
 
 interface CharacterData extends Character {
+  id?: number;
   totalScore: number;
 }
 
