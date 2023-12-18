@@ -1,0 +1,61 @@
+.toggle_button {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 9999px;
+}
+
+.toggle_base {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem;
+  background-color: var(--base-white-color);
+}
+
+.toggle_back {
+  pointer-events: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3.6rem;
+  height: 1.6rem;
+  background-color: var(--base-slate-200);
+  border-radius: 9999px;
+  transition-property: color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.toggle_back.is_check {
+  background-color: var(--base-main-color);
+}
+
+.toggle_mark {
+  pointer-events: none;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--base-slate-200);
+  border-radius: 9999px;
+  background-color: var(--base-white-color);
+  transform: translate(0px, 0px) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.toggle_mark.is_check {
+  transform: translate(2rem, 0px) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+}

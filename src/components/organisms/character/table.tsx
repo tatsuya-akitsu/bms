@@ -1,5 +1,5 @@
 import { CharacterData } from '@/types'
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import { useRouter } from 'next/navigation'
 import Table from '@/components/organisms/table'
 import Button from '@/components/modules/Button'
@@ -7,8 +7,17 @@ import styles from '@/app/styles/object/components/table.module.css';
 import imageStyles from '@/app/styles/object/components/image-item.module.css';
 import textStyles from '@/app/styles/object/components/text.module.css';
 import { CharacterType } from '@prisma/client';
+import Toggle from '@/components/modules/Toggle'
 
-const CharacterTable: React.FC<{ data: CharacterData[], thead: Array<string> }> = ({ data, thead }) => {
+interface Props {
+  data: CharacterData[]
+  thead: Array<string>
+  targetId: number
+  loading: boolean
+  onClick: (id: number, isHas: boolean) => Promise<void>
+}
+
+const CharacterTable: React.FC<Props> = ({ data, thead, targetId, loading, onClick }) => {
   const router = useRouter()
 
   const handleTypeValue = (type: CharacterType) => {
@@ -26,11 +35,17 @@ const CharacterTable: React.FC<{ data: CharacterData[], thead: Array<string> }> 
     router.push(`/characters/${id}`)
   }
 
+  const handleHasCharacter = (id: number | undefined, hasCharacter: boolean) => {
+    if (id && onClick) onClick(id, !hasCharacter)
+  }
+
   return (
     <Table thead={thead}>
       {data.map((character: CharacterData, i: number) => (
         <tr
-          className={styles.tbodyrow}
+          className={`${styles.tbodyrow} ${
+            loading && targetId === character.id ? styles.is_loading : ''
+          }`}
           key={i}
         >
           <td className={styles.tbodydata}>
@@ -81,6 +96,14 @@ const CharacterTable: React.FC<{ data: CharacterData[], thead: Array<string> }> 
               value={`詳細`}
               size={`is_small`}
               onClick={() => handleRouteDetail(`${i + 1}`)}
+            />
+          </td>
+          <td className={styles.tbodydata}>
+            <Toggle
+              isTrue={character.hasCharacter}
+              onClick={() =>
+                handleHasCharacter(character.id, character.hasCharacter)
+              }
             />
           </td>
         </tr>
