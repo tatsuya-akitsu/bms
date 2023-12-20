@@ -52,9 +52,7 @@ const CharacterTable: React.FC<Props> = ({ data, thead, targetId, loading, onCli
             <div
               className={imageStyles.table_character_icon}
               style={{
-                backgroundImage: `url(/images/characters/character_${
-                  i + 1
-                }.png)`,
+                backgroundImage: `url(/images/characters/character_${character.id}.png)`,
               }}
             ></div>
           </td>
@@ -95,7 +93,7 @@ const CharacterTable: React.FC<Props> = ({ data, thead, targetId, loading, onCli
               isSecondary={false}
               value={`詳細`}
               size={`is_small`}
-              onClick={() => handleRouteDetail(`${i + 1}`)}
+              onClick={() => handleRouteDetail(`${character.id}`)}
             />
           </td>
           <td className={styles.tbodydata}>

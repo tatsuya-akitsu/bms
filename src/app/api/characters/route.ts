@@ -7,6 +7,11 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
   const page = parseInt(req.nextUrl.searchParams.get('page')!) || 1
   const skip = (page - 1) * pageSize
   const characters = await prisma.character.findMany({
+    orderBy: [
+      {
+        type: 'desc'
+      }
+    ],
     skip,
     take: pageSize
   })

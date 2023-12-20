@@ -107,3 +107,9 @@ interface Breadcrumb {
   path: string;
   label: string;
 }
+
+interface FilterItem {
+  label: string;
+  value: string;
+  isSelect: boolean;
+};

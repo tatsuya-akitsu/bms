@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   overflow-y: auto;
   margin: 0 auto;
   width: 80%;
@@ -6,6 +7,7 @@
   background-color: var(--base-white-color);
   border: 1px solid var(--base-slate-200);
   border-radius: 0.8rem;
+  z-index: 10;
 }
 
 .inner {
@@ -38,7 +40,6 @@
 
 .container {
   display: flow-root;
-  margin-top: 2rem;
 }
 
 .table_wrapper {
