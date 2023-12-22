@@ -44,6 +44,10 @@
   z-index: 10;
 }
 
+.sort_inner + .sort_inner {
+  margin-top: 1.2rem;
+}
+
 .filter_list {
   display: flex;
   justify-content: flex-start;

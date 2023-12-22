@@ -6,15 +6,33 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function GET(req: NextRequest, res: NextApiResponse) {
   const page = parseInt(req.nextUrl.searchParams.get('page')!) || 1
   const skip = (page - 1) * pageSize
-  const characters = await prisma.character.findMany({
-    orderBy: [
-      {
-        type: 'desc'
-      }
-    ],
+
+  const order = req.nextUrl.searchParams.get('order')!
+  const target = req.nextUrl.searchParams.get('target')
+  const sort = req.nextUrl.searchParams.get('sort')
+
+  console.log(order, target, sort)
+
+  let queryOptions: {
+    skip: number;
+    take: number;
+    where?: { [key: string]: string };
+    orderBy?: { [key: string]: string };
+  } = {
     skip,
-    take: pageSize
-  })
+    take: pageSize,
+  };
+
+  if (target && order) {
+    queryOptions.where = { [order]: `${target}` }
+  }
+  if (sort && order) {
+    queryOptions.orderBy = {
+      [order]: `${sort}`
+    }
+  }
+
+  const characters = await prisma.character.findMany(queryOptions)
   return NextResponse.json(characters)
 }
 

@@ -24,12 +24,7 @@ const CharacterDetail = () => {
     characterDetailTags: Array<CharacterTag>
     maximum: string
   }>(getCharacterDetail(id));
-
   const status: CharacterDetailModelSeed['maximum'] = JSON.parse(detailData.maximum);
-  console.log(status)
-
-  console.log(characterData, '||| character data')
-  console.log(detailData, '||| detail data')
 
   return (
     <div className={styles.wrapper}>
