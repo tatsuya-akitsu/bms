@@ -11,8 +11,6 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
   const target = req.nextUrl.searchParams.get('target')
   const sort = req.nextUrl.searchParams.get('sort')
 
-  console.log(order, target, sort)
-
   let queryOptions: {
     skip: number;
     take: number;

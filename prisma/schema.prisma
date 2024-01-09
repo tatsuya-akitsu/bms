@@ -11,64 +11,98 @@ datasource db {
 }
 
 model User {
-  id                   Int                   @id @default(autoincrement())
-  email                String                @unique
-  characters           Character[]
-  userCharacterDetails UserCharacterDetail[]
-  createdAt            DateTime              @default(now())
+  id                String              @id
+  email             String              @unique
+  characters        Characters[]        @relation("UserCharacters")
+  characterUserdata CharacterUserdata[]
+}
+
+model Characters {
+  id             String              @id
+  name           String
+  label          String
+  type           CharacterType
+  attributes     CharacterAttributes
+  totalScore     Int
+  hasCharacter   Boolean
+  isMultipleType Boolean
+  users          User[]              @relation("UserCharacters")
+  character      Character?
 }
 
 model Character {
-  id           Int                 @id @default(autoincrement())
-  name         String
-  label        String
-  type         CharacterType
-  attributes   CharacterAttributes
-  totalScore   Int
-  hasCharacter Boolean
-  isMultipleType   Boolean
-  createdAt    DateTime            @default(now())
-  userId       Int
-  user         User                @relation(fields: [userId], references: [id])
-  details      CharacterDetail[]
+  id            String           @id
+  uniqueId      String           @unique
+  status        CharacterMaximum @relation(fields: [statusId], references: [id])
+  statusId      String
+  tags          CharacterTag[]
+  characterData Characters       @relation(fields: [characterId], references: [id])
+  characterId   String           @unique
 }
 
-model CharacterDetail {
-  id                   Int                   @id @default(autoincrement())
-  maximum              Json
-  createdAt            DateTime              @default(now())
-  characterId          Int
-  character            Character             @relation(fields: [characterId], references: [id])
-  characterDetailTags  CharacterDetailTag[]
-  userCharacterDetails UserCharacterDetail[]
+model CharacterMaximum {
+  id        String                 @id
+  status    CharacterMaximumStatus @relation(fields: [statusId], references: [id])
+  statusId  String
+  skill     CharacterMaximumSkill  @relation(fields: [skillId], references: [id])
+  skillId   String
+  character Character[]
+}
+
+model CharacterMaximumStatus {
+  id            String             @id
+  level         Int
+  comprehensive Int
+  strength      Int
+  attack        Int
+  defense       Int
+  critical      Float
+  boost         Int
+  maximum       CharacterMaximum[]
+}
+
+model CharacterMaximumSkill {
+  id      String             @id
+  skill1  Int
+  skill2  Int
+  maximum CharacterMaximum[]
 }
 
 model CharacterTag {
-  id                  Int                  @id @default(autoincrement())
-  name                String
-  isActivation        Boolean
-  effect              Json
-  createdAt           DateTime             @default(now())
-  characterDetailTags CharacterDetailTag[]
+  id           String      @id
+  name         String
+  isActivation Boolean
+  effect       Json
+  character    Character[]
 }
 
-model UserCharacterDetail {
-  userId            Int
-  characterDetailId Int
-  userdata          Json // ユーザーごとのキャラクターのステータス情報
-  user              User            @relation(fields: [userId], references: [id])
-  characterDetail   CharacterDetail @relation(fields: [characterDetailId], references: [id])
-
-  @@id([userId, characterDetailId])
+model CharacterUserdata {
+  id       String                  @id
+  status   CharacterUserdataStatus @relation(fields: [statusId], references: [id])
+  statusId String
+  skill    CharacterUserdataSkill  @relation(fields: [skillId], references: [id])
+  skillId  String
+  user     User                    @relation(fields: [userId], references: [id])
+  userId   String
 }
 
-model CharacterDetailTag {
-  characterDetailId Int
-  characterTagId    Int
-  characterDetail   CharacterDetail @relation(fields: [characterDetailId], references: [id])
-  characterTag      CharacterTag    @relation(fields: [characterTagId], references: [id])
+model CharacterUserdataStatus {
+  id            String              @id
+  level         Int
+  comprehensive Int
+  strength      Int
+  attack        Int
+  defense       Int
+  critical      Float
+  boost         Int
+  userdata      CharacterUserdata[]
+}
 
-  @@id([characterDetailId, characterTagId])
+model CharacterUserdataSkill {
+  id       String              @id
+  skill1   Int
+  skill2   Int
+  userdata CharacterUserdata[]
 }
 
 enum CharacterType {

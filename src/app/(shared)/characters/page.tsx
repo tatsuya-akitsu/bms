@@ -1,35 +1,51 @@
 'use client'
+import { pageSize } from '@/constants';
 import { CharacterData, FilterItem } from '@/types';
-import React, { cache, use, useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react'
 import CharacterTable from '@/components/organisms/character/table';
-import styles from '@/app/styles/object/components/table.module.css'
-import filterStyles from '@/app/styles/object/components/filtering.module.css'
-import iconStyles from '@/app/styles/object/components/icon.module.css'
+import styles from '@/app/styles/object/components/table.module.css';
+import filterStyles from '@/app/styles/object/components/filtering.module.css';
+import iconStyles from '@/app/styles/object/components/icon.module.css';
 import ChevronUp from '@/components/icons/ChevronUp';
 import ChevronDown from '@/components/icons/ChevronDown';
 import Button from '@/components/modules/Button';
 
-// const getCharacters = cache(() =>
-//   fetch('http://localhost:3000/api/characters').then((res) => res.json())
-// );
-
 enum sortKey {
-  type = 'type',
   attributes = 'attributes',
+  sort = 'sort',
   status = 'status',
-  sort = 'sort'
+  type = 'type'
 }
 
-const Characters = () => {
-  const thead = ['', '名前', 'タイプ', '属性', 'キャラ総合力', '詳細', '所持/未所持']
+const Characters: React.FC = () => {
+  const thead: string[] = ['', '名前', 'タイプ', '属性', 'キャラ総合力', '所持/未所持', '詳細']
+  const [attributes, setAttributes] = useState<FilterItem[]>([
+    { label: '赤属性', value: 'RED', isSelect: false },
+    { label: '青属性', value: 'BLUE', isSelect: false },
+    { label: '緑属性', value: 'GREEN', isSelect: false },
+  ]);
+  const [status, setStatus] = useState<FilterItem[]>([
+    { label: 'キャラ総合力', value: 'comprehensive', isSelect: false },
+    { label: '体力', value: 'strength', isSelect: false },
+    { label: '攻撃力', value: 'attack', isSelect: false },
+    { label: '防御力', value: 'defense', isSelect: false },
+  ]);
+  const [type, setType] = useState<FilterItem[]>([
+    { label: 'アタッカー', value: 'ATTACKER', isSelect: false },
+    { label: 'ディフェンダー', value: 'DEFENDER', isSelect: false },
+    { label: 'ゲッター', value: 'GETTER', isSelect: false },
+  ]);
+  const [sort, setSort] = useState<FilterItem[]>([
+    { label: '昇順', value: 'asc', isSelect: false },
+    { label: '降順', value: 'desc', isSelect: false },
+  ]);
   const [menus, setMenus] = useState<
-    Array<{ label: string; value: sortKey; isOpen: boolean }>
+    { label: string; value: sortKey; isOpen: boolean }[]
   >([
     { label: '表示順', value: sortKey.status, isOpen: false },
     { label: 'スタイル', value: sortKey.type, isOpen: false },
     { label: '属性', value: sortKey.attributes, isOpen: false },
   ]);
-
   const [sortMenus, setSortMenus] = useState<{
     [sortKey.attributes]: Array<FilterItem>;
     [sortKey.status]: Array<FilterItem>;
@@ -54,357 +70,266 @@ const Characters = () => {
     ],
     sort: [
       { label: '昇順', value: 'asc', isSelect: false },
-      { label: '降順', value: 'desc', isSelect: false }
-    ]
+      { label: '降順', value: 'desc', isSelect: false },
+    ],
   });
-  const [data, setData] = useState<Array<CharacterData>>([])
+  const [data, setData] = useState<CharacterData[]>([])
   const [page, setPage] = useState<number>(0)
   const [hasData, setHasData] = useState<boolean>(true)
   const [loading, setLoading] = useState<boolean>(false)
   const [targetId, setTargetId] = useState<number>(0)
-  const [filterKey, setFilterKey] = useState<sortKey | null>(null)
-  const isDevFetchFlg = useRef<boolean>(true)
-  const isDevObserverFlg = useRef<boolean>(true)
-  const target = useRef<HTMLDivElement>(null)
+  const [fetchMode, setFetchMode] = useState<'normal' | 'sort'>('normal')
+  const [filterKey, setFilterKey] = useState<sortKey | null>(null);
+  const isDevObserverFlg = useRef<boolean>(true);
+  const isDevCountPageFlg = useRef<boolean>(true);
+  const target = useRef<HTMLDivElement>(null);
 
-  // const fetchData = async (number: number) => {
-  //   const res = await fetch(
-  //     `http://localhost:3000/api/characters?page=${number}`,
-  //     {
-  //       method: 'GET'
-  //     }
-  //   );
-  //   const data: CharacterData[] = await res.json();
-  //   const count = data.length
+  const fetchCharactersData = async (page: number) => {
+    if (fetchMode !== 'normal') return
+    const res = await fetch(`http://localhost:3000/api/characters?page=${page}`);
+    const data: CharacterData[] = await res.json();
+    const count = data.length
 
-  //   if (data.length === 0) {
-  //     setHasData(false)
-  //     return;
-  //   }
-  //   setData((prev) => [...prev, ...data]);
-  //   setHasData(count > 0);
-  // };
-
-  const fetchData = async (number: number, key?: sortKey) => {
-    let data: CharacterData[] = []
-    let res: Response
-    let count: number = 0
-    console.log(`||| arg.filterKey: ${key}`)
-    if (key) {
-      console.log('keyは来てる？')
-      sortMenus[key].forEach(async (item) => {
-        if (item.isSelect) {
-          switch (key) {
-            case sortKey.attributes:
-              res = await fetch(
-                `http://localhost:3000/api/characters?page=${1}&order=attributes&target=${
-                  item.value
-                }`
-              );
-              data = await res.json();
-              count = data.length;
-              return
-            case sortKey.status:
-              res = await fetch(
-                `http://localhost:3000/api/characters?page=${1}&order=${
-                  item.value
-                }&sort=${
-                  sortMenus[sortKey.sort].filter((item) => item.isSelect)[0]
-                    .value
-                }`
-              );
-              data = await res.json();
-              count = data.length;
-              return
-            case sortKey.type:
-              res = await fetch(
-                `http://localhost:3000/api/characters?page=${1}&order=type&target=${
-                  item.value
-                }`
-              );
-              data = await res.json();
-              count = data.length;
-              return
-          }
-        }
-      })
-      setFilterKey(key);
-      if (data.length === 0) {
-        setHasData(false);
-        return;
-      }
-      setData((prev) => [...data])
-    } else {
-      res = await fetch(`http://localhost:3000/api/characters?page=${number}`, {
-        method: 'GET',
-      });
-      data = await res.json();
-      count = data.length;
-
-      if (data.length === 0) {
-        setHasData(false);
-        return;
-      }
-
-      setData((prev) => [...prev, ...data])
+    if (data.length === 0) {
+      setHasData(false)
+      return
     }
-
-    console.log(`||| data length: ${data.length}`)
-    setHasData(count > 0);
+    setData((prev) => [...prev, ...data])
+    setHasData(count > 0)
   };
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      if (isDevObserverFlg.current) {
-        isDevObserverFlg.current = false;
-        return;
-      }
+    if (process.env.NODE_ENV === 'development' && isDevObserverFlg.current) {
+      isDevObserverFlg.current = false;
+      return;
     }
 
     const observer = new IntersectionObserver(
-      entries => {
-        if (entries[0].isIntersecting) {
-          if (hasData) {
-            setPage((prev) => prev + 1)
-          }
+      (entries) => {
+        if (entries[0].isIntersecting && hasData) {
+          setPage((prev) => prev + 1)
         }
       },
       { threshold: 1.0 }
-    )
+    );
 
     if (target.current) {
-      observer.observe(target.current)
+      observer.observe(target.current);
     }
     return () => {
       if (target.current) {
-        observer.unobserve(target.current)
+        observer.unobserve(target.current);
       }
-    }
-  }, [hasData, target])
+    };
+  }, [hasData, target, fetchMode]);
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      if (isDevFetchFlg.current) {
-        isDevFetchFlg.current = false;
-        return;
-      }
+    if (process.env.NODE_ENV === 'development' && isDevCountPageFlg.current) {
+      isDevCountPageFlg.current = false;
+      return;
     }
-
-    console.log(`||| useState the page: ${page}`)
 
     if (page > 0) {
-      fetchData(page)
+      // 次のデータを取ってくる
+      if (fetchMode === 'normal') {
+        fetchCharactersData(page)
+      } else if (fetchMode === 'sort' && filterKey) {
+        fetchSortCharactersData(page, filterKey);
+      }
     }
-    if (filterKey) {
-      setPage(0)
-    }
-  }, [page])
+  }, [page]);
 
-  const handleHasCharacter = async (id: number, isHas: boolean) => {
-    setTargetId(id)
-    setLoading(true)
-    const res = await fetch(`http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}`, {
-      method: 'PATCH'
-    });
-    if (res.ok) {
-      const data: CharacterData[] = await res.json();
-      data.filter((character) => character.id === id)[0].hasCharacter = isHas
-      setTargetId(0)
-      setLoading(false)
-    }
+  const applySort = async (key: sortKey) => {
+    setFetchMode('sort')
+    setFilterKey(key)
+    setPage(0)
+    setData([])
   }
 
-  const fetchFilteringData = (key: sortKey) => {
-    let index: number = 1;
+  const fetchSortCharactersData = async (index: number, key: sortKey) => {
+    let list: CharacterData[] = [];
+    let res: Response;
+    let count: number = 0;
 
-    sortMenus[key].map(async (item) => {
-      if (item.isSelect) {
-        let data: CharacterData[]
-        let count: number = 0
-        let res: Response
-        switch (key) {
-          case sortKey.attributes:
-            res = await fetch(`http://localhost:3000/api/characters?page=${index}&order=attributes&target=${item.value}`)
-            data = await res.json()
-            count = data.length
-            break;
-          case sortKey.status:
-            res = await fetch(
-              `http://localhost:3000/api/characters?page=${index}&order=${item.value}&sort=${sortMenus[sortKey.sort].filter((item) => item.isSelect)[0].value}`
-            );
-            data = await res.json()
-            count = data.length
-            break;
-          case sortKey.type:
-            res = await fetch(
-              `http://localhost:3000/api/characters?page=${index}&order=type&target=${item.value}`
-            );
-            data = await res.json()
-            count = data.length
-            break;
-        }
-        setData((prev) => [...data]);
-        setHasData(count > 0);
+    if (key === sortKey.attributes) {
+      let value = attributes.filter((item) => item.isSelect)[0].value
+      res = await fetch(
+        `http://localhost:3000/api/characters?page=${index}&order=attributes&target=${value}`
+      );
+      list = await res.json();
+      count = list.length;
+    } else if (key === sortKey.status) {
+      let value = status.filter((item) => item.isSelect)[0].value
+      let order = sort.filter((item) => item.isSelect)[0].value
+      res = await fetch(
+        `http://localhost:3000/api/characters?page=${index}&order=${value}&sort=${order}`
+      );
+      list = await res.json();
+      count = list.length;
+    } else if (key === sortKey.type) {
+      let value = type.filter((item) => item.isSelect)[0].value
+      res = await fetch(
+        `http://localhost:3000/api/characters?page=${index}&order=type&target=${value}`
+      );
+      list = await res.json();
+      count = list.length;
+    }
+
+    if (list.length === 0) {
+      setHasData(false)
+      return
+    }
+
+    setData((prev) => [...prev, ...list]);
+    setHasData(count > 0);
+  };
+
+  const onDispatchHasCharacter = async (id: number, isHas: boolean) => {
+    setTargetId(id);
+    setLoading(true);
+    const res = await fetch(
+      `http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}`,
+      {
+        method: 'PATCH',
       }
-    })
-    setFilterKey(key);
+    );
+    if (res.ok) {
+      const data: CharacterData[] = await res.json();
+      data.filter((character) => character.id === id)[0].hasCharacter = isHas;
+      setTargetId(0);
+      setLoading(false);
+    }
   }
 
   const resetFilter = (key: sortKey) => {
-    setFilterKey(null)
+    setFetchMode('normal')
+    setFilterKey(null);
     setSortMenus((prev) => {
       const updateArray = prev[key].map((item) => {
         return {
           ...item,
-          isSelect: false
-        }
-      })
+          isSelect: false,
+        };
+      });
 
       return {
         ...prev,
-        [key]: updateArray
-      }
-    })
-  }
+        [key]: updateArray,
+      };
+    });
+    if (target.current) {
+      target.current.scrollTop = 0
+    }
+  };
 
-  const handleSortContent = (value: sortKey) => {
-    setMenus((prev) => prev.map((item) => {
-      if (item.value === value) {
-        return {
-          ...item,
-          isOpen: !item.isOpen
-        }
-      } else {
-        return {
-          ...item,
-          isOpen: false
-        }
+  const onDispatchStatusSort = async (value: string) => {
+    setStatus((prev) => prev.map((item) => {
+      return {
+        ...item,
+        isSelect: item.value === value ? !item.isSelect : item.isSelect
       }
     }))
   }
 
-  const handleFilter = (value: string, key: sortKey) => {
-    setSortMenus((prev) => {
-      const updateArray = prev[key].map((item) => {
-        if (item.value === value) {
-          return {
-            ...item,
-            isSelect: !item.isSelect,
-          };
-        } else {
-          return {
-            ...item,
-            isSelect: false,
-          };
-        }
-      })
-
+  const onDispatchSort = async (value: string) => {
+    setSort((prev) => prev.map((item) => {
       return {
-        ...prev,
-        [key]: updateArray
-      }
-    })
+        ...item,
+        isSelect: item.value === value ? !item.isSelect : item.isSelect,
+      };
+    }));
+
+    await applySort(sortKey.status)
   }
 
-  const handleSortFilter = (value: string) => {
-    setSortMenus((prev) => {
-      const updateArray = prev[sortKey.sort].map((item) => {
-        if (item.value === value) {
-          return {
-            ...item,
-            isSelect: !item.isSelect
-          }
-        } else {
-          return {
-            ...item,
-            isSelect: false
-          }
-        }
+  const onDispatchTypeFilter = async (value: string) => {
+    setType((prev) =>
+      prev.map((item) => {
+        return {
+          ...item,
+          isSelect: item.value === value ? !item.isSelect : item.isSelect,
+        };
       })
+    );
 
-      return {
-        ...prev,
-        [sortKey.sort]: updateArray
-      }
-    })
+    await applySort(sortKey.type)
   }
 
-  // const characters = use<CharacterData[]>(getCharacters());
+  const onDispatchAttributeFilter = async (value: string) => {
+    setAttributes((prev) =>
+      prev.map((item) => {
+        return {
+          ...item,
+          isSelect: item.value === value ? !item.isSelect : item.isSelect,
+        };
+      })
+    );
+
+    await applySort(sortKey.attributes)
+  }
+
   return (
     <React.Fragment>
-      <div className={filterStyles.box}>
-        <ul className={filterStyles.sort_list}>
-          {menus.map((menu, i) => (
-            <li
-              key={i}
-              className={filterStyles.sort_item}
-            >
-              <button
-                type="button"
-                className={filterStyles.sort_button}
-                onClick={() => handleSortContent(menu.value)}
-              >
-                <span>{menu.label}</span>
-                {menu.isOpen ? <ChevronUp /> : <ChevronDown />}
-              </button>
-              <div
-                className={filterStyles.sort_content}
-                style={menu.isOpen ? {} : { display: 'none' }}
-              >
-                <div className={filterStyles.sort_inner}>
-                  <ul className={filterStyles.filter_list}>
-                    {sortMenus[menu.value as sortKey].map((item, i) => (
-                      <li
-                        key={i}
-                        className={`${filterStyles.filter_list_item} ${
-                          item.isSelect ? filterStyles.is_select : ''
-                        }`}
-                        onClick={() =>
-                          handleFilter(item.value, menu.value as sortKey)
-                        }
-                      >
-                        <span>{item.label}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {(menu.value as sortKey) === sortKey.status && (
-                  <div className={filterStyles.sort_inner}>
-                    <ul className={filterStyles.filter_list}>
-                      {sortMenus[sortKey.sort].map((item, i) => (
-                        <li
-                          key={i}
-                          className={`${filterStyles.filter_list_item} ${
-                            item.isSelect ? filterStyles.is_select : ''
-                          }`}
-                          onClick={() => handleSortFilter(item.value)}
-                        >
-                          <span>{item.label}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                <div>
-                  <Button
-                    size={`is_medium`}
-                    value={`リセット`}
-                    isDisabled={false}
-                    isSecondary={true}
-                    onClick={() => resetFilter(menu.value)}
-                  />
-                  <Button
-                    size={`is_medium`}
-                    value={`OK`}
-                    isDisabled={false}
-                    isSecondary={false}
-                    onClick={() => fetchData(page, menu.value)}
-                  />
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+      <div className={filterStyles.wrapper}>
+        <div className={filterStyles.inner}>
+          <div className={filterStyles.index}>
+            <p>表示順</p>
+            <ul className={filterStyles.filter_list}>
+              {status.map((item, i) => (
+                <li
+                  key={i}
+                  className={`${filterStyles.filter_list_item} ${
+                    item.isSelect ? filterStyles.is_select : ''
+                    }`}
+                  onClick={() => onDispatchStatusSort(item.value)}
+                >
+                  <span>{item.label}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className={filterStyles.filter_list}>
+              {sort.map((item, i) => (
+                <li
+                  key={i}
+                  className={`${filterStyles.filter_list_item} ${item.isSelect ? filterStyles.is_select : ''
+                    }`}
+                  onClick={() => onDispatchSort(item.value)}
+                >
+                  <span>{item.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={filterStyles.index}>
+            <p>絞り込み</p>
+            <ul className={filterStyles.filter_list}>
+              {type.map((item, i) => (
+                <li
+                  key={i}
+                  className={`${filterStyles.filter_list_item} ${
+                    item.isSelect ? filterStyles.is_select : ''
+                    }`}
+                  onClick={() => onDispatchTypeFilter(item.value)}
+                >
+                  <span>{item.label}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className={filterStyles.filter_list}>
+              {attributes.map((item, i) => (
+                <li
+                  key={i}
+                  className={`${filterStyles.filter_list_item} ${
+                    item.isSelect ? filterStyles.is_select : ''
+                    }`}
+                  onClick={() => onDispatchAttributeFilter(item.value)}
+                >
+                  <span>{item.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.inner}>
@@ -416,7 +341,7 @@ const Characters = () => {
                   thead={thead}
                   targetId={targetId}
                   loading={loading}
-                  onClick={handleHasCharacter}
+                  onClick={onDispatchHasCharacter}
                 />
                 <div ref={target}>
                   {hasData && (

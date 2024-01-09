@@ -28,7 +28,7 @@ interface CharacterModelSeed {
   attributes: CharacterAttributes;
   hasCharacter: boolean;
   isMultipleType: boolean;
-  userId: number;
+  userId: string;
 }
 
 interface CharacterDetailModelSeed {

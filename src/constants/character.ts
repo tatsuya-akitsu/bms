@@ -1,5 +1,6 @@
 import { Character } from '@/types';
 import { CharacterAttributes, CharacterType } from '@prisma/client';
+import { initialUserId } from '.';
 
 export const characterMasterData: Character[] = [
   {
@@ -25,7 +26,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 2, 3, 4, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -50,7 +51,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 8, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: true,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ルフィ太郎',
@@ -75,7 +76,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ホネ吉',
@@ -100,7 +101,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 11, 9, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャンクス',
@@ -125,7 +126,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 2, 3, 4, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナイトメア・ルフィ',
@@ -150,7 +151,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 13, 11, 3, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -175,7 +176,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 3, 11, 7, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'アルベル',
@@ -200,7 +201,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 8, 9, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヤマト',
@@ -225,7 +226,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 8, 4, 9],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -250,7 +251,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シルバーズ・レイリー',
@@ -275,7 +276,7 @@ export const characterMasterData: Character[] = [
     tags: [5, 15],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'エドワード・ニューゲート',
@@ -300,7 +301,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 16, 11, 3, 4, 9],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シルバーズ・レイリー',
@@ -325,7 +326,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -350,7 +351,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'キッド&ロー',
@@ -375,7 +376,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヤマト',
@@ -400,7 +401,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 8, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トラファルガー・ロー',
@@ -425,7 +426,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 17, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サボ',
@@ -450,7 +451,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 18, 19, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジュラキュール・ミホーク',
@@ -475,7 +476,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 17, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カイドウ',
@@ -500,7 +501,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 8, 3, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウタ',
@@ -525,7 +526,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ユースタス・キッド',
@@ -550,7 +551,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ドンキホーテ・ドフラミンゴ',
@@ -575,7 +576,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 20, 11, 3, 9, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クイーン',
@@ -600,7 +601,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 8, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ベン・ベックマン',
@@ -625,7 +626,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 2, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ニコ・ロビン',
@@ -650,7 +651,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロロノア・ゾロ',
@@ -675,7 +676,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ブルック',
@@ -700,7 +701,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'うるティ',
@@ -725,7 +726,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 8, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'X・ドレーク',
@@ -750,7 +751,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 21, 8, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'バギー',
@@ -775,7 +776,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 17, 11, 3, 9, 4, 22, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ゲッコー・モリア',
@@ -800,7 +801,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 17, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'スクラッチメン・アプー',
@@ -825,7 +826,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヒナ',
@@ -850,7 +851,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ゾロ十郎',
@@ -875,7 +876,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トラファルガー・ロー',
@@ -900,7 +901,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 3, 9, 13, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'マルコ',
@@ -925,7 +926,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 16, 8, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'フラの介',
@@ -950,7 +951,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トニートニー・チョッパー',
@@ -975,7 +976,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 8, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ペル',
@@ -1000,7 +1001,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 8, 9, 13, 23],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ページワン',
@@ -1025,7 +1026,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 8, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -1050,7 +1051,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 11, 3, 9, 13, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'X・ドレーク',
@@ -1075,7 +1076,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 8, 9, 4, 10, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジャック',
@@ -1100,7 +1101,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 8, 24, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'コラソン',
@@ -1125,7 +1126,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 20, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トニートニー・チョッパー',
@@ -1150,7 +1151,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 8, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ゴール・D・ロジャー',
@@ -1175,7 +1176,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 3, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '【サカズキ】',
@@ -1200,7 +1201,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 21, 19, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウタ',
@@ -1225,7 +1226,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -1250,7 +1251,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カイドウ',
@@ -1275,7 +1276,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 8, 3, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ポートガス・D・エース',
@@ -1300,7 +1301,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 16, 19, 9, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -1325,7 +1326,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '光月おでん',
@@ -1350,7 +1351,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 16, 25, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カイドウ',
@@ -1375,7 +1376,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 8, 3, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -1400,7 +1401,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 3, 9, 10],
     hasCharacter: false,
     isMultipleType: true,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'バギー',
@@ -1425,7 +1426,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26, 11, 3, 9, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'マルコ',
@@ -1450,7 +1451,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 16, 8, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウソップ',
@@ -1475,7 +1476,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -1500,7 +1501,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -1525,7 +1526,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ボア・ハンコック',
@@ -1550,7 +1551,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 17, 27, 11, 3, 9, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'コビー',
@@ -1575,7 +1576,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 21, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モネ',
@@ -1600,7 +1601,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 20, 19, 9, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ミス・ウェンズデー',
@@ -1625,7 +1626,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 28, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ゲッコー・モリア',
@@ -1650,7 +1651,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 17, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トラファルガー・ロー',
@@ -1675,7 +1676,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'バジル・ホーキンス',
@@ -1700,7 +1701,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4, 10, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シリュウ',
@@ -1725,7 +1726,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13, 29],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サンジ',
@@ -1750,7 +1751,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -1775,7 +1776,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ユースタス・キッド',
@@ -1800,7 +1801,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ボア・ハンコック',
@@ -1825,7 +1826,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 17, 27, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'そげキング',
@@ -1850,7 +1851,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'バーソロミュー・くま',
@@ -1875,7 +1876,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 17, 18, 11, 9, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -1900,7 +1901,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウルージ',
@@ -1925,7 +1926,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 3, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クロコダイル',
@@ -1950,7 +1951,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 17, 28, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カク',
@@ -1975,7 +1976,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 30, 8, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ニコ・ロビン',
@@ -2000,7 +2001,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ブルック',
@@ -2025,7 +2026,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クザン',
@@ -2050,7 +2051,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 19, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'おそばマスク',
@@ -2075,7 +2076,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4, 32],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'エンポリオ・イワンコフ',
@@ -2100,7 +2101,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 18, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'アルビダ',
@@ -2125,7 +2126,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26, 3],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トニートニー・チョッパー',
@@ -2150,7 +2151,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 8, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ガープ',
@@ -2175,7 +2176,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カラス',
@@ -2200,7 +2201,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 18, 9, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヘルメッポ',
@@ -2225,7 +2226,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -2250,7 +2251,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・カタクリ',
@@ -2275,7 +2276,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'キラー',
@@ -2300,7 +2301,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クイーン',
@@ -2325,7 +2326,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 8, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ビスタ',
@@ -2350,7 +2351,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 16, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'チュウ',
@@ -2375,7 +2376,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26, 24, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'たしぎ',
@@ -2400,7 +2401,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 21, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ルフィ',
@@ -2425,7 +2426,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26, 7, 11, 3, 9],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'フランキー将軍',
@@ -2450,7 +2451,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'はっちゃん',
@@ -2475,7 +2476,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26, 24],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ドン・クリーク',
@@ -2500,7 +2501,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26, 3],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ゼフ',
@@ -2525,7 +2526,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'キャプテン・クロ',
@@ -2550,7 +2551,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26, 3],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロブ・ルッチ',
@@ -2575,7 +2576,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 30, 8, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ギン',
@@ -2600,7 +2601,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '【クザン】',
@@ -2625,7 +2626,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'イゾウ',
@@ -2650,7 +2651,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 16, 4, 12, 25],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '【ボルサリーノ】',
@@ -2675,7 +2676,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロロノア・ゾロ',
@@ -2700,7 +2701,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヴィンスモーク・ジャッジ',
@@ -2725,7 +2726,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4, 32],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トレーボル',
@@ -2750,7 +2751,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 20, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クロコダイル',
@@ -2775,7 +2776,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -2800,7 +2801,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クンフージュゴン',
@@ -2825,7 +2826,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13],
     hasCharacter: false,
     isMultipleType: true,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジンベエ',
@@ -2850,7 +2851,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 17, 3, 24, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジーザス・バージェス',
@@ -2875,7 +2876,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13, 29],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャンクス',
@@ -2900,7 +2901,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26, 2, 3, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ネコマムシ',
@@ -2925,7 +2926,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4, 25, 33],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '菊之丞',
@@ -2950,7 +2951,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 25],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'キャロット',
@@ -2975,7 +2976,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4, 33],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トニートニー・チョッパー',
@@ -3000,7 +3001,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 8, 9, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'バルトロメオ',
@@ -3025,7 +3026,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロブ・ルッチ',
@@ -3050,7 +3051,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 30, 8, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'エネル',
@@ -3075,7 +3076,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウソップ',
@@ -3100,7 +3101,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ミス・オールサンデー',
@@ -3125,7 +3126,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 28, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ペローナ',
@@ -3150,7 +3151,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 9, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ニコ・ロビン',
@@ -3175,7 +3176,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'アーロン',
@@ -3200,7 +3201,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26, 3, 24],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロロノア・ゾロ',
@@ -3225,7 +3226,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'フランキー',
@@ -3250,7 +3251,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サンジ',
@@ -3275,7 +3276,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・プリン',
@@ -3300,7 +3301,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 8, 4, 12, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サンジ',
@@ -3325,7 +3326,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モーガン',
@@ -3350,7 +3351,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26, 21],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'Mr.2・ボン・クレー',
@@ -3375,7 +3376,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 28, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジュエリー・ボニー',
@@ -3400,7 +3401,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 3, 9, 13, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カポネ・ベッジ',
@@ -3425,7 +3426,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 4, 10, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カバジ',
@@ -3450,7 +3451,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジャンゴ',
@@ -3475,7 +3476,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26, 3],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'おロビ',
@@ -3500,7 +3501,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウソップ',
@@ -3525,7 +3526,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26, 7, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジョニー',
@@ -3550,7 +3551,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヨサク',
@@ -3575,7 +3576,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ブチ',
@@ -3600,7 +3601,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヒグマ',
@@ -3625,7 +3626,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'センゴク',
@@ -3650,7 +3651,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 8, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ボア・ハンコック',
@@ -3675,7 +3676,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 17, 27, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -3700,7 +3701,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'コビー',
@@ -3725,7 +3726,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'エリザベローⅡ世',
@@ -3750,7 +3751,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'マーシャル・D・ティーチ',
@@ -3775,7 +3776,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 17, 19, 3, 9, 13, 10, 29],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '【イッショウ】',
@@ -3800,7 +3801,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ブルック',
@@ -3825,7 +3826,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'キャベンディッシュ',
@@ -3850,7 +3851,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 3, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ユースタス・キッド',
@@ -3875,7 +3876,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 3, 9, 13, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '"ゴッド"ウソップ',
@@ -3900,7 +3901,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ペドロ',
@@ -3925,7 +3926,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 33],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・クラッカー',
@@ -3950,7 +3951,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヤソップ',
@@ -3975,7 +3976,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 2, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'キング',
@@ -4000,7 +4001,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 8, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '黒炭カン十郎',
@@ -4025,7 +4026,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'アルビダ',
@@ -4050,7 +4051,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ササキ',
@@ -4075,7 +4076,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 8, 24, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・プリン',
@@ -4100,7 +4101,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'マゼラン',
@@ -4125,7 +4126,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・ペロスペロー',
@@ -4150,7 +4151,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・オーブン',
@@ -4175,7 +4176,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -4200,7 +4201,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サンジ',
@@ -4225,7 +4226,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クロオビ',
@@ -4250,7 +4251,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26, 24],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ベロ・ベティ',
@@ -4275,7 +4276,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 18, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ミス・ゴールデンウィーク',
@@ -4300,7 +4301,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 28, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヒョウ五郎',
@@ -4325,7 +4326,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロロノア・ゾロ',
@@ -4350,7 +4351,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4, 10],
     hasCharacter: false,
     isMultipleType: true,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'エネル',
@@ -4375,7 +4376,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サボ',
@@ -4400,7 +4401,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 18, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '雷ぞう',
@@ -4425,7 +4426,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 9, 4, 12, 25, 34],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ボア・ハンコック',
@@ -4450,7 +4451,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 17, 27, 11, 3, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'リューマ',
@@ -4475,7 +4476,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'バンダー・デッケン九世',
@@ -4500,7 +4501,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 3, 24, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ギルド・テゾーロ',
@@ -4525,7 +4526,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トニートニー・チョッパー',
@@ -4550,7 +4551,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 8, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サンジ',
@@ -4575,7 +4576,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 4],
     hasCharacter: false,
     isMultipleType: true,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ハクバ',
@@ -4600,7 +4601,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 3, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ネフェルタリ・ビビ',
@@ -4625,7 +4626,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 13, 23],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'エドワード・ニューゲート',
@@ -4650,7 +4651,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 16, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・リンリン',
@@ -4675,7 +4676,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'スモーカー',
@@ -4700,7 +4701,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 21, 19, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・カタクリ',
@@ -4725,7 +4726,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ビビ&カルー',
@@ -4750,7 +4751,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 13, 23],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ディアマンテ',
@@ -4775,7 +4776,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 20, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ポートガス・D・エース',
@@ -4800,7 +4801,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 16, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シュガー',
@@ -4825,7 +4826,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 20, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジョズ',
@@ -4850,7 +4851,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 16, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヴェルゴ',
@@ -4875,7 +4876,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 21, 20, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウソ八',
@@ -4900,7 +4901,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '戦桃丸',
@@ -4925,7 +4926,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '【サカズキ】',
@@ -4950,7 +4951,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 21, 19, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'Mr.3',
@@ -4975,7 +4976,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 28, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ベラミー',
@@ -5000,7 +5001,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'フランキー',
@@ -5025,7 +5026,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヴィンスモーク・レイジュ',
@@ -5050,7 +5051,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 4, 32],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '河松',
@@ -5075,7 +5076,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 24, 4, 25],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'イヌアラシ',
@@ -5100,7 +5101,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 25, 33],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '居眠り狂死郎',
@@ -5125,7 +5126,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'アシュラ童子',
@@ -5150,7 +5151,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4, 25],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'しのぶ',
@@ -5175,7 +5176,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 9, 4, 25, 34],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'コアラ',
@@ -5200,7 +5201,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 18, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'おナミ',
@@ -5225,7 +5226,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4, 34],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トラファルガー・ロー',
@@ -5250,7 +5251,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'スモーカー（シャンブルズ）',
@@ -5275,7 +5276,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 21, 4, 35],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ニコ・ロビン',
@@ -5300,7 +5301,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 7, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ペローナ',
@@ -5325,7 +5326,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シーザー・クラウン',
@@ -5350,7 +5351,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 19, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -5375,7 +5376,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジュラキュール・ミホーク',
@@ -5400,7 +5401,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 26, 17],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ワポル',
@@ -5425,7 +5426,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ネフェルタリ・ビビ',
@@ -5450,7 +5451,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 13, 23],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ヤソップ',
@@ -5475,7 +5476,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 26, 2, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'スモーカー',
@@ -5500,7 +5501,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロロノア・ゾロ',
@@ -5525,7 +5526,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カヤ',
@@ -5550,7 +5551,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ネプチューン',
@@ -5575,7 +5576,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ニコ・ロビン',
@@ -5600,7 +5601,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サンジ',
@@ -5625,7 +5626,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ブルック',
@@ -5650,7 +5651,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '錦えもん',
@@ -5675,7 +5676,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4, 25],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・ブリュレ',
@@ -5700,7 +5701,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ホーディ・ジョーンズ',
@@ -5725,7 +5726,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 3, 24, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジンベエ',
@@ -5750,7 +5751,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 3, 24, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ドンキホーテ・ドフラミンゴ',
@@ -5775,7 +5776,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 17, 20, 11, 3, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'セニョール・ピンク',
@@ -5800,7 +5801,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 20, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -5825,7 +5826,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ベビー5',
@@ -5850,7 +5851,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 20, 11, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ポートガス・D・エース',
@@ -5875,7 +5876,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 16, 19, 9, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ダグラス・バレット',
@@ -5900,7 +5901,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 11, 9, 4, 5],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シキ',
@@ -5925,7 +5926,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ジンベエ',
@@ -5950,7 +5951,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 7, 24, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'チンジャオ',
@@ -5975,7 +5976,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'フーズ・フー',
@@ -6000,7 +6001,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 8, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウソップ',
@@ -6025,7 +6026,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 4, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'Mr.2・ボン・クレー',
@@ -6050,7 +6051,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'サボ',
@@ -6075,7 +6076,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 18, 19, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'アディオ・スエルテ',
@@ -6100,7 +6101,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'クロコダイル',
@@ -6125,7 +6126,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 19, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ガイモン',
@@ -6150,7 +6151,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 26],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'レベッカ',
@@ -6175,7 +6176,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ベラミー',
@@ -6200,7 +6201,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 13],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'チョパえもん',
@@ -6225,7 +6226,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 7, 8, 9, 4, 33],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: '花魁おリン',
@@ -6250,7 +6251,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 3, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: true,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'シャーロット・リンリン',
@@ -6275,7 +6276,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 11, 3, 9, 4, 31],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ゼファー',
@@ -6300,7 +6301,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'スモーカー',
@@ -6325,7 +6326,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 21, 19, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ウソップ',
@@ -6350,7 +6351,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 7, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -6375,7 +6376,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 4, 7, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'トニートニー・チョッパー',
@@ -6400,7 +6401,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 4, 8, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ハック',
@@ -6425,7 +6426,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 24, 18],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'イデオ',
@@ -6450,7 +6451,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'カリブー',
@@ -6475,7 +6476,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 19, 3, 9, 4],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'イナズマ',
@@ -6500,7 +6501,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 11, 9, 13, 18],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ブラックマリア',
@@ -6525,7 +6526,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 8, 9, 4, 14],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ポートガス・D・エース',
@@ -6550,7 +6551,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13, 16, 19],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ナミ',
@@ -6575,7 +6576,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'モンキー・D・ガープ',
@@ -6600,7 +6601,7 @@ export const characterMasterData: Character[] = [
     tags: [6, 13, 21],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'フランキー',
@@ -6625,7 +6626,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 4, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ロロノア・ゾロ',
@@ -6650,7 +6651,7 @@ export const characterMasterData: Character[] = [
     tags: [1, 13, 7],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'キラー',
@@ -6675,7 +6676,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 4, 10],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'ワイパー',
@@ -6700,7 +6701,7 @@ export const characterMasterData: Character[] = [
     tags: [15, 13, 12],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
   {
     name: 'たしぎ',
@@ -6725,6 +6726,6 @@ export const characterMasterData: Character[] = [
     tags: [15, 4, 21],
     hasCharacter: false,
     isMultipleType: false,
-    userId: 0,
+    userId: initialUserId,
   },
 ];
