@@ -26,6 +26,7 @@ model Characters {
   totalScore     Int
   hasCharacter   Boolean
   isMultipleType Boolean
+  tagIds         Int[]
   users          User[]              @relation("UserCharacters")
   character      Character?
 }

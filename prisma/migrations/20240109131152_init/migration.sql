@@ -22,6 +22,7 @@ CREATE TABLE "Characters" (
     "totalScore" INTEGER NOT NULL,
     "hasCharacter" BOOLEAN NOT NULL,
     "isMultipleType" BOOLEAN NOT NULL,
+    "tagIds" INTEGER[],
 
     CONSTRAINT "Characters_pkey" PRIMARY KEY ("id")
 );

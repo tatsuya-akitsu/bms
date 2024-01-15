@@ -1,13 +1,10 @@
-// prisma/seed.ts
 import prisma from '../src/lib/prisma';
-import { characterMasterData } from '../src/constants/character';
 import { characterTags } from '../src/constants/character-tag';
+import { characterMasterData } from '../src/constants/character';
 import { initialUserId } from '../src/constants/index';
-import { CharacterModelSeed, Character as CharacterModel, CharacterDetailModelSeed } from '../src/types';
-import { Character, CharacterAttributes, CharacterType, Characters } from '@prisma/client';
 
 // 初期データとしてサンプルユーザーを登録
-async function seedUser() {
+async function seedInitUser() {
   await prisma.user.upsert({
     where: {
       email: 'sample@gmail.com',
@@ -20,12 +17,12 @@ async function seedUser() {
   });
 }
 
-// キャラクター一覧データを登録
+// キャラクター一覧データの登録
 async function seedCharacters() {
-  for (const [i, character] of characterMasterData.entries()) {
+  characterMasterData.map(async (character, i) => {
     await prisma.characters.create({
       data: {
-        id: `${character.attributes}_${character.type}_0${i + 1}`,
+        id: `${i + 1}_${character.attributes}_${character.type}`,
         name: character.name,
         label: character.label,
         type: character.type,
@@ -33,22 +30,23 @@ async function seedCharacters() {
         totalScore: character.maximum.status.comprehensive,
         hasCharacter: character.hasCharacter,
         isMultipleType: character.isMultipleType,
+        tagIds: character.tags,
         users: {
           connect: {
             id: character.userId,
           },
-        }
-      }
-    })
-  }
+        },
+      },
+    });
+  })
 }
 
 // 【最大値】キャラクターステータスの登録
 async function seedCharacterMaximumStatus() {
   const status = characterMasterData.map((character, i) => {
     return {
-      id: `${character.attributes}_${character.type}_${i + 1}`,
-      ...character.maximum.status
+      id: `${i + 1}_${character.attributes}_${character.type}`,
+      ...character.maximum.status,
     };
   })
   await prisma.characterMaximumStatus.createMany({
@@ -60,7 +58,7 @@ async function seedCharacterMaximumStatus() {
 async function seedCharacterMaximumSkill() {
   const skills = characterMasterData.map((character, i) => {
     return {
-      id: `${character.attributes}_${character.type}_${i + 1}`,
+      id: `${i + 1}_${character.attributes}_${character.type}`,
       ...character.maximum.skills,
     };
   })
@@ -88,82 +86,69 @@ async function seedCharacterMaximum() {
   })
 }
 
-// キャラクター一覧取得
-async function getCharacters() {
-  return prisma.characters.findMany();
-}
-
 // キャラクター詳細の登録
 async function seedCharacter() {
   const maximumStatus = await prisma.characterMaximum.findMany()
-  const characters = await getCharacters()
 
-  for (const [i, character] of characters.entries()) {
+  characterMasterData.map(async (character, i) => {
     await prisma.character.create({
       data: {
         id: `detail_${character.attributes}_${character.type}_${i + 1}`,
         uniqueId: `${i + 1}_${character.attributes}_${character.type}`,
         statusId: maximumStatus.filter(
           (status) =>
-            status.id === `${character.attributes}_${character.type}_${i + 1}`
+            status.id === `${i + 1}_${character.attributes}_${character.type}`
         )[0].id,
-        characterId: character.id,
+        characterId: `${i + 1}_${character.attributes}_${character.type}`,
       },
     });
-  }
+  })
 }
 
 // キャラクタータグの登録
-async function seedCharacterTags() {
-  const characters = await getCharacters()
+async function seedCharacterTag() {
+  const characters = await prisma.characters.findMany()
   characterTags.forEach(async (tag, i) => {
     await prisma.characterTag.create({
       data: {
         id: `tag_${i + 1}`,
-        ...tag,
+        ...tag
       }
     })
   })
 
   const characterTagsData = await prisma.characterTag.findMany()
 
-  for (const [idx, character] of characterMasterData.entries()) {
-    for (const [i, tag] of characterTagsData.entries()) {
-      if (character.tags.includes(i + 1)) {
-        let targetCharacter = characters.filter(
-          (data) =>
-            data.attributes === character.attributes &&
-            data.label === character.label &&
-            data.type === character.type
-        )[0];
-        let getCharacter = await prisma.character.findMany({
-          where: {
-            characterId: `${targetCharacter.attributes}_${
-              targetCharacter.type
-            }_0${idx + 1}`,
-          },
-        });
-        await prisma.characterTag.update({
-          where: {
-            id: `tag_${i + 1}`,
-          },
-          data: {
-            character: {
-              connect: getCharacter,
-            },
-          },
-        });
-      }
-    }
-  }
+  characterTagsData.map(async (tag, i) => {
+    let containTagCharacters = characters.filter((character) => character.tagIds.includes(Number(tag.id.split('_')[1])))
+
+    containTagCharacters.map(async (character) => {
+      let getCharacter = await prisma.character.findMany({
+        where: {
+          uniqueId: character.id
+        }
+      })
+
+      await prisma.characterTag.update({
+        where: {
+          id: tag.id
+        },
+        data: {
+          character: {
+            connect: getCharacter[0]
+          }
+        }
+      })
+    })
+  })
 }
 
 // 【ユーザー別】キャラクターステータスの登録
 async function seedCharacterUserStatus() {
-  for (const [i, character] of characterMasterData.entries()) {
+  characterMasterData.map(async (character, i) => {
     await prisma.characterUserdataStatus.create({
       data: {
-        id: `${character.attributes}_${character.type}_${i + 1}`,
+        id: `${i + 1}_${character.attributes}_${character.type}`,
         level: 0,
         comprehensive: 0,
         strength: 0,
@@ -173,28 +158,28 @@ async function seedCharacterUserStatus() {
         boost: 0,
       },
     });
-  }
+  })
 }
 
 // 【ユーザー別】キャラクタースキルの登録
 async function seedCharacterUserSkill() {
-  for (const [i, character] of characterMasterData.entries()) {
+  characterMasterData.map(async (character, i) => {
     await prisma.characterUserdataSkill.create({
       data: {
-        id: `${character.attributes}_${character.type}_${i + 1}`,
+        id: `${i + 1}_${character.attributes}_${character.type}`,
         skill1: 0,
         skill2: 0,
       },
     });
-  }
+  })
 }
 
 // 【ユーザー別】キャラクター情報の登録
 async function seedCharacterUserdata() {
   const statuses = await prisma.characterUserdataStatus.findMany()
-  const skills = await prisma.characterUserdataStatus.findMany()
+  const skills = await prisma.characterUserdataSkill.findMany()
 
-  for (const [i, status] of statuses.entries()) {
+  statuses.map(async (status, i) => {
     await prisma.characterUserdata.create({
       data: {
         id: status.id,
@@ -203,17 +188,34 @@ async function seedCharacterUserdata() {
         userId: initialUserId,
       },
     });
-  }
+  })
 }
 
+/*
+  @TODO: 以下の順番で個別にseedは実行していく
+  1.
+    seedInitUser
+    seedCharacters
+    seedCharacterMaximumStatus
+    seedCharacterMaximumSkill
+    seedCharacterMaximum
+    seedCharacter
+  2.
+    seedCharacterTag
+  3.
+    seedCharacterUserStatus
+    seedCharacterUserSkill
+  4.
+    seedCharacterUserdata
+*/
 async function main() {
-  await seedUser()
+  await seedInitUser()
   await seedCharacters()
   await seedCharacterMaximumStatus()
   await seedCharacterMaximumSkill()
   await seedCharacterMaximum()
-  await seedCharacterTags()
   await seedCharacter()
+  await seedCharacterTag()
   await seedCharacterUserStatus()
   await seedCharacterUserSkill()
   await seedCharacterUserdata()
