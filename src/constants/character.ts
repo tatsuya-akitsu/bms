@@ -1,8 +1,8 @@
-import { Character } from '@/types';
+import { CharacterModel } from '@/types';
 import { CharacterAttributes, CharacterType } from '@prisma/client';
 import { initialUserId } from '.';
 
-export const characterMasterData: Character[] = [
+export const characterMasterData: CharacterModel[] = [
   {
     name: 'シャンクス',
     label: 'FILM RED',

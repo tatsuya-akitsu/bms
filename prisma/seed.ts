@@ -109,14 +109,14 @@ async function seedCharacter() {
 // キャラクタータグの登録
 async function seedCharacterTag() {
   const characters = await prisma.characters.findMany()
-  // characterTags.forEach(async (tag, i) => {
-  //   await prisma.characterTag.create({
-  //     data: {
-  //       id: `tag_${i + 1}`,
-  //       ...tag
-  //     }
-  //   })
-  // })
+  characterTags.forEach(async (tag, i) => {
+    await prisma.characterTag.create({
+      data: {
+        id: `tag_${i + 1}`,
+        ...tag
+      }
+    })
+  })
 
   const characterTagsData = await prisma.characterTag.findMany()
 

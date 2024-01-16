@@ -5,7 +5,8 @@ import { RecoilRoot } from 'recoil';
 import styles from '@/app/styles/object/projects/shared.module.css'
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Breadcrumb, CharacterData } from '@/types';
+import { Breadcrumb } from '@/types';
+import { Characters } from '@prisma/client';
 
 export default function RootTemplate({
   children,
@@ -44,7 +45,7 @@ export default function RootTemplate({
         const res = await fetch(
           `http://localhost:3000/api/characters/${characterId}?id=${characterId}`
         );
-        const data: CharacterData = await res.json()
+        const data: Characters = await res.json()
 
         setHeader({
           title: `${data.label} ${data.name}`,

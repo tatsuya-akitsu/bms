@@ -1,4 +1,3 @@
-import { CharacterData } from '@/types'
 import React, { MouseEventHandler } from 'react'
 import { useRouter } from 'next/navigation'
 import Table from '@/components/organisms/table'
@@ -6,11 +5,11 @@ import Button from '@/components/modules/Button'
 import styles from '@/app/styles/object/components/table.module.css';
 import imageStyles from '@/app/styles/object/components/image-item.module.css';
 import textStyles from '@/app/styles/object/components/text.module.css';
-import { CharacterType } from '@prisma/client';
+import { CharacterType, Characters } from '@prisma/client';
 import Toggle from '@/components/modules/Toggle'
 
 interface Props {
-  data: CharacterData[]
+  data: Characters[]
   thead: Array<string>
   targetId: number
   loading: boolean
@@ -31,8 +30,8 @@ const CharacterTable: React.FC<Props> = ({ data, thead, targetId, loading, onCli
     }
   };
 
-  const handleRouteDetail = (id: string) => {
-    router.push(`/characters/${id}`)
+  const handleRouteDetail = (uniqueId: string) => {
+    router.push(`/characters/${uniqueId}`)
   }
 
   const handleHasCharacter = (id: number | undefined, hasCharacter: boolean) => {
@@ -41,7 +40,7 @@ const CharacterTable: React.FC<Props> = ({ data, thead, targetId, loading, onCli
 
   return (
     <Table thead={thead}>
-      {data.map((character: CharacterData, i: number) => (
+      {data.map((character: Characters, i: number) => (
         <tr
           className={`${styles.tbodyrow} ${
             loading && targetId === character.id ? styles.is_loading : ''
@@ -93,7 +92,7 @@ const CharacterTable: React.FC<Props> = ({ data, thead, targetId, loading, onCli
               isSecondary={false}
               value={`詳細`}
               size={`is_small`}
-              onClick={() => handleRouteDetail(`${character.id}`)}
+              onClick={() => handleRouteDetail(`${character.uniqueId}`)}
             />
           </td>
           <td className={styles.tbodydata}>

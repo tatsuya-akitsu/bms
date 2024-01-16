@@ -1,6 +1,6 @@
 'use client'
 import { pageSize } from '@/constants';
-import { CharacterData, FilterItem } from '@/types';
+import { FilterItem } from '@/types';
 import React, { useEffect, useRef, useState } from 'react'
 import CharacterTable from '@/components/organisms/character/table';
 import styles from '@/app/styles/object/components/table.module.css';
@@ -9,6 +9,7 @@ import iconStyles from '@/app/styles/object/components/icon.module.css';
 import ChevronUp from '@/components/icons/ChevronUp';
 import ChevronDown from '@/components/icons/ChevronDown';
 import Button from '@/components/modules/Button';
+import { Characters } from '@prisma/client';
 
 enum sortKey {
   attributes = 'attributes',
@@ -73,7 +74,7 @@ const Characters: React.FC = () => {
       { label: '降順', value: 'desc', isSelect: false },
     ],
   });
-  const [data, setData] = useState<CharacterData[]>([])
+  const [data, setData] = useState<Characters[]>([])
   const [page, setPage] = useState<number>(0)
   const [hasData, setHasData] = useState<boolean>(true)
   const [loading, setLoading] = useState<boolean>(false)
@@ -87,7 +88,7 @@ const Characters: React.FC = () => {
   const fetchCharactersData = async (page: number) => {
     if (fetchMode !== 'normal') return
     const res = await fetch(`http://localhost:3000/api/characters?page=${page}`);
-    const data: CharacterData[] = await res.json();
+    const data: Characters[] = await res.json();
     const count = data.length
 
     if (data.length === 0) {
@@ -147,7 +148,7 @@ const Characters: React.FC = () => {
   }
 
   const fetchSortCharactersData = async (index: number, key: sortKey) => {
-    let list: CharacterData[] = [];
+    let list: Characters[] = [];
     let res: Response;
     let count: number = 0;
 
@@ -194,7 +195,7 @@ const Characters: React.FC = () => {
       }
     );
     if (res.ok) {
-      const data: CharacterData[] = await res.json();
+      const data: Characters[] = await res.json();
       data.filter((character) => character.id === id)[0].hasCharacter = isHas;
       setTargetId(0);
       setLoading(false);
