@@ -15,22 +15,61 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
     skip: number;
     take: number;
     where?: { [key: string]: string };
-    orderBy?: { [key: string]: string };
+    orderBy?: {
+      character: {
+        status: {
+          status: {
+            [key: string]: string
+          };
+        };
+      };
+    };
+    include: {
+      character: {
+        include: {
+          status: {
+            include: {
+              status: boolean;
+            };
+          };
+        };
+      };
+    };
   } = {
     skip,
     take: pageSize,
+    include: {
+      character: {
+        include: {
+          status: {
+            include: {
+              status: true,
+            },
+          },
+        },
+      },
+    },
   };
 
   if (target && order) {
-    queryOptions.where = { [order]: `${target}` }
+    queryOptions.where = {
+      [order]: `${target}`
+    }
   }
   if (sort && order) {
     queryOptions.orderBy = {
-      [order]: `${sort}`
-    }
+      character: {
+        status: {
+          status: {
+            [order]: `${sort}`,
+          },
+        },
+      },
+    };
   }
 
-  const characters = await prisma.characters.findMany(queryOptions)
+  const characters = await prisma.characters.findMany(queryOptions);
+
   return NextResponse.json(characters)
 }
 

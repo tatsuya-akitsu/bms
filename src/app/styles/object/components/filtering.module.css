@@ -1,8 +1,11 @@
 .wrapper {
-  padding: 2.4rem 3.2rem;
+  padding: 0 0 2.4rem;
 }
 
 .inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 0 auto;
   width: 80%;
 }

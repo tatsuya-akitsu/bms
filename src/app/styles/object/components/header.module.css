@@ -1,5 +1,5 @@
 .header {
-  margin-bottom: 4rem;
+  margin-bottom: 3.2rem;
   border-bottom: 1px solid var(--base-slate-200);
 }
 
@@ -8,7 +8,7 @@
 }
 
 .title {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
@@ -16,7 +16,7 @@
 }
 
 .subtitle {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.08em;
@@ -24,10 +24,10 @@
 }
 
 .description {
-  padding-top: 1.6rem;
-  font-size: 1.6rem;
+  padding-top: 1.4rem;
+  font-size: 1.4rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.25;
   letter-spacing: 0.05em;
   color: var(--base-slate-800);
 }

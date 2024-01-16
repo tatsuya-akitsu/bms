@@ -3,8 +3,8 @@
   overflow-y: auto;
   margin: 0 auto;
   width: 80%;
-  height: calc(var(--full-height) * 0.66);
-  max-height: calc(var(--full-height) * 0.66);
+  height: calc(var(--full-height) * 0.6);
+  max-height: calc(var(--full-height) * 0.6);
   background-color: var(--base-white-color);
   border: 1px solid var(--base-slate-200);
   border-radius: 0.8rem;
@@ -63,7 +63,7 @@
 .theadrow {
   position: sticky;
   top: 0px;
-  padding: 1.4rem 0;
+  padding: 1rem 0;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--base-text-color);

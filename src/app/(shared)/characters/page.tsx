@@ -1,5 +1,4 @@
 'use client'
-import { pageSize } from '@/constants';
 import { FilterItem } from '@/types';
 import React, { useEffect, useRef, useState } from 'react'
 import CharacterTable from '@/components/organisms/character/table';
