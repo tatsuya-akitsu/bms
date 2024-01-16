@@ -18,7 +18,8 @@ model User {
 }
 
 model Characters {
-  id             String              @id
+  id             Int                 @id
+  uniqueId       String              @unique
   name           String
   label          String
   type           CharacterType
@@ -37,7 +38,7 @@ model Character {
   status        CharacterMaximum @relation(fields: [statusId], references: [id])
   statusId      String
   tags          CharacterTag[]
-  characterData Characters       @relation(fields: [characterId], references: [id])
+  characterData Characters       @relation(fields: [characterId], references: [uniqueId])
   characterId   String           @unique
 }
 

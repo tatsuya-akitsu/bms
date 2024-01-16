@@ -9,7 +9,7 @@
     "migrate": "prisma migrate dev --name init",
     "migrate:update": "prisma migrate dev",
     "deploy": "prisma migrate deploy",
-    "applied": "prisma migrate resolve --applied '20240105021129_init'",
+    "applied": "prisma migrate resolve --applied '20240116025036_init'",
     "db:reset": "prisma migrate reset",
     "studio": "prisma studio",
     "start": "next start",

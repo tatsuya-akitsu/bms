@@ -22,7 +22,8 @@ async function seedCharacters() {
   characterMasterData.map(async (character, i) => {
     await prisma.characters.create({
       data: {
-        id: `${i + 1}_${character.attributes}_${character.type}`,
+        id: i + 1,
+        uniqueId: `${i + 1}_${character.attributes}_${character.type}`,
         name: character.name,
         label: character.label,
         type: character.type,
@@ -108,14 +109,14 @@ async function seedCharacter() {
 // キャラクタータグの登録
 async function seedCharacterTag() {
   const characters = await prisma.characters.findMany()
-  characterTags.forEach(async (tag, i) => {
-    await prisma.characterTag.create({
-      data: {
-        id: `tag_${i + 1}`,
-        ...tag
-      }
-    })
-  })
+  // characterTags.forEach(async (tag, i) => {
+  //   await prisma.characterTag.create({
+  //     data: {
+  //       id: `tag_${i + 1}`,
+  //       ...tag
+  //     }
+  //   })
+  // })
 
   const characterTagsData = await prisma.characterTag.findMany()
 
@@ -125,7 +126,7 @@ async function seedCharacterTag() {
     containTagCharacters.map(async (character) => {
       let getCharacter = await prisma.character.findMany({
         where: {
-          uniqueId: character.id
+          characterId: character.uniqueId
         }
       })
 
@@ -205,7 +206,6 @@ async function seedCharacterUserdata() {
   3.
     seedCharacterUserStatus
     seedCharacterUserSkill
-  4.
     seedCharacterUserdata
 */
 async function main() {

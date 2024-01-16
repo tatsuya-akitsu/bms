@@ -14,7 +14,8 @@ CREATE TABLE "User" (
 
 -- CreateTable
 CREATE TABLE "Characters" (
-    "id" TEXT NOT NULL,
+    "id" INTEGER NOT NULL,
+    "uniqueId" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "label" TEXT NOT NULL,
     "type" "CharacterType" NOT NULL,
@@ -114,7 +115,7 @@ CREATE TABLE "CharacterUserdataSkill" (
 
 -- CreateTable
 CREATE TABLE "_UserCharacters" (
-    "A" TEXT NOT NULL,
+    "A" INTEGER NOT NULL,
     "B" TEXT NOT NULL
 );
 
@@ -126,6 +127,9 @@ CREATE TABLE "_CharacterToCharacterTag" (
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Characters_uniqueId_key" ON "Characters"("uniqueId");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Character_uniqueId_key" ON "Character"("uniqueId");
@@ -149,7 +153,7 @@ CREATE INDEX "_CharacterToCharacterTag_B_index" ON "_CharacterToCharacterTag"("B
 ALTER TABLE "Character" ADD CONSTRAINT "Character_statusId_fkey" FOREIGN KEY ("statusId") REFERENCES "CharacterMaximum"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Character" ADD CONSTRAINT "Character_characterId_fkey" FOREIGN KEY ("characterId") REFERENCES "Characters"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Character" ADD CONSTRAINT "Character_characterId_fkey" FOREIGN KEY ("characterId") REFERENCES "Characters"("uniqueId") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "CharacterMaximum" ADD CONSTRAINT "CharacterMaximum_statusId_fkey" FOREIGN KEY ("statusId") REFERENCES "CharacterMaximumStatus"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

@@ -30,7 +30,7 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
     }
   }
 
-  const characters = await prisma.character.findMany(queryOptions)
+  const characters = await prisma.characters.findMany(queryOptions)
   return NextResponse.json(characters)
 }
 
@@ -40,7 +40,7 @@ export async function PATCH(req: NextRequest, res: NextApiResponse) {
     hasCharacter: req.nextUrl.searchParams.get('hasCharacter')!,
   };
   const isHas = hasCharacter === 'true' ? true : false
-  const characters = await prisma.character.update({
+  const characters = await prisma.characters.update({
     where: {
       id: id
     },
