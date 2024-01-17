@@ -171,18 +171,99 @@ const Characters: React.FC = () => {
         &&
         b.  statusとsortにそれぞれ一つでもisSelectがtrueのものがあるかどうか
       7. 属性とキャラタイプと特定のステータス数値によるソート
+
+      targetとして渡したい値は以下
+        i.    attributes
+        ii.   type
+        iii.  comprehensive
+        ⅳ.   attack
+        ⅴ.    defense
+        ⅵ.   strength
+        ⅶ.   critical
+      実際にtargetに渡す分類は以下とする
+        i.  filtering
+          a.  attributes
+          b.  type
+        ii. sort
+          a.  status
+      orderとして渡したい値は以下
+        i.  attributes
+          a.  BLUE
+          b.  RED
+          c.  GREEN
+        ii. type
+          a.  ATTACKER
+          b.  DEFENDER
+          c.  GETTER
+        iii. status
+          a.  asc
+          b.  desc
+      実際にorderにわたす分類は以下
+        i.  value
+          a.  attributes
+          b.  type
+        ii. order
+          a.  status
     */
 
-    let isAttributes = attributes.filter((item) => item.isSelect)
-    let isType = type.filter((item) => item.isSelect)
-    let isStatus = status.filter((item) => item.isSelect)
-    let isOrder = sort.filter((item) => item.isSelect)
+    let isAttributes = attributes.filter((item) => item.isSelect);
+    let isType = type.filter((item) => item.isSelect);
+    let isStatus = status.filter((item) => item.isSelect);
+    let isOrder = sort.filter((item) => item.isSelect);
 
-    if (isAttributes.length) {
-      // 属性の選択がある場合
-      let value = isAttributes[0].value
+    if (
+      isAttributes.length &&
+      isType.length &&
+      isStatus.length &&
+      isOrder.length
+    ) {
+      // 属性の選択があり且つキャラタイプの選択があり且つ、特定のステータスの選択がある場合
+      let attributes = isAttributes[0].value;
+      let type = isType[0].value;
+      let value = isStatus[0].value;
+      let order = isOrder[0].value;
+
       res = await fetch(
-        `http://localhost:3000/api/characters?page=${index}&order=attributes&target=${value}`
+        `http://localhost:3000/api/characters?page=${index}&filtering=attributes&value=${attributes}&filtering=type&value=${type}&sort=${value}&order=${order}`
+      );
+      list = await res.json();
+      count = list.length;
+    } else if (isAttributes.length && isType.length) {
+      // 属性とキャラタイプの選択がある場合
+      let attributes = isAttributes[0].value;
+      let types = isType[0].value;
+      res = await fetch(
+        `http://localhost:3000/api/characters?page=${index}&filtering=attributes&value=${attributes}&filtering=type&value=${types}`
+      );
+      list = await res.json();
+      count = list.length;
+    } else if (isAttributes.length && isStatus.length && isOrder.length) {
+      // 属性の選択があり且つ、特定のステータスの選択がある場合
+      let attributes = isAttributes[0].value
+      let value = isStatus[0].value;
+      let order = isOrder[0].value;
+
+      res = await fetch(
+        `http://localhost:3000/api/characters?page=${index}&filtering=attributes&value=${attributes}&sort=${value}&order=${order}`
+      );
+      list = await res.json();
+      count = list.length;
+    } else if (isType.length && isStatus.length && isOrder.length) {
+      // キャラタイプの選択があり且つ、特定のステータスの選択がある場合
+      let type = isType[0].value;
+      let value = isStatus[0].value;
+      let order = isOrder[0].value;
+
+      res = await fetch(
+        `http://localhost:3000/api/characters?page=${index}&filtering=type&value=${type}&sort=${value}&order=${order}`
+      );
+      list = await res.json();
+      count = list.length;
+    } else if (isAttributes.length) {
+      // 属性の選択がある場合
+      let value = isAttributes[0].value;
+      res = await fetch(
+        `http://localhost:3000/api/characters?page=${index}&filtering=attributes&value=${value}`
       );
       list = await res.json();
       count = list.length;
@@ -190,39 +271,24 @@ const Characters: React.FC = () => {
       // キャラタイプの選択がある場合
       let value = isType[0].value;
       res = await fetch(
-        `http://localhost:3000/api/characters?page=${index}&order=type&target=${value}`
-      );
-      list = await res.json();
-      count = list.length;
-    } else if (isAttributes.length && isType.length) {
-      // 属性とキャラタイプの選択がある場合
-      let attributes = isAttributes[0].value
-      let types = isType[0].value
-      res = await fetch(
-        `http://localhost:3000/api/characters?page=${index}&order=attributes&target=${attributes}&order=type&target=${types}`
+        `http://localhost:3000/api/characters?page=${index}&filtering=type&value=${value}`
       );
       list = await res.json();
       count = list.length;
     } else if (isStatus.length && isOrder.length) {
       // 特定のステータスの選択がある場合
-      let value = isStatus[0].value
-      let order = isOrder[0].value
+      let value = isStatus[0].value;
+      let order = isOrder[0].value;
       res = await fetch(
-        `http://localhost:3000/api/characters?page=${index}&order=${value}&sort=${order}`
+        `http://localhost:3000/api/characters?page=${index}&sort=${value}&order=${order}`
       );
       list = await res.json();
       count = list.length;
-    } else if (isAttributes.length && isStatus.length && isOrder.length) {
-      // 属性の選択があり且つ、特定のステータスの選択がある場合
-    } else if (isType.length && isStatus.length && isOrder.length) {
-      // キャラタイプの選択があり且つ、特定のステータスの選択がある場合
-    } else if (isAttributes.length && isType.length && isStatus.length && isOrder.length) {
-      // 属性の選択があり且つキャラタイプの選択があり且つ、特定のステータスの選択がある場合
     }
 
     if (list.length === 0) {
-      setHasData(false)
-      return
+      setHasData(false);
+      return;
     }
 
     setData((prev) => [...prev, ...list]);

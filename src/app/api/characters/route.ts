@@ -7,9 +7,10 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
   const page = parseInt(req.nextUrl.searchParams.get('page')!) || 1
   const skip = (page - 1) * pageSize
 
-  const order = req.nextUrl.searchParams.get('order')!
-  const target = req.nextUrl.searchParams.get('target')
+  const filtering = req.nextUrl.searchParams.getAll('filtering') || []
+  const value = req.nextUrl.searchParams.getAll('value') || []
   const sort = req.nextUrl.searchParams.get('sort')
+  const order = req.nextUrl.searchParams.get('order')
 
   let queryOptions: {
     skip: number;
@@ -51,17 +52,38 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
     },
   };
 
-  if (target && order) {
-    queryOptions.where = {
-      [order]: `${target}`
+  if (filtering && value && sort && order) {
+    // 属性またはキャラタイプもしくはその両方と、ステータスのソートがある場合
+    queryOptions.where = {};
+    for (let i = 0; i < filtering.length; i++) {
+      queryOptions.where[filtering[i]] = `${value[i]}`;
     }
-  }
-  if (sort && order) {
     queryOptions.orderBy = {
       character: {
         status: {
           status: {
-            [order]: `${sort}`,
+            [sort]: `${order}`,
+          },
+        },
+      },
+    };
+  }
+
+  if (filtering && value) {
+    // 属性のみまたはキャラタイプのみもしくは属性とキャラタイプのみ
+    queryOptions.where = {}
+    for (let i = 0; i < filtering.length; i++) {
+      queryOptions.where[filtering[i]] = `${value[i]}`
+    }
+  }
+
+  if (sort && order) {
+    // ステータスのソートのみ
+    queryOptions.orderBy = {
+      character: {
+        status: {
+          status: {
+            [sort]: `${order}`,
           },
         },
       },
@@ -69,7 +91,6 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
   }
 
   const characters = await prisma.characters.findMany(queryOptions);
-
   return NextResponse.json(characters)
 }
 
