@@ -4,7 +4,8 @@ import { useRouter } from 'next/navigation';
 import styles from '@/app/styles/object/projects/signin-page.module.css';
 import icon from '@/app/styles/object/components/icon.module.css'
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/api/firebase';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider, twitterProvider } from '@/api/firebase';
 
 import Headline from '@/components/modules/Headline'
 import Button from '@/components/modules/Button';
@@ -12,6 +13,7 @@ import Icon from '@/components/modules/Icon'
 import { iconRatio } from '@/constants/index';
 import { useRecoilState } from 'recoil';
 import { useUserState } from '@/store/user';
+import prisma from '@/lib/prisma';
 
 const Signup = () => {
   const router = useRouter();
@@ -44,10 +46,66 @@ const Signup = () => {
         password: password,
         displayName: userCredential.user.displayName,
       });
+      await prisma.user.upsert({
+        where: {
+          id: userCredential.user.uid,
+        },
+        update: {},
+        create: {
+          id: userCredential.user.uid,
+          email: `${userCredential.user.email}`,
+        },
+      });
       router.push('/dashboard');
     } catch (e) {
       console.error(e);
     }
+  };
+
+  const onTwitterSignin = async () => {
+    try {
+      const userCredential = await signInWithPopup(auth, twitterProvider);
+      await setUser({
+        uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        password: password,
+        displayName: userCredential.user.displayName,
+      });
+      await prisma.user.upsert({
+        where: {
+          id: userCredential.user.uid,
+        },
+        update: {},
+        create: {
+          id: userCredential.user.uid,
+          email: `${userCredential.user.email}`,
+        },
+      });
+      router.push('/dashboard');
+    } catch (e) {}
+  };
+
+  const onGoogleSignin = async () => {
+    try {
+      const userCredential = await signInWithPopup(auth, googleProvider);
+      await setUser({
+        uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        password: password,
+        displayName: userCredential.user.displayName,
+      });
+      await prisma.user.upsert({
+        where: {
+          id: userCredential.user.uid,
+        },
+        update: {},
+        create: {
+          id: userCredential.user.uid,
+          email: `${userCredential.user.email}`,
+        },
+      });
+      router.push('/dashboard');
+    } catch (e) {}
   };
 
   return (
@@ -100,6 +158,7 @@ const Signup = () => {
                 width: `calc(${objectWidth}px / ${iconRatio})`,
                 height: `calc(${objectWidth}px / ${iconRatio})`,
               }}
+              onClick={onTwitterSignin}
             >
               <Icon
                 imagePath={'/images/icon_social--twitter.svg'}
@@ -113,6 +172,7 @@ const Signup = () => {
                 width: `calc(${objectWidth}px / ${iconRatio})`,
                 height: `calc(${objectWidth}px / ${iconRatio})`,
               }}
+              onClick={onGoogleSignin}
             >
               <Icon
                 imagePath={'/images/icon_social--google.svg'}

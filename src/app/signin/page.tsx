@@ -12,6 +12,7 @@ import Icon from '@/components/modules/Icon';
 import { iconRatio } from '@/constants/index';
 import { useRecoilState } from 'recoil';
 import { useUserState } from '@/store/user';
+import prisma from '@/lib/prisma';
 
 const Signup = () => {
   const router = useRouter()
@@ -44,6 +45,16 @@ const Signup = () => {
         password: password,
         displayName: userCredential.user.displayName
       })
+      await prisma.user.upsert({
+        where: {
+          id: userCredential.user.uid,
+        },
+        update: {},
+        create: {
+          id: userCredential.user.uid,
+          email: `${userCredential.user.email}`,
+        },
+      });
       router.push('/dashboard')
     } catch (e) {
       console.error(e);
@@ -59,6 +70,16 @@ const Signup = () => {
         password: password,
         displayName: userCredential.user.displayName,
       });
+      await prisma.user.upsert({
+        where: {
+          id: userCredential.user.uid,
+        },
+        update: {},
+        create: {
+          id: userCredential.user.uid,
+          email: `${userCredential.user.email}`,
+        },
+      });
       router.push('/dashboard');
     } catch (e) {}
   }
@@ -71,6 +92,16 @@ const Signup = () => {
         email: userCredential.user.email,
         password: password,
         displayName: userCredential.user.displayName,
+      });
+      await prisma.user.upsert({
+        where: {
+          id: userCredential.user.uid,
+        },
+        update: {},
+        create: {
+          id: userCredential.user.uid,
+          email: `${userCredential.user.email}`,
+        },
       });
       router.push('/dashboard');
     } catch (e) {}

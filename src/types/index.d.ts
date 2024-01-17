@@ -66,3 +66,10 @@ interface FilterItem {
   value: string;
   isSelect: boolean;
 };
+
+interface UserState {
+  uid: string;
+  email: string | null;
+  password?: string;
+  displayName: string | null;
+}

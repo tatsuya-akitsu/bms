@@ -1,4 +1,4 @@
-import { UserState } from '@/types/response'
+import { UserState } from '@/types'
 import { atom } from 'recoil'
 
 export const useUserState = atom<UserState | null>({
