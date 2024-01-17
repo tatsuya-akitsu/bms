@@ -3,7 +3,7 @@
   overflow-y: auto;
   margin: 0 auto;
   width: 80%;
-  height: calc(var(--full-height) * 0.6);
+  height: calc(var(--full-height) * 0.7);
   max-height: calc(var(--full-height) * 0.6);
   background-color: var(--base-white-color);
   border: 1px solid var(--base-slate-200);

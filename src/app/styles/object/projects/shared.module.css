@@ -1,9 +1,13 @@
 .template {
   display: flex;
   width: var(--full-width);
-  height: var(--full-height);
+  min-height: var(--full-height);
 }
 
 .container {
   width: calc(100% - 28.8rem);
+}
+
+.inner {
+  padding-bottom: 6.2rem;
 }

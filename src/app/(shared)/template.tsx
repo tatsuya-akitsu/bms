@@ -38,7 +38,7 @@ export default function RootTemplate({
     let prevBreadcrumb: Breadcrumb = { path: '', label: '' }
     let breadcrumbs: Array<Breadcrumb> = []
 
-    const characterDetailPathMatch = /^\/characters\/(\d+)$/;
+    const characterDetailPathMatch = /^\/characters\/(\d+)_(\w+)$/;
     if (characterDetailPathMatch.test(pathname)) {
       const characterId = pathname.split('/')[2]
       const fetchData = async () => {
@@ -100,7 +100,7 @@ export default function RootTemplate({
         <Sidebar />
         <div className={styles.container}>
           <Header title={header.title} subtitle={header.subtitle} description={header.description} breadcrumbs={breadcrumbs} />
-          <div>{children}</div>
+          <div className={styles.inner}>{children}</div>
         </div>
       </div>
     </RecoilRoot>
