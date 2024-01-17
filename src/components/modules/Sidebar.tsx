@@ -2,18 +2,21 @@ import React from 'react'
 import styles from '@/app/styles/object/components/sidebar.module.css'
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
+import { useRecoilValue } from 'recoil';
+import { useUserState } from '@/store/user';
 
 const Sidebar: React.FC = () => {
   const navigation: Array<{ label: string; path: string }> = [
     { label: 'キャラクター一覧', path: 'characters' },
     { label: 'シミュレーター', path: 'simulator' },
-    { label: 'AIパーティー生成', path: 'aiparty' }
+    { label: 'AIパーティー生成', path: 'aigenerate' }
   ];
   const subnavigation: Array<{ initial: string; label: string; path: string }> = [
     { initial: 'H', label: '所持キャラクター一覧', path: 'character/has' },
     { initial: 'S', label: '設定', path: 'settings' }
   ]
   const segment = useSelectedLayoutSegment()
+  const user = useRecoilValue(useUserState)
 
   return (
     <div className={styles.sidebar}>

@@ -12,7 +12,6 @@ import Icon from '@/components/modules/Icon';
 import { iconRatio } from '@/constants/index';
 import { useRecoilState } from 'recoil';
 import { useUserState } from '@/store/user';
-import prisma from '@/lib/prisma';
 
 const Signup = () => {
   const router = useRouter()
@@ -45,17 +44,19 @@ const Signup = () => {
         password: password,
         displayName: userCredential.user.displayName
       })
-      await prisma.user.upsert({
-        where: {
-          id: userCredential.user.uid,
-        },
-        update: {},
-        create: {
-          id: userCredential.user.uid,
-          email: `${userCredential.user.email}`,
-        },
-      });
-      router.push('/dashboard')
+      const res = await fetch(`http://localhost:3000/api/user`, {
+        method: 'PUT',
+        body: JSON.stringify({
+          uid: userCredential.user.uid,
+          data: {
+            id: userCredential.user.uid,
+            email: `${userCredential.user.email}`
+          }
+        })
+      })
+      if (res.status === 200) {
+        router.push('/dashboard');
+      }
     } catch (e) {
       console.error(e);
     }
@@ -70,17 +71,19 @@ const Signup = () => {
         password: password,
         displayName: userCredential.user.displayName,
       });
-      await prisma.user.upsert({
-        where: {
-          id: userCredential.user.uid,
-        },
-        update: {},
-        create: {
-          id: userCredential.user.uid,
-          email: `${userCredential.user.email}`,
-        },
+      const res = await fetch(`http://localhost:3000/api/user`, {
+        method: 'PUT',
+        body: JSON.stringify({
+          uid: userCredential.user.uid,
+          data: {
+            id: userCredential.user.uid,
+            email: `${userCredential.user.email}`,
+          },
+        }),
       });
-      router.push('/dashboard');
+      if (res.status === 200) {
+        router.push('/dashboard');
+      }
     } catch (e) {}
   }
 
@@ -93,17 +96,19 @@ const Signup = () => {
         password: password,
         displayName: userCredential.user.displayName,
       });
-      await prisma.user.upsert({
-        where: {
-          id: userCredential.user.uid,
-        },
-        update: {},
-        create: {
-          id: userCredential.user.uid,
-          email: `${userCredential.user.email}`,
-        },
+      const res = await fetch(`http://localhost:3000/api/user`, {
+        method: 'PUT',
+        body: JSON.stringify({
+          uid: userCredential.user.uid,
+          data: {
+            id: userCredential.user.uid,
+            email: `${userCredential.user.email}`,
+          },
+        }),
       });
-      router.push('/dashboard');
+      if (res.status === 200) {
+        router.push('/dashboard');
+      }
     } catch (e) {}
   }
 

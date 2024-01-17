@@ -1,19 +1,24 @@
 'use client'
 import Header from '@/components/modules/Header'
 import Sidebar from '@/components/modules/Sidebar'
-import { RecoilRoot } from 'recoil';
+import { RecoilRoot, useRecoilValue } from 'recoil';
 import styles from '@/app/styles/object/projects/shared.module.css'
 import { useEffect, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Breadcrumb } from '@/types';
 import { Characters } from '@prisma/client';
+import { useUserState } from '@/store/user';
+import useAuth from '@/hooks/useAuth';
 
 export default function RootTemplate({
   children,
 }: {
     children: React.ReactNode;
   }) {
+  const router = useRouter()
   const pathname = usePathname()
+  const user = useRecoilValue(useUserState)
+  const { loading } = useAuth()
   const [header, setHeader] = useState<{ title: string; subtitle: string; description: string }>({
     title: '',
     subtitle: '',
@@ -94,6 +99,14 @@ export default function RootTemplate({
       }
     }
   }, [pathname])
+
+  useEffect(() => {
+    if (loading) return
+    if (!user) {
+      router.push('/signin')
+    }
+  }, [user, loading, router])
+
   return (
     <RecoilRoot>
       <div className={styles.template}>
