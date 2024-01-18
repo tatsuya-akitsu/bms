@@ -1,7 +1,12 @@
 import { UserState } from '@/types'
 import { atom } from 'recoil'
 
-export const useUserState = atom<UserState | null>({
+export const useUserState = atom<UserState>({
   key: 'useUserState',
-  default: null
+  default: {
+    uid: '',
+    email: '',
+    password: '',
+    displayName: ''
+  }
 })

@@ -95,9 +95,10 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
 }
 
 export async function PATCH(req: NextRequest, res: NextApiResponse) {
-  const { id, hasCharacter } = {
+  const { id, hasCharacter, uid } = {
     id: parseInt(req.nextUrl.searchParams.get('id')!),
     hasCharacter: req.nextUrl.searchParams.get('hasCharacter')!,
+    uid: req.nextUrl.searchParams.get('uid')!
   };
   const isHas = hasCharacter === 'true' ? true : false
   const characters = await prisma.characters.update({
@@ -106,7 +107,57 @@ export async function PATCH(req: NextRequest, res: NextApiResponse) {
     },
     data: {
       hasCharacter: isHas,
+      users: {
+        connect: {
+          id: uid
+        }
+      }
     }
   })
+
+  const targetCharacter = await prisma.characters.findMany({
+    where: {
+      id: id
+    }
+  })
+  await prisma.characterUserdataStatus.create({
+    data: {
+      id: targetCharacter[0].uniqueId,
+      level: 0,
+      comprehensive: 0,
+      strength: 0,
+      attack: 0,
+      defense: 0,
+      critical: 0.0,
+      boost: 0,
+    },
+  });
+  await prisma.characterUserdataSkill.create({
+    data: {
+      id: targetCharacter[0].uniqueId,
+      skill1: 0,
+      skill2: 0,
+    },
+  });
+
+  const statuses = await prisma.characterUserdataStatus.findMany({
+    where: {
+      id: targetCharacter[0].uniqueId
+    }
+  })
+  const skills = await prisma.characterUserdataSkill.findMany({
+    where: {
+      id: targetCharacter[0].uniqueId
+    }
+  })
+  await prisma.characterUserdata.create({
+    data: {
+      id: statuses[0].id,
+      statusId: statuses[0].id,
+      skillId: skills[0].id,
+      userId: uid,
+    },
+  });
+
   return NextResponse.json(characters)
 }

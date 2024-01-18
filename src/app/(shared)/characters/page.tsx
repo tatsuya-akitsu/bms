@@ -9,6 +9,8 @@ import ChevronUp from '@/components/icons/ChevronUp';
 import ChevronDown from '@/components/icons/ChevronDown';
 import Button from '@/components/modules/Button';
 import { Characters } from '@prisma/client';
+import { useRecoilValue } from 'recoil';
+import { useUserState } from '@/store/user';
 
 enum sortKey {
   attributes = 'attributes',
@@ -18,6 +20,7 @@ enum sortKey {
 }
 
 const Characters: React.FC = () => {
+  const user = useRecoilValue(useUserState)
   const thead: string[] = ['', '名前', 'タイプ', '属性', 'キャラ総合力', '所持/未所持', '詳細']
   const [attributes, setAttributes] = useState<FilterItem[]>([
     { label: '赤属性', value: 'RED', isSelect: false },
@@ -244,8 +247,9 @@ const Characters: React.FC = () => {
   const onDispatchHasCharacter = async (id: number, isHas: boolean) => {
     setTargetId(id);
     setLoading(true);
+    console.log(user)
     const res = await fetch(
-      `http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}`,
+      `http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}&uid=${user.uid}`,
       {
         method: 'PATCH',
       }

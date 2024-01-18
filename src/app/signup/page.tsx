@@ -40,7 +40,7 @@ const Signup = () => {
         email,
         password
       );
-      await setUser({
+      setUser({
         uid: userCredential.user.uid,
         email: userCredential.user.email,
         password: password,
@@ -67,7 +67,7 @@ const Signup = () => {
   const onTwitterSignin = async () => {
     try {
       const userCredential = await signInWithPopup(auth, twitterProvider);
-      await setUser({
+      setUser({
         uid: userCredential.user.uid,
         email: userCredential.user.email,
         password: password,
@@ -92,7 +92,7 @@ const Signup = () => {
   const onGoogleSignin = async () => {
     try {
       const userCredential = await signInWithPopup(auth, googleProvider);
-      await setUser({
+      setUser({
         uid: userCredential.user.uid,
         email: userCredential.user.email,
         password: password,

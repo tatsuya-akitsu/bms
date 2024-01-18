@@ -1,4 +1,4 @@
-import { UserState } from '@/types/response';
+import { UserState } from '@/types/index';
 import { initializeApp, getApps } from 'firebase/app';
 import { GoogleAuthProvider, TwitterAuthProvider, getAuth, onAuthStateChanged } from 'firebase/auth';
 import { SetterOrUpdater } from 'recoil';
@@ -19,9 +19,10 @@ export const auth = getAuth(app);
 export const twitterProvider = new TwitterAuthProvider()
 export const googleProvider = new GoogleAuthProvider()
 
-export const authenticateStateConfirm = (onUpdateStateUser: SetterOrUpdater<UserState | null>) => {
+export const authenticateStateConfirm = (onUpdateStateUser: SetterOrUpdater<UserState>) => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
+      console.log(user, 'ここは呼ばれる？on firebase')
       onUpdateStateUser({
         uid: user.uid,
         email: user.email,

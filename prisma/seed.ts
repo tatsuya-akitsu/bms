@@ -32,11 +32,6 @@ async function seedCharacters() {
         hasCharacter: character.hasCharacter,
         isMultipleType: character.isMultipleType,
         tagIds: character.tags,
-        users: {
-          connect: {
-            id: character.userId,
-          },
-        },
       },
     });
   })
@@ -203,7 +198,7 @@ async function seedCharacterUserdata() {
     seedCharacter
   2.
     seedCharacterTag
-  3.
+  @TODO: 以下の情報は初期データは不要
     seedCharacterUserStatus
     seedCharacterUserSkill
     seedCharacterUserdata
@@ -216,9 +211,9 @@ async function main() {
   await seedCharacterMaximum()
   await seedCharacter()
   await seedCharacterTag()
-  await seedCharacterUserStatus()
-  await seedCharacterUserSkill()
-  await seedCharacterUserdata()
+  // await seedCharacterUserStatus()
+  // await seedCharacterUserSkill()
+  // await seedCharacterUserdata()
 }
 
 main()

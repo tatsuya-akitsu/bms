@@ -5,13 +5,19 @@ import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 
 const useAuth = () => {
-  const [user, setUser] = useRecoilState<UserState | null>(useUserState)
+  const [user, setUser] = useRecoilState<UserState>(useUserState)
   const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user)
-      setLoading(false)
+      if (user) {
+        setUser({
+          uid: user?.uid,
+          email: user?.email,
+          displayName: user?.displayName
+        })
+        setLoading(false)
+      }
     })
 
     return () => unsubscribe()
