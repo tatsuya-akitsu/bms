@@ -1,8 +1,5 @@
-import { UserState } from '@/types/index';
 import { initializeApp, getApps } from 'firebase/app';
 import { GoogleAuthProvider, TwitterAuthProvider, getAuth, onAuthStateChanged } from 'firebase/auth';
-import { SetterOrUpdater } from 'recoil';
-import { useRouter } from 'next/navigation';
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
