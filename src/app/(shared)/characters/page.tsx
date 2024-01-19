@@ -151,7 +151,7 @@ const Characters: React.FC = () => {
       return;
     }
 
-    if (page > 0) {
+    if (page > 0 && user) {
       // 次のデータを取ってくる
       if (fetchMode === 'normal') {
         fetchCharactersData(page)
@@ -159,7 +159,7 @@ const Characters: React.FC = () => {
         fetchSortCharactersData(page, filterKey);
       }
     }
-  }, [page]);
+  }, [page, user]);
 
   const applySort = async (key: sortKey) => {
     setFetchMode('sort')
