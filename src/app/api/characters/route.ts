@@ -12,97 +12,120 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
   const sort = req.nextUrl.searchParams.get('sort')
   const order = req.nextUrl.searchParams.get('order')
   const uid = req.nextUrl.searchParams.get('uid')!
+  const isList: boolean = JSON.parse(req.nextUrl.searchParams.get('isList')!);
 
-  let queryOptions: {
-    skip: number;
-    take: number;
-    where?: { [key: string]: string };
-    orderBy?: {
-      character: {
-        status: {
+  if (isList) {
+    let queryOptions: {
+      skip: number;
+      take: number;
+      where?: { [key: string]: string };
+      orderBy?: {
+        character: {
           status: {
-            [key: string]: string;
-          };
-        };
-      };
-    };
-    include: {
-      character: {
-        include: {
-          status: {
-            include: {
-              status: boolean;
+            status: {
+              [key: string]: string;
             };
           };
         };
       };
-      users: {
-        where: {
-          id: string;
+      include: {
+        character: {
+          include: {
+            status: {
+              include: {
+                status: boolean;
+              };
+            };
+          };
+        };
+        users: {
+          where: {
+            id: string;
+          };
         };
       };
-    };
-  } = {
-    skip,
-    take: pageSize,
-    include: {
-      character: {
-        include: {
-          status: {
-            include: {
-              status: true,
+    } = {
+      skip,
+      take: pageSize,
+      include: {
+        character: {
+          include: {
+            status: {
+              include: {
+                status: true,
+              },
             },
           },
         },
-      },
-      users: {
-        where: {
-          id: uid
+        users: {
+          where: {
+            id: uid
+          }
         }
+      },
+    };
+
+    if (filtering && value && sort && order) {
+      // 属性またはキャラタイプもしくはその両方と、ステータスのソートがある場合
+      queryOptions.where = {};
+      for (let i = 0; i < filtering.length; i++) {
+        queryOptions.where[filtering[i]] = `${value[i]}`;
       }
-    },
-  };
-
-  if (filtering && value && sort && order) {
-    // 属性またはキャラタイプもしくはその両方と、ステータスのソートがある場合
-    queryOptions.where = {};
-    for (let i = 0; i < filtering.length; i++) {
-      queryOptions.where[filtering[i]] = `${value[i]}`;
-    }
-    queryOptions.orderBy = {
-      character: {
-        status: {
+      queryOptions.orderBy = {
+        character: {
           status: {
-            [sort]: `${order}`,
+            status: {
+              [sort]: `${order}`,
+            },
+          },
+        },
+      };
+    }
+
+    if (filtering && value) {
+      // 属性のみまたはキャラタイプのみもしくは属性とキャラタイプのみ
+      queryOptions.where = {}
+      for (let i = 0; i < filtering.length; i++) {
+        queryOptions.where[filtering[i]] = `${value[i]}`
+      }
+    }
+
+    if (sort && order) {
+      // ステータスのソートのみ
+      queryOptions.orderBy = {
+        character: {
+          status: {
+            status: {
+              [sort]: `${order}`,
+            },
+          },
+        },
+      };
+    }
+
+    const characters = await prisma.characters.findMany(queryOptions);
+    return NextResponse.json(characters)
+  } else {
+    const characters = await prisma.characters.findMany({
+      include: {
+        character: {
+          include: {
+            status: {
+              include: {
+                status: true,
+              },
+            },
+          },
+        },
+        users: {
+          where: {
+            id: uid,
           },
         },
       },
-    };
+    });
+    return NextResponse.json(characters)
   }
-
-  if (filtering && value) {
-    // 属性のみまたはキャラタイプのみもしくは属性とキャラタイプのみ
-    queryOptions.where = {}
-    for (let i = 0; i < filtering.length; i++) {
-      queryOptions.where[filtering[i]] = `${value[i]}`
-    }
-  }
-
-  if (sort && order) {
-    // ステータスのソートのみ
-    queryOptions.orderBy = {
-      character: {
-        status: {
-          status: {
-            [sort]: `${order}`,
-          },
-        },
-      },
-    };
-  }
-
-  const characters = await prisma.characters.findMany(queryOptions);
-  return NextResponse.json(characters)
 }
 
 export async function PATCH(req: NextRequest, res: NextApiResponse) {

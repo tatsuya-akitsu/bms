@@ -1,4 +1,4 @@
-import { CharacterAttributes, CharacterType } from "@prisma/client"
+import { CharacterAttributes, CharacterType, Characters } from "@prisma/client"
 
 // @TODO: 追々情報として追加するかも…？
 // interface CharacterSkill {
@@ -45,6 +45,13 @@ interface CharacterModel {
   hasCharacter: boolean;
   isMultipleType: boolean;
   userId: string;
+}
+
+interface UseCharacter extends Characters {
+  users: Array<{
+    email: string;
+    id: string;
+  }>
 }
 
 interface Tag {

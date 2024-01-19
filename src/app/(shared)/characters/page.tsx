@@ -1,5 +1,5 @@
 'use client'
-import { FilterItem } from '@/types';
+import { FilterItem, UseCharacter } from '@/types';
 import React, { useEffect, useRef, useState } from 'react'
 import CharacterTable from '@/components/organisms/character/table';
 import styles from '@/app/styles/object/components/table.module.css';
@@ -17,13 +17,6 @@ enum sortKey {
   sort = 'sort',
   status = 'status',
   type = 'type'
-}
-
-interface ICharacter extends Characters {
-  users: Array<{
-    email: string;
-    id: string;
-  }>
 }
 
 const Characters: React.FC = () => {
@@ -83,7 +76,7 @@ const Characters: React.FC = () => {
       { label: '降順', value: 'desc', isSelect: false },
     ],
   });
-  const [data, setData] = useState<ICharacter[]>([])
+  const [data, setData] = useState<UseCharacter[]>([])
   const [page, setPage] = useState<number>(0)
   const [hasData, setHasData] = useState<boolean>(true)
   const [loading, setLoading] = useState<boolean>(false)
@@ -96,8 +89,8 @@ const Characters: React.FC = () => {
 
   const fetchCharactersData = async (page: number) => {
     if (fetchMode !== 'normal') return
-    const res = await fetch(`http://localhost:3000/api/characters?page=${page}&uid=${user?.uid}`);
-    const data: ICharacter[] = await res.json();
+    const res = await fetch(`http://localhost:3000/api/characters?page=${page}&uid=${user?.uid}&isList=${true}`);
+    const data: UseCharacter[] = await res.json();
     const count = data.length
 
     if (data.length === 0) {
@@ -169,7 +162,7 @@ const Characters: React.FC = () => {
   }
 
   const fetchSortCharactersData = async (index: number, key: sortKey) => {
-    let list: ICharacter[] = [];
+    let list: UseCharacter[] = [];
     let res: Response;
     let count: number = 0;
 
@@ -249,7 +242,7 @@ const Characters: React.FC = () => {
     let queryParams = filteringParams.concat(sortParams).join('&')
 
     if (queryParams) {
-      res = await fetch(`http://localhost:3000/api/characters?page=${index}&${queryParams}&uid=${user?.uid}`);
+      res = await fetch(`http://localhost:3000/api/characters?page=${index}&${queryParams}&uid=${user?.uid}&isList=${true}`);
       list = await res.json()
       count = list.length
     }
@@ -280,7 +273,7 @@ const Characters: React.FC = () => {
     setTargetId(id);
     setLoading(true);
     const res = await fetch(
-      `http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}&uid=${user?.uid}`,
+      `http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}&uid=${user?.uid}&isList=${true}`,
       {
         method: 'PATCH',
       }

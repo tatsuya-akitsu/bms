@@ -9,7 +9,7 @@ const Sidebar: React.FC = () => {
   const navigation: Array<{ label: string; path: string }> = [
     { label: 'キャラクター一覧', path: 'characters' },
     { label: 'シミュレーター', path: 'simulator' },
-    { label: 'AIパーティー生成', path: 'aigenerate' }
+    { label: 'AIパーティー生成', path: 'generator' }
   ];
   const subnavigation: Array<{ initial: string; label: string; path: string }> = [
     { initial: 'H', label: '所持キャラクター一覧', path: 'character/has' },

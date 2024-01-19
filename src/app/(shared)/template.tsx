@@ -85,6 +85,19 @@ export default function RootTemplate({
           breadcrumbs = [currentBreadcrumb];
           setBreadcrumbs(breadcrumbs);
           break;
+        case '/generator':
+          setHeader({
+            title: 'AIパーティー生成',
+            subtitle: 'Party generation by AI',
+            description: 'あなたの所持キャラの情報を元にパーティーを提案します。'
+          });
+          currentBreadcrumb = {
+            path: '/generator',
+            label: 'AIパーティー生成'
+          };
+          breadcrumbs = [currentBreadcrumb]
+          setBreadcrumbs(breadcrumbs)
+          break;
         // ダッシュボード
         default:
           setHeader({
