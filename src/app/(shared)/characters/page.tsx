@@ -247,16 +247,15 @@ const Characters: React.FC = () => {
   const onDispatchHasCharacter = async (id: number, isHas: boolean) => {
     setTargetId(id);
     setLoading(true);
-    console.log(user)
     const res = await fetch(
-      `http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}&uid=${user.uid}`,
+      `http://localhost:3000/api/characters?id=${id}&hasCharacter=${isHas}&uid=${user?.uid}`,
       {
         method: 'PATCH',
       }
     );
     if (res.ok) {
-      const data: Characters[] = await res.json();
-      data.filter((character) => character.id === id)[0].hasCharacter = isHas;
+      const target: Characters = await res.json()
+      data.filter((character) => character.id === target.id)[0].hasCharacter = isHas;
       setTargetId(0);
       setLoading(false);
     }

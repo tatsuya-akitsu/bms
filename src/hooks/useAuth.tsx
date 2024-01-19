@@ -1,27 +1,28 @@
-import { auth } from "@/api/firebase";
-import { useUserState } from "@/store/user";
-import { UserState } from "@/types";
-import { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
+'use client'
+import { auth } from "@/api/firebase"
+import { useUserState } from "@/store/user"
+import { onAuthStateChanged } from "firebase/auth"
+import { useEffect, useState } from "react"
+import { useRecoilState } from "recoil"
 
 const useAuth = () => {
-  const [user, setUser] = useRecoilState<UserState>(useUserState)
+  const [user, setUser] = useRecoilState(useUserState)
   const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
+    const unsubscribe = onAuthStateChanged(auth, (newUser) => {
+      if (newUser) {
         setUser({
-          uid: user?.uid,
-          email: user?.email,
-          displayName: user?.displayName
+          uid: newUser.uid,
+          email: newUser.email,
+          displayName: newUser.displayName
         })
         setLoading(false)
       }
     })
 
     return () => unsubscribe()
-  }, [setUser])
+  }, [])
 
   return { user, loading }
 }

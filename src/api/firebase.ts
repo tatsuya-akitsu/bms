@@ -22,7 +22,6 @@ export const googleProvider = new GoogleAuthProvider()
 export const authenticateStateConfirm = (onUpdateStateUser: SetterOrUpdater<UserState>) => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      console.log(user, 'ここは呼ばれる？on firebase')
       onUpdateStateUser({
         uid: user.uid,
         email: user.email,

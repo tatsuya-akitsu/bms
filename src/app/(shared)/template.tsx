@@ -1,24 +1,24 @@
 'use client'
 import Header from '@/components/modules/Header'
 import Sidebar from '@/components/modules/Sidebar'
-import { RecoilRoot, useRecoilValue } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import styles from '@/app/styles/object/projects/shared.module.css'
 import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { Breadcrumb } from '@/types';
 import { Characters } from '@prisma/client';
-import { useUserState } from '@/store/user';
 import useAuth from '@/hooks/useAuth';
+import { useUserState } from '@/store/user';
 
 export default function RootTemplate({
   children,
 }: {
     children: React.ReactNode;
   }) {
+  const { user, loading } = useAuth()
+  const setUser = useSetRecoilState(useUserState)
   const router = useRouter()
   const pathname = usePathname()
-  const user = useRecoilValue(useUserState)
-  const { loading } = useAuth()
   const [header, setHeader] = useState<{ title: string; subtitle: string; description: string }>({
     title: '',
     subtitle: '',
@@ -101,6 +101,11 @@ export default function RootTemplate({
   }, [pathname])
 
   useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && isDevFlg.current) {
+      isDevFlg.current = false
+      return
+    }
+
     if (loading) return
     if (!user) {
       router.push('/signin')
@@ -108,14 +113,12 @@ export default function RootTemplate({
   }, [user, loading, router])
 
   return (
-    <RecoilRoot>
-      <div className={styles.template}>
-        <Sidebar />
-        <div className={styles.container}>
-          <Header title={header.title} subtitle={header.subtitle} description={header.description} breadcrumbs={breadcrumbs} />
-          <div className={styles.inner}>{children}</div>
-        </div>
+    <div className={styles.template}>
+      <Sidebar />
+      <div className={styles.container}>
+        <Header title={header.title} subtitle={header.subtitle} description={header.description} breadcrumbs={breadcrumbs} />
+        <div className={styles.inner}>{children}</div>
       </div>
-    </RecoilRoot>
+    </div>
   );
 }
