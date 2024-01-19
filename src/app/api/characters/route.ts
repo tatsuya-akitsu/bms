@@ -11,6 +11,7 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
   const value = req.nextUrl.searchParams.getAll('value') || []
   const sort = req.nextUrl.searchParams.get('sort')
   const order = req.nextUrl.searchParams.get('order')
+  const uid = req.nextUrl.searchParams.get('uid')!
 
   let queryOptions: {
     skip: number;
@@ -20,7 +21,7 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
       character: {
         status: {
           status: {
-            [key: string]: string
+            [key: string]: string;
           };
         };
       };
@@ -33,6 +34,11 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
               status: boolean;
             };
           };
+        };
+      };
+      users: {
+        where: {
+          id: string;
         };
       };
     };
@@ -49,6 +55,11 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
           },
         },
       },
+      users: {
+        where: {
+          id: uid
+        }
+      }
     },
   };
 
@@ -95,18 +106,15 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
 }
 
 export async function PATCH(req: NextRequest, res: NextApiResponse) {
-  const { id, hasCharacter, uid } = {
+  const { id, uid } = {
     id: parseInt(req.nextUrl.searchParams.get('id')!),
-    hasCharacter: req.nextUrl.searchParams.get('hasCharacter')!,
     uid: req.nextUrl.searchParams.get('uid')!
   };
-  const isHas = hasCharacter === 'true' ? true : false
   const characters = await prisma.characters.update({
     where: {
       id: id
     },
     data: {
-      hasCharacter: isHas,
       users: {
         connect: {
           id: uid

@@ -18,18 +18,3 @@ export const app = getApps()?.length ? getApps()[0] : initializeApp(firebaseConf
 export const auth = getAuth(app);
 export const twitterProvider = new TwitterAuthProvider()
 export const googleProvider = new GoogleAuthProvider()
-
-export const authenticateStateConfirm = (onUpdateStateUser: SetterOrUpdater<UserState>) => {
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      onUpdateStateUser({
-        uid: user.uid,
-        email: user.email,
-        displayName: user.displayName
-      });
-    } else {
-      const router = useRouter()
-      router.push('/login')
-    }
-  });
-};

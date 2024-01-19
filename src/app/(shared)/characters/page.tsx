@@ -19,6 +19,13 @@ enum sortKey {
   type = 'type'
 }
 
+interface ICharacter extends Characters {
+  users: Array<{
+    email: string;
+    id: string;
+  }>
+}
+
 const Characters: React.FC = () => {
   const user = useRecoilValue(useUserState)
   const thead: string[] = ['', '名前', 'タイプ', '属性', 'キャラ総合力', '所持/未所持', '詳細']
@@ -76,7 +83,7 @@ const Characters: React.FC = () => {
       { label: '降順', value: 'desc', isSelect: false },
     ],
   });
-  const [data, setData] = useState<Characters[]>([])
+  const [data, setData] = useState<ICharacter[]>([])
   const [page, setPage] = useState<number>(0)
   const [hasData, setHasData] = useState<boolean>(true)
   const [loading, setLoading] = useState<boolean>(false)
@@ -89,15 +96,27 @@ const Characters: React.FC = () => {
 
   const fetchCharactersData = async (page: number) => {
     if (fetchMode !== 'normal') return
-    const res = await fetch(`http://localhost:3000/api/characters?page=${page}`);
-    const data: Characters[] = await res.json();
+    const res = await fetch(`http://localhost:3000/api/characters?page=${page}&uid=${user?.uid}`);
+    const data: ICharacter[] = await res.json();
     const count = data.length
 
     if (data.length === 0) {
       setHasData(false)
       return
     }
-    setData((prev) => [...prev, ...data])
+    const characters = data.map((character) => {
+      if (character.users.length) {
+        return {
+          ...character,
+          hasCharacter: true
+        }
+      } else {
+        return {
+          ...character
+        }
+      }
+    })
+    setData((prev) => [...prev, ...characters])
     setHasData(count > 0)
   };
 
@@ -150,7 +169,7 @@ const Characters: React.FC = () => {
   }
 
   const fetchSortCharactersData = async (index: number, key: sortKey) => {
-    let list: Characters[] = [];
+    let list: ICharacter[] = [];
     let res: Response;
     let count: number = 0;
 
@@ -230,7 +249,7 @@ const Characters: React.FC = () => {
     let queryParams = filteringParams.concat(sortParams).join('&')
 
     if (queryParams) {
-      res = await fetch(`http://localhost:3000/api/characters?page=${index}&${queryParams}`);
+      res = await fetch(`http://localhost:3000/api/characters?page=${index}&${queryParams}&uid=${user?.uid}`);
       list = await res.json()
       count = list.length
     }
@@ -240,7 +259,20 @@ const Characters: React.FC = () => {
       return;
     }
 
-    setData((prev) => [...prev, ...list]);
+    let characters = list.map((character) => {
+      if (character.users.length) {
+        return {
+          ...character,
+          hasCharacter: true
+        }
+      } else {
+        return {
+          ...character
+        }
+      }
+    })
+
+    setData((prev) => [...prev, ...characters]);
     setHasData(count > 0);
   };
 
