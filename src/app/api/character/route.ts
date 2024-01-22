@@ -8,17 +8,21 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
       characterId: req.nextUrl.searchParams.get('id')!,
     },
     include: {
+      characterData: {
+        include: {
+          users: {
+            where: {
+              id: req.nextUrl.searchParams.get('uid')!
+            }
+          }
+        }
+      },
       status: {
         include: {
           skill: true,
           status: true
         }
-      },
-      tags: {
-        include: {
-          character: true,
-        },
-      },
+      }
     },
   });
   return NextResponse.json(character)

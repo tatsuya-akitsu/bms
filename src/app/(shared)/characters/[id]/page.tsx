@@ -4,37 +4,50 @@ import Hammer from '@/components/icons/Hammer'
 import HeartBeat from '@/components/icons/HeartBeat'
 import Shield from '@/components/icons/Shield'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { cache, use } from 'react'
+import { useEffect, useRef } from 'react'
 import styles from '@/app/styles/object/projects/character.module.css'
-import { Character, CharacterMaximum, CharacterMaximumSkill, CharacterMaximumStatus, CharacterTag, Characters } from '@prisma/client'
+import { useRecoilValue } from 'recoil'
+import { useUserState } from '@/store/user'
+import { Character, CharacterUserdata, CharacterUserdataSkill, CharacterUserdataStatus, Characters } from '@prisma/client'
+import { UseCharacter } from '@/types'
 
-const getCharacterDetail = cache((id: string | null) =>
-  fetch(`http://localhost:3000/api/character?id=${id}`).then((res) => res.json())
-)
-
-const getCharacter = cache((id: string | null) =>
-  fetch(`http://localhost:3000/api/characters/${id}?id=${id}`).then((res) => res.json())
-)
-
-interface CharacterStatus extends CharacterMaximum {
-  skill: CharacterMaximumSkill;
-  status: CharacterMaximumStatus;
+interface CharacterStatus extends CharacterUserdata {
+  skill: CharacterUserdataSkill,
+  status: CharacterUserdataStatus
 }
 
-interface CharacterDetail extends Character {
-  status: CharacterStatus;
-  tags: CharacterTag[];
+interface CharacterState extends Character {
+  characterData: UseCharacter
+  status: CharacterStatus
 }
 
 const CharacterDetail = () => {
   const pathname = usePathname()
   const id = pathname.split('/')[2]
-  const characterData = use<Characters>(getCharacter(id))
-  const detailData = use<CharacterDetail>(getCharacterDetail(id));
+  const user = useRecoilValue(useUserState)
+  const isDevFlg = useRef<boolean>(true)
+
+  const fetchCharacter = async (id: string | null, uid: string | undefined) => {
+    const res = await fetch(
+      `http://localhost:3000/api/character?id=${id}&uid=${uid}`
+    );
+    console.log(res)
+  }
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && isDevFlg.current) {
+      isDevFlg.current = false
+      return
+    }
+
+    if (user) {
+      fetchCharacter(id, user.uid)
+    }
+  }, [user])
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.left_box}>
+      {/* <div className={styles.left_box}>
         <p className={styles.label}>{characterData.label}</p>
         <h2 className={styles.name}>{characterData.name}</h2>
         <div className={styles.status}>
@@ -86,7 +99,7 @@ const CharacterDetail = () => {
             backgroundImage: `url(/images/characters/character_${characterData.id}.png)`,
           }}
         ></div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -171,21 +171,11 @@ export async function PATCH(req: NextRequest, res: NextApiResponse) {
     },
   });
 
-  const statuses = await prisma.characterUserdataStatus.findMany({
-    where: {
-      id: targetCharacter[0].uniqueId
-    }
-  })
-  const skills = await prisma.characterUserdataSkill.findMany({
-    where: {
-      id: targetCharacter[0].uniqueId
-    }
-  })
   await prisma.characterUserdata.create({
     data: {
-      id: statuses[0].id,
-      statusId: statuses[0].id,
-      skillId: skills[0].id,
+      id: targetCharacter[0].uniqueId,
+      statusId: targetCharacter[0].uniqueId,
+      skillId: targetCharacter[0].uniqueId,
       userId: uid,
     },
   });
