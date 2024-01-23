@@ -5,7 +5,7 @@ import { useSetRecoilState } from 'recoil';
 import styles from '@/app/styles/object/projects/shared.module.css'
 import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { Breadcrumb } from '@/types';
+import { Breadcrumb, CharacterState } from '@/types';
 import { Characters } from '@prisma/client';
 import useAuth from '@/hooks/useAuth';
 import { useUserState } from '@/store/user';
@@ -44,18 +44,18 @@ export default function RootTemplate({
     let breadcrumbs: Array<Breadcrumb> = []
 
     const characterDetailPathMatch = /^\/characters\/(\d+)_(\w+)$/;
+    console.log(characterDetailPathMatch.test(pathname));
     if (characterDetailPathMatch.test(pathname)) {
       const characterId = pathname.split('/')[2]
       const fetchData = async () => {
         const res = await fetch(
-          `http://localhost:3000/api/characters/${characterId}?id=${characterId}`
+          `http://localhost:3000/api/character?id=${characterId}&uid=${user?.uid}`
         );
-        const data: Characters = await res.json()
-
+        const data: CharacterState = await res.json();
         setHeader({
-          title: `${data.label} ${data.name}`,
+          title: `${data.characterData.label} ${data.characterData.name}`,
           subtitle: 'Character Detail',
-          description: `${data.label} ${data.name}についての詳細情報です。最大まで強化したときのステータスで表示しています。`
+          description: `${data.characterData.label} ${data.characterData.name}についての詳細情報です。最大まで強化したときのステータスで表示しています。`,
         });
         prevBreadcrumb = {
           path: '/characters',
@@ -63,12 +63,14 @@ export default function RootTemplate({
         };
         currentBreadcrumb = {
           path: pathname,
-          label: `${data.label} ${data.name}`
-        }
+          label: `${data.characterData.label} ${data.characterData.name}`,
+        };
         breadcrumbs = [prevBreadcrumb, currentBreadcrumb];
         setBreadcrumbs(breadcrumbs);
       }
-      fetchData()
+      if (user) {
+        fetchData()
+      }
     } else {
       switch (pathname) {
         case '/characters':
@@ -111,7 +113,7 @@ export default function RootTemplate({
           break;
       }
     }
-  }, [pathname])
+  }, [pathname, user])
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && isDevFlg.current) {

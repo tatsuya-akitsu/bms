@@ -1,4 +1,4 @@
-import { CharacterAttributes, CharacterType, Characters } from "@prisma/client"
+import { CharacterAttributes, CharacterMaximumSkill, CharacterMaximumStatus, CharacterType, CharacterUserdataSkill, CharacterUserdataStatus, Characters } from "@prisma/client"
 
 // @TODO: 追々情報として追加するかも…？
 // interface CharacterSkill {
@@ -52,6 +52,25 @@ interface UseCharacter extends Characters {
     email: string;
     id: string;
   }>
+}
+
+interface CharacterData extends Characters {
+  users: Array<{
+    characterUserdata: Array<{
+      skill: CharacterUserdataSkill;
+      status: CharacterUserdataStatus;
+    }>;
+  }>;
+}
+
+interface CharacterStatus extends CharacterUserdata {
+  skill: CharacterMaximumSkill;
+  status: CharacterMaximumStatus;
+}
+
+interface CharacterState extends Character {
+  characterData: CharacterData;
+  status: CharacterStatus;
 }
 
 interface Tag {

@@ -13,6 +13,14 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
           users: {
             where: {
               id: req.nextUrl.searchParams.get('uid')!
+            },
+            select: {
+              characterUserdata: {
+                select: {
+                  skill: true,
+                  status: true
+                }
+              }
             }
           }
         }
