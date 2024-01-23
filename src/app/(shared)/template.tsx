@@ -44,7 +44,6 @@ export default function RootTemplate({
     let breadcrumbs: Array<Breadcrumb> = []
 
     const characterDetailPathMatch = /^\/characters\/(\d+)_(\w+)$/;
-    console.log(characterDetailPathMatch.test(pathname));
     if (characterDetailPathMatch.test(pathname)) {
       const characterId = pathname.split('/')[2]
       const fetchData = async () => {

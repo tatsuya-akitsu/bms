@@ -4,9 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import CharacterTable from '@/components/organisms/character/table';
 import styles from '@/app/styles/object/components/table.module.css';
 import filterStyles from '@/app/styles/object/components/filtering.module.css';
-import iconStyles from '@/app/styles/object/components/icon.module.css';
-import ChevronUp from '@/components/icons/ChevronUp';
-import ChevronDown from '@/components/icons/ChevronDown';
+import loaderStyles from '@/app/styles/object/components/loading.module.css';
 import Button from '@/components/modules/Button';
 import { Characters } from '@prisma/client';
 import { useRecoilValue } from 'recoil';
@@ -79,6 +77,7 @@ const Characters: React.FC = () => {
   const [data, setData] = useState<UseCharacter[]>([])
   const [page, setPage] = useState<number>(0)
   const [hasData, setHasData] = useState<boolean>(true)
+  const [initFetch, setInitFetch] = useState<boolean>(true)
   const [loading, setLoading] = useState<boolean>(false)
   const [targetId, setTargetId] = useState<number>(0)
   const [fetchMode, setFetchMode] = useState<'normal' | 'sort'>('normal')
@@ -89,15 +88,16 @@ const Characters: React.FC = () => {
 
   const fetchCharactersData = async (page: number) => {
     if (fetchMode !== 'normal') return
-    const res = await fetch(`http://localhost:3000/api/characters?page=${page}&uid=${user?.uid}&isList=${true}`);
-    const data: UseCharacter[] = await res.json();
-    const count = data.length
+    data.length === 0 ? setInitFetch(true) : setInitFetch(false)
+    const req = await fetch(`http://localhost:3000/api/characters?page=${page}&uid=${user?.uid}&isList=${true}`);
+    const res: UseCharacter[] = await req.json();
+    const count = res.length
 
-    if (data.length === 0) {
+    if (res.length === 0) {
       setHasData(false)
       return
     }
-    const characters = data.map((character) => {
+    const characters = res.map((character) => {
       if (character.users.length) {
         return {
           ...character,
@@ -111,6 +111,7 @@ const Characters: React.FC = () => {
     })
     setData((prev) => [...prev, ...characters])
     setHasData(count > 0)
+    setInitFetch(false)
   };
 
   useEffect(() => {
@@ -365,7 +366,7 @@ const Characters: React.FC = () => {
                   key={i}
                   className={`${filterStyles.filter_list_item} ${
                     item.isSelect ? filterStyles.is_select : ''
-                    }`}
+                  }`}
                   onClick={() => onDispatchStatusSort(item.value)}
                 >
                   <span>{item.label}</span>
@@ -376,8 +377,9 @@ const Characters: React.FC = () => {
               {sort.map((item, i) => (
                 <li
                   key={i}
-                  className={`${filterStyles.filter_list_item} ${item.isSelect ? filterStyles.is_select : ''
-                    }`}
+                  className={`${filterStyles.filter_list_item} ${
+                    item.isSelect ? filterStyles.is_select : ''
+                  }`}
                   onClick={() => onDispatchSort(item.value)}
                 >
                   <span>{item.label}</span>
@@ -393,7 +395,7 @@ const Characters: React.FC = () => {
                   key={i}
                   className={`${filterStyles.filter_list_item} ${
                     item.isSelect ? filterStyles.is_select : ''
-                    }`}
+                  }`}
                   onClick={() => onDispatchTypeFilter(item.value)}
                 >
                   <span>{item.label}</span>
@@ -406,7 +408,7 @@ const Characters: React.FC = () => {
                   key={i}
                   className={`${filterStyles.filter_list_item} ${
                     item.isSelect ? filterStyles.is_select : ''
-                    }`}
+                  }`}
                   onClick={() => onDispatchAttributeFilter(item.value)}
                 >
                   <span>{item.label}</span>
@@ -430,8 +432,10 @@ const Characters: React.FC = () => {
                 />
                 <div ref={target}>
                   {hasData && (
-                    <div className={iconStyles.loader_box}>
-                      <div className={iconStyles.loader}></div>
+                    <div
+                      className={`${loaderStyles.loading_box} ${styles.loading_wrapper} ${initFetch ? `${styles.full_height}` : ''}`}
+                    >
+                      <div className={loaderStyles.loading}></div>
                     </div>
                   )}
                 </div>

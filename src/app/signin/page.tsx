@@ -19,6 +19,7 @@ const Signup = () => {
   const [password, setPassword] = useState('')
   const [objectWidth, setWidth] = useState(0);
   const [user, setUser] = useRecoilState(useUserState)
+  const [loading, setLoading] = useState<boolean>(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -114,79 +115,85 @@ const Signup = () => {
 
   return (
     <div className={`${styles.container}`}>
-      <div className={styles.inner}>
-        <Headline
-          label={`Login`}
-          title={`ログイン`}
-        />
-        <div className={styles.formBox}>
-          <div className={styles.formBoxItem}>
-            <p>メールアドレス</p>
-            <input
-              type="email"
-              name="email"
-              placeholder="メールアドレス"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className={styles.formBoxItem}>
-            <p>パスワード</p>
-            <input
-              type="password"
-              name="password"
-              placeholder="パスワード"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className={styles.formBoxItem}>
-            <Button
-              onClick={() => router.push('/signup')}
-              isDisabled={false}
-              isSecondary={true}
-              size={`is_medium`}
-              value={`新規登録はこちら`}
-            />
-            <Button
-              onClick={onSignin}
-              isDisabled={false}
-              isSecondary={false}
-              size={`is_medium`}
-              value={`ログイン`}
-            />
-          </div>
-          <hr className={styles.separator} />
-          <div className={styles.socialLoginBox}>
-            <button
-              type="button"
-              className={icon.icon}
-              style={{
-                width: `calc(${objectWidth}px / ${iconRatio})`,
-                height: `calc(${objectWidth}px / ${iconRatio})`,
-              }}
-              onClick={onTwitterSignin}
-            >
-              <Icon
-                imagePath={'/images/icon_social--twitter.svg'}
-                alt={'Twitter'}
+      {loading ? (
+        <div>
+          <div></div>
+        </div>
+      ) : (
+        <div className={styles.inner}>
+          <Headline
+            label={`Login`}
+            title={`ログイン`}
+          />
+          <div className={styles.formBox}>
+            <div className={styles.formBoxItem}>
+              <p>メールアドレス</p>
+              <input
+                type="email"
+                name="email"
+                placeholder="メールアドレス"
+                onChange={(e) => setEmail(e.target.value)}
               />
-            </button>
-            <button
-              type="button"
-              className={icon.icon}
-              style={{
-                width: `calc(${objectWidth}px / ${iconRatio})`,
-                height: `calc(${objectWidth}px / ${iconRatio})`,
-              }}
-              onClick={onGoogleSignin}
-            >
-              <Icon
-                imagePath={'/images/icon_social--google.svg'}
-                alt={'Google'}
+            </div>
+            <div className={styles.formBoxItem}>
+              <p>パスワード</p>
+              <input
+                type="password"
+                name="password"
+                placeholder="パスワード"
+                onChange={(e) => setPassword(e.target.value)}
               />
-            </button>
+            </div>
+            <div className={styles.formBoxItem}>
+              <Button
+                onClick={() => router.push('/signup')}
+                isDisabled={false}
+                isSecondary={true}
+                size={`is_medium`}
+                value={`新規登録はこちら`}
+              />
+              <Button
+                onClick={onSignin}
+                isDisabled={false}
+                isSecondary={false}
+                size={`is_medium`}
+                value={`ログイン`}
+              />
+            </div>
+            <hr className={styles.separator} />
+            <div className={styles.socialLoginBox}>
+              <button
+                type="button"
+                className={icon.icon}
+                style={{
+                  width: `calc(${objectWidth}px / ${iconRatio})`,
+                  height: `calc(${objectWidth}px / ${iconRatio})`,
+                }}
+                onClick={onTwitterSignin}
+              >
+                <Icon
+                  imagePath={'/images/icon_social--twitter.svg'}
+                  alt={'Twitter'}
+                />
+              </button>
+              <button
+                type="button"
+                className={icon.icon}
+                style={{
+                  width: `calc(${objectWidth}px / ${iconRatio})`,
+                  height: `calc(${objectWidth}px / ${iconRatio})`,
+                }}
+                onClick={onGoogleSignin}
+              >
+                <Icon
+                  imagePath={'/images/icon_social--google.svg'}
+                  alt={'Google'}
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

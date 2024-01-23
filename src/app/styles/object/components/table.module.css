@@ -39,6 +39,16 @@
   color: var(--base-subtext-color);
 }
 
+.loading_wrapper {
+  width: 100%;
+}
+.loading_wrapper.full_height {
+  height: calc(calc(var(--full-height) * 0.56) - 63px);
+}
+.loading_wrapper:not(.full_height) {
+  height: 7.2rem;
+}
+
 .container {
   display: flow-root;
 }
@@ -90,7 +100,7 @@
   content: '';
   display: block;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 26px;
