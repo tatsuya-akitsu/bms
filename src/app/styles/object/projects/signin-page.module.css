@@ -11,10 +11,16 @@
   margin: 0 auto;
   padding: 4% 8% 3%;
   width: 78.2rem;
+  height: 564px;
   border-radius: 1.2rem;
   background-color: #fff;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px #0000001a,
     0 4px 6px -4px #0000001a;
+}
+.inner.is_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .formBox {
